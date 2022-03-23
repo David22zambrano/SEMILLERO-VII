@@ -22,12 +22,9 @@ In my second week working at Sincosotf I can make a better FIGMA's, adding some 
 
 third week.
 
-In my thir week working at Sincosof.
+In my thir week working at Sincosof. each day I'm much better using FIGMA, this week I'm learn how organized my time better using "MURAL" for write all my activities weekly. Also I finished the CSS course in Freecodecamp, and I started the Applied Visual Desing.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-Desing figma (Exercise 1,2,3,4,5,6,7)
 This are some figma desing previously named( Preview desing AND final resultado).
 
 1). Exercise 1.
@@ -39,6 +36,22 @@ Final desing
 
 2) Exercise 2.
 -Preview desing
+![image](https://user-images.githubusercontent.com/101721369/159787308-46a00dac-dec8-4218-8ef1-9ad52ca325d4.png)
+-Final result
+![Final result d2](https://user-images.githubusercontent.com/101721369/159789818-6e04fe43-e44a-4301-8b7c-87c0871cc457.PNG)
+
+3) Exercise 3.
+-Preview desing
+
+![mobile-design-slide-1](https://user-images.githubusercontent.com/101721369/159790418-274a2b6d-2978-425a-9a0b-8354053e2112.jpg)
+
+-Final result
+
+![Final result](https://user-images.githubusercontent.com/101721369/159790352-073d1c7d-2469-4629-8219-00f3283f0b12.PNG)
+4) Exercise 4
+-Preview desing
+
+
 
 
 
