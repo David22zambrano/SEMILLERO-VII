@@ -24,6 +24,10 @@ third week.
 
 In my thir week working at Sincosof. each day I'm much better using FIGMA, this week I'm learn how organized my time better using "MURAL" for write all my activities weekly. Also I finished the CSS course in Freecodecamp, and I started the Applied Visual Desing.
 
+CSS course finalized.
+![image](https://user-images.githubusercontent.com/101721369/159799185-3feee7d7-17f1-4e27-9e29-09d7856d7dd7.png)
+
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 This are some figma desing previously named( Preview desing AND final resultado).
 
