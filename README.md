@@ -38,22 +38,30 @@ This are some figma desing previously named( Preview desing AND final resultado)
 Final desing
 ![image](https://user-images.githubusercontent.com/101721369/159542225-f66caeea-52a8-44b5-96c7-e84ad59a2508.png)
 
-2) Exercise 2.
+2) Exercise 2. <br>
 -Preview desing
+<br>
+
 ![image](https://user-images.githubusercontent.com/101721369/159787308-46a00dac-dec8-4218-8ef1-9ad52ca325d4.png)
+<br>
+
 -Final result
+<br>
+
 ![Final result d2](https://user-images.githubusercontent.com/101721369/159789818-6e04fe43-e44a-4301-8b7c-87c0871cc457.PNG)
-
+<br>
 3) Exercise 3.
+ <br>
 -Preview desing
-
+<br>
 ![mobile-design-slide-1](https://user-images.githubusercontent.com/101721369/159790418-274a2b6d-2978-425a-9a0b-8354053e2112.jpg)
-
+<br>
 -Final result
-
+<br>
 ![Final result](https://user-images.githubusercontent.com/101721369/159790352-073d1c7d-2469-4629-8219-00f3283f0b12.PNG)
+<br>
 4) Exercise 4
--Preview desing
+
 
 
 
