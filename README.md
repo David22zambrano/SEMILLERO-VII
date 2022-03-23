@@ -3,7 +3,7 @@
 
 This is the 7th phase of the Semillero starting March 16 2022
 
-Desing figma (Exercise 1,2,3,4,5)
+Desing figma (Exercise 1,2,3,4,5,6,7)
 
 First week.
 
@@ -27,7 +27,7 @@ In my thir week working at Sincosof.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-Desing figma (Exercise 1,2,3,4,5)
+Desing figma (Exercise 1,2,3,4,5,6,7)
 This are some figma desing previously named( Preview desing AND final resultado).
 
 1). Exercise 1.
