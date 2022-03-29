@@ -25,7 +25,7 @@ In my second week working at Sincosotf I can make a better FIGMA's, adding some 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <br>
 third week.
-
+git
 In my third week working at Sincosof. each day I'm much better using FIGMA, this week I'm learn how organized my time better using "MURAL" for annote all my activities weekly. Also I finished the CSS course in Freecodecamp, and I started the Applied Visual Desing. 
 
 
