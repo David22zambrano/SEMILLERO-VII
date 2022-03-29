@@ -25,17 +25,13 @@ In my second week working at Sincosotf I can make a better FIGMA's, adding some 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 <br>
 third week.
-<<<<<<< HEAD
-<br>
-=======
 
-In my thir week working at Sincosof.
+In my third week working at Sincosof. each day I'm much better using FIGMA, this week I'm learn how organized my time better using "MURAL" for annote all my activities weekly. Also I finished the CSS course in Freecodecamp, and I started the Applied Visual Desing. 
+
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
->>>>>>> 007a723bfa950ec91965bdc9ca7781d1d08a4f1e
-In my thir week working at Sincosof. each day I'm much better using FIGMA, this week I'm learn how organized my time better using "MURAL" for write all my activities weekly. Also I finished the CSS course in Freecodecamp, and I started the Applied Visual Desing.
 <br>
 CSS course finalized.
 
@@ -45,11 +41,6 @@ CSS course finalized.
 
 <br>
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<<<<<<< HEAD
-<br>
-=======
-
->>>>>>> 007a723bfa950ec91965bdc9ca7781d1d08a4f1e
 This are some figma desing previously named( Preview desing AND final resultado).
 <br>
 1). Exercise 1.
@@ -63,18 +54,12 @@ This are some figma desing previously named( Preview desing AND final resultado)
 
 Final desing
 ![image](https://user-images.githubusercontent.com/101721369/159542225-f66caeea-52a8-44b5-96c7-e84ad59a2508.png)
-<<<<<<< HEAD
- <br>
- 2). Exercise 2
- <br> 
-=======
 
 
 2) Exercise 2.
 -Preview desing
 
 2) Exercise 2. <br>
->>>>>>> 007a723bfa950ec91965bdc9ca7781d1d08a4f1e
 -Preview desing
 <br>
 
@@ -98,15 +83,7 @@ Final desing
 <br>
 4) Exercise 4
 
-<<<<<<< HEAD
 <br>
-=======
-
-
-
-
-
->>>>>>> 007a723bfa950ec91965bdc9ca7781d1d08a4f1e
 
 Proyectos semillero
 <br>

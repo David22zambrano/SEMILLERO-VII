@@ -1,0 +1,65 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}  
+/* color de fondo Main: #727272 
+color botones : #E3842D
+color header: #FFBA52
+color letra: 000000
+
+
+html{
+    background-color: #ffffff;
+}
+body{
+    height: 875px;
+    width: 1261px;
+    background-color: #FFEAB5;
+    border-style: solid;
+    border-color: black;
+    margin: auto;
+}
+header{
+    height: 156px;
+    background-color: #FFBA52;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;;
+}
+#titlepage {
+    height: 156px;
+    width: 1261px;
+    background: #FFBA52;
+    border-color: #000;    
+    border-width: 1px;
+    text-align: center;
+    font-size: 50px; 
+    font-family: Anton;
+    color: #000;
+}
+
+main{
+    height: 719px;
+    background: #FFEAB5;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+}
+#menu {
+    height: 120px;
+    width: 432px;
+    background: #FFBA52;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    text-align: center;
+    font-size: 50px; 
+    font-family: Anton;
+    color: #000
+   
+}
+*/
