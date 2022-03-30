@@ -1,15 +1,49 @@
 body{
-    width: 100%;
-   
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+
 }
-img{
+.location{
     height: 300px;
     width: 400px;
     left: 917px;
     top: 18px;
     border-radius: 0px;
     position: relative;
-    display:flex;
+    display: flex;
+}
+:root {
+    --background-color: rgba(45, 45, 45, 0.1);
+    --padding: 10px;
+    --font-size: 27px;
+    --position: relative;
+}
+.box-1{    
+    background-color: rgba(45, 45, 45, 0.1);
+    padding: 10px;
+    font-size: 27px;
+    position: relative;;
+    width: 157px;
+    height: 92px;
+    left: 87px;
+    top: 133px;
+    display: flex;
+
+}
+.box-2{
+    background-color: rgba(45, 45, 45, 0.1);
+    padding: 10px;
+    font-size: 27px;
+    position: relative;
+    width: 157px;
+    height: 92px;
+    left: 271px;
+    top: 160px;
+    display: flex;
+    
+
 }
 nav{
     position: relative;
@@ -18,17 +52,18 @@ nav{
     left: -53px;
     top: 16px;
 }
-.button{
+.buttom{
     border: 1px solid rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
-    box-shadow: 4px 4px 15px 2px rgba(0, 0, 0, 0.25);
-}
+    box-shadow: 0 10px 20px rgba(85, 82, 82, 0.19), 0 6px 6px rgba(0,0,0,0.23);
+}   
 .tittle-grafic {
-    position: relative;
-    width: 163px;
-    height: 66px;
-    left: 558px;
-    top: 50px;
+  
+position: relative;
+width: 163px;
+height: 66px;
+left: 558px;
+top:    50px;
     
     font-family: 'Anton';
     font-style: normal;
