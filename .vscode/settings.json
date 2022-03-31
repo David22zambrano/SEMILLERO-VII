@@ -1,0 +1,7 @@
+{
+    "testing.automaticallyOpenPeekViewDuringAutoRun": true,
+    "testing.autoRun.mode": "rerun",
+    "npm-intellisense.packageSubfoldersIntellisense": true,
+    "npm-intellisense.scanDevDependencies": true,
+    "npm-intellisense.showBuildInLibs": true
+}

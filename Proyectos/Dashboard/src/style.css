@@ -1,0 +1,116 @@
+
+:root {
+   --background-color: rgba(45, 45, 45, 0.1); ;
+   --padding: 10px;
+   --font-size: 27px;
+   --position: relative;
+   --width: 157px;
+   --height: 92px;
+   --display: flex;
+}
+
+    body{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.buttom{
+    position: relative;
+    height: 86px;
+    width: 494.56805419921875px;
+    right: -53px;
+    top:-16px;
+    border-radius: 0px;
+
+}
+.h2{
+    position: absolute;
+    font-size: 24px;
+    range: center;
+    vertical-align: top;
+
+    
+}
+.box-1{    
+    background-color: var(--background-color);
+    padding: var(--padding);
+    font-size: var(--font-size);
+    position: var(--position);
+    width: var(--width);
+    height: var(--height);
+    left: -1196px;
+    top: -133px;
+    display: var(--display);
+
+}
+.box-2 {
+    background-color: var(--background-color);
+    padding: var(--padding);
+    font-size: var(--font-size);
+    position: var(--position);
+    width: var(--width);
+    height: var(--height);
+    left: -1012px;
+    top: -133px;
+    display: var(--display);
+}
+.box-3 {
+    background-color: var(--background-color);
+    padding: var(--padding);
+    font-size: var(--font-size);
+    position: var(--position);
+    width: var(--width);
+    height: var(--height);
+    left: -828px;
+    top: -133px;
+    display: var(--display);
+}
+
+.box-4 {
+    background-color: var(--background-color);
+    padding: var(--padding);
+    font-size: var(--font-size);
+    position: var(--position);
+    width: var(--width);
+    height: var(--height);
+    left: -639px;
+    top: -133px;
+    display: var(--display);
+}
+
+
+.box-5 {
+    background-color: var(--background-color);
+    padding: var(--padding);
+    font-size: var(--font-size);
+    position: var(--position);
+    width: var(--width);
+    height: var(--height);
+    left: 818px;
+    top: 246px;
+    display: var(--display);
+}
+.box-6 {
+    background-color: var(--background-color);
+    padding: var(--padding);
+    font-size: var(--font-size);
+    position: var(--position);
+    width: var(--width);
+    height: var(--height);
+    left: 654px;
+    top: 246px;
+    display: var(--display);
+}
+.location { 
+    position: relative;
+    left: 18px;
+    top: 917px;
+    width: 459px;
+    height: 323px;
+    border-radius: 0%;
+
+}
+
+
