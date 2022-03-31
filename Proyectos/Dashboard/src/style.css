@@ -9,19 +9,57 @@
    --display: flex;
 }
 
-    body{
+body{
     width: 100vw;
     height: 100vh;
     justify-content: center;
     align-items: center;
     display: flex;
 }
-.buttom{
+.container{
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+header{
     position: relative;
-    height: 86px;
-    width: 494.56805419921875px;
-    right: -53px;
-    top:-16px;
+    height: 49px;
+    width: 362px;
+    left: 10px;
+    top: -280px;
+    border-radius: 0px;
+}
+.tittle-graphic{
+    position: relative;
+    font-size: 24px;
+    left: 0px;
+    top: -275px;
+
+}
+.date{ 
+    position: absolute;
+    height: 49px;
+    width: 362px;
+    border-radius: 0px;
+    left: 0px;
+    top: -275px;
+}
+.text{
+    left: 10px;
+    top: -280px;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.bottom {
+    position: relative;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 49px;
+    width: 362px;
+    left: 13px;
+    top: -265px;
     border-radius: 0px;
 
 }
@@ -52,7 +90,7 @@
     position: var(--position);
     width: var(--width);
     height: var(--height);
-    left: -1012px;
+    left: -1170px;
     top: -133px;
     display: var(--display);
 }
@@ -63,7 +101,7 @@
     position: var(--position);
     width: var(--width);
     height: var(--height);
-    left: -828px;
+    left: -1140px;
     top: -133px;
     display: var(--display);
 }
@@ -75,7 +113,7 @@
     position: var(--position);
     width: var(--width);
     height: var(--height);
-    left: -639px;
+    left: -1110px;
     top: -133px;
     display: var(--display);
 }
@@ -88,8 +126,8 @@
     position: var(--position);
     width: var(--width);
     height: var(--height);
-    left: 818px;
-    top: 246px;
+    left: -1450px;
+    top: 6px;
     display: var(--display);
 }
 .box-6 {
@@ -99,14 +137,14 @@
     position: var(--position);
     width: var(--width);
     height: var(--height);
-    left: 654px;
-    top: 246px;
+    left: -1420px;
+    top: 6px;
     display: var(--display);
 }
 .location { 
     position: relative;
-    left: 18px;
-    top: 917px;
+    left: 120px;
+    top: -100px;
     width: 459px;
     height: 323px;
     border-radius: 0%;
