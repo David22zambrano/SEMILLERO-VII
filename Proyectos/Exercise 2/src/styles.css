@@ -39,7 +39,7 @@
 .img{
   display: flex;
   justify-content: start;
-  margin: 12px;
+  margin: 18px;
   z-index: 1;
   width: 80px;
   height: 57px;
@@ -137,9 +137,37 @@
   position: absolute;
   border: none;
   right: 30px;
-  top: -30px;
+  top: -52px;
+  z-index: 1;
   
 }
+.msGbAct{
+  position: absolute;
+  border: none; 
+  right: 30px;
+  top: -52px;
+  z-index: 2;
+  position: relative;
+  animation: active 5s;
+
+}
+@keyframes active{
+  from{
+      width: 100%;
+  }
+  to{
+    height: 100%;
+  }
+}
+  .msGbact::after{
+      content: "";
+      position: relative;
+      right: 30px;
+      top: -52px;
+      border: 3px;
+      background-color: white; 
+  }
+
 .info-memory {
 
   font-family: monospace;
@@ -199,50 +227,8 @@
 
 }
 }
+
 /*
-@media
 
---------------------------
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0C122C;
-    height: 100vh;
-    width: 100%;
-    background-image: url("../images/bg-desktop.png");
-    background-position: center bottom;
-    background-size: contain;
-    background-repeat: no-repeat;
-
----------------------------------------
-.indicatorMemory{
-  font-family: monospace;
-font-size: 12px;
-color: #7C86C1;
-}
-.indicatorMemory2{
-
-font-family: monospace;
-font-size: 12px;
-color: #7C86C1;
-}
------------------
-.btnDoc{
-  display: flex;
-  width: 47px;
-  height: 36px;
-  
-}
-.btnFolder{
-  display: flex;
-  width: 47px;
-  height: 36px;
-}
-.uploadBtn{
-  display: flex;
-  width: 47px;
-  height: 36px;
-}
 
    *\
