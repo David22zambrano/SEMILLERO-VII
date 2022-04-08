@@ -2,35 +2,49 @@
 
 
 This is the 7th phase of the Semillero starting March 16 2022
-<br>
-Desing figma (Exercise 1,2,3,4,5,6,7)
-<br>
+
+Desing figma and HTML
+
 
 First week.
-<br>
+
 
 In my first week working at Sincosotf I'm learning about HTML and figma, also I ready make it some desing's each one is better that the last. 
- <br>
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-<br>
+
+
 Second week.
-<br>
+
 In my second week working at Sincosotf I can make a better FIGMA's, adding some components, prototypes and color styles. Also I completed HTML Basic course of Freecodecapm and I started the CSS basic course.
 
 
 third week.
-git
-In my third week working at Sincosof. each day I'm much better using FIGMA, this week I'm learn how organized my time better using "MURAL" for annote all my activities weekly. Also I finished the CSS course in Freecodecamp, and I started the Applied Visual Desing. 
+
+In my third week working at Sincosoft each day I'm much better using FIGMA, this week I'm learn how organized my time better using "MURAL" for annote all my activities weekly. Also I finished the CSS course in Freecodecamp, and I started the Applied Visual Desing. 
+
+
+fourth week.
+ In my fourth week working at Sincosoft
+
+ bulletin friday 08/03/2022
+
+
+
+ 
+In my fourth week working at Sincosoft I can do it a exercise from FIGMA to HTML, I had some dificulties during this week but I cant fix everything. I could finalized the Applied Visual Desing course and I learn about how add a @media query, @keywords and some thing's more.
+
+This week I listened a little of: Salsa, reggaeton, pop, rock.
+
+In my free-time I continue reading: la locura de nuestro tiempo By Mario Mendoza
+
+For the next week I will begin the JavaScript course of freecodecamp to understand some concepts and put into practice and upgrade my performance.
+
+
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-<br>
-CSS course finalized.
-
-<br>
-
+I finalized the CSS course:
 ![image](https://user-images.githubusercontent.com/101721369/159799185-3feee7d7-17f1-4e27-9e29-09d7856d7dd7.png)
 
 <br>

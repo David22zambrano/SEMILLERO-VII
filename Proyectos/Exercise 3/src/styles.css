@@ -9,13 +9,13 @@ body{
 
 }
 .container {  
-    position: relative;
+    position: absolute;
     justify-content: center;
     align-items: center;
     height: 100vh;
     width: 100%;
     display: flex;
-    background-color: #ffffff;
+
 
   }
   #left{
@@ -23,13 +23,24 @@ body{
       flex-direction: column;
       display: flex;
       justify-content: left;
-      width: 300px;
-      height: 200px;
+      width: 330px;
+      height: 170px;
+      padding: 15px;
+      border-top-right-radius: 15px;
+      border-bottom-right-radius: 15px;
+      /*
+      background-color: #ffffff; background-image: url("../3 coding-bootcamp-testimonials-slider/images/pattern-quotes.svg");
+      background-position: center bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+      */
+  
       
   }
   .pcurve{
     position: relative;
     display: flex;
+    z-index: 1;
     width: 200px;
     height: 170px;
     left: 44px;
@@ -56,21 +67,27 @@ body{
 
   }
 
-  .personPhoto{
-  display: flex;
-  height: 523px;
-  width: 544px;
-  left: 710px;
-  top: 250px;
-  border-radius: 10px;
 
+
+  .personPhoto{
+  position: relative;
+  display: flex;
+  z-index: 1;
+  height: 355px;
+  width: 430px;
+  left: 35px;
+  top: -377px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   }
   .botton{
-    height: 55px;
-    width: 107px;
-    left: 766px;
-   top: 773px;
-   border-radius: 50px;
+  position: relative;
+  display: flex;
+  z-index: 2;
+  height: 55px;
+  width: 107px;
+  top: 200px;
+  border-radius: 50px;
 
   } 
 
@@ -79,5 +96,7 @@ body{
     background-position: center bottom;
     background-size: contain;
     background-repeat: no-repeat;
+
+    @media only screen  and (max-width: 600px) {
 
     */
