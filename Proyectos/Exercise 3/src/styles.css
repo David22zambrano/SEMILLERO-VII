@@ -28,23 +28,35 @@ body{
       padding: 15px;
       border-top-right-radius: 15px;
       border-bottom-right-radius: 15px;
-      /*
-      background-color: #ffffff; background-image: url("../3 coding-bootcamp-testimonials-slider/images/pattern-quotes.svg");
-      background-position: center bottom;
-      background-size: contain;
-      background-repeat: no-repeat;
-      */
+      background-color: #ffffff; 
   
-      
   }
-  .pcurve{
-    position: relative;
+  .txt{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 300px;
+    top: 118px;
+    left: -42px;
+  }
+  .pquotes{
+    position: absolute;
     display: flex;
     z-index: 1;
-    width: 200px;
-    height: 170px;
-    left: 44px;
-    top: 700px;
+    width: 161px;
+    height: 68px;
+    top: 33px;
+    left: 10px
+  }
+  .pcurve{
+    position: absolute;
+    display: flex;
+    z-index: 2;
+    width: 304px;
+    height: 115px;
+    left: -53px;
+    top: 279px;
   }
 
   #right{
@@ -64,7 +76,6 @@ body{
   top: 288px;
   border-radius: 0px;
 
-
   }
 
 
@@ -83,12 +94,11 @@ body{
   .botton{
   position: relative;
   display: flex;
-  z-index: 2;
+  z-index: 1;
   height: 55px;
   width: 107px;
-  top: 200px;
+  top: -370px;
   border-radius: 50px;
-
   } 
 
 
