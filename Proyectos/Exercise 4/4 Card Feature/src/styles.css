@@ -1,0 +1,60 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAFAFA;
+
+}
+.container{
+
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.boxes{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.tbuilder{
+    position: relative; 
+    width: 294px;
+    font-family: 'poppins';
+    height: 200px;
+    left: 613px;
+    top: 395px;
+}
+.supervisor{
+    position: relative; 
+    width: 294px;
+    height: 200px;
+    left: 267px;
+    top: 495px;
+ 
+}
+.karma{
+    position: relative; 
+    width: 294px;
+    height: 200px;
+    left: 613px;
+    top: 638px;
+
+
+}
+.calculator{
+    position: relative; 
+    width: 294px;
+    height: 200px;
+    left: 958px;
+    top: 495px;
+
+}

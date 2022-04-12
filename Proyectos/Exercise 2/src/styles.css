@@ -267,47 +267,6 @@
   font-size: 12px;
   color: #7C86C1;
 }
-@media only screen  and (max-width: 600px) {
-.container{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-image: url("../images/bg-mobile.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
-}
-#right{
-  position: relative;
-  display: flex;
-  z-index: 1;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  margin-bottom: 20px;
-  background-color: #1E2C69;
-  font-size: 27px;
-  width: 300px;
-  height: 118px;
-}
-.msGb{
-  position: absolute;
-  border: none;
-  right: 10%;
-  top: 90%;
-  
-}
-.msGbActive{
-  position: absolute;
-  border: none;
-  right: 10%;
-  top: 90%;
-
-}
-}
 }
 /*
 

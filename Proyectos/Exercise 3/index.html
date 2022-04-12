@@ -6,15 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/styles.css" />
+
+
+
     <title>Document</title>
-    <script>
+   <script>
 
-        let i = 1;
-            function next(){
-                
+   let i = 1;
+             function next(){            
+                 document.getElementsByClassName("pPhoto1" + i.toString())[0].style.display = "none"  
+                 
+                 document.getElementsByClassName("text1" + i.toString())[0].style.display = "none"
+
+            i++;
+            if (i == 1){
+                i == 0;
+
+
+            }
+
         }
-
-    </script>
+    </script> 
 </head>
 <body>
     <main class="container">
@@ -24,33 +36,34 @@
             
          
                 <seccion class="txt1">
-                        <p style="font-size: 22px; text-align: center;">
+                        <p >
                             “I’ve been interesting in coding for a while 
                             but never taken the jump until now. I
                             couldn’t recommend this course enough.
                             I’m now in the jop of my dreams an so 
                             excited about the future.” </p>
-                            <h2 style="font-size: 12px;">Tanya Sinclair <span style="color: #C8C7D0; font-size: 8px;"> UX Enginner</span> </h1> 
+                            <h2 style="font-size: 12px;">Tanya Sinclair <span style="color: #C8C7D0; font-size: 8px;"> UX Enginner</span> </h2> 
                             </seccion>
-                          
-                <!-- <seccion class="txt2">
-                    <p style="font-size: 16px; text-align: left;">
-                        “.” </p>
-                        <h2 font-size: 12px;>jhon<span style="color: #C8C7D0; font-size: 8px;"> UX Enginner</span> </h1> 
-                        </seccion> -->
+
+                    
+             
                      
         </aside>
         <aside id="right">
 
             <section>
-                <div><img src="./3 coding-bootcamp-testimonials-slider/images/pattern-bg.svg" alt="bgPhoto" class="bg"></div>
+                <img src="./3 coding-bootcamp-testimonials-slider/images/pattern-bg.svg" alt="bgPhoto" class="bg">
 
-                </div> <img src="./3 coding-bootcamp-testimonials-slider/images/image-tanya.jpg" alt="person" class="personPhoto"> </div>
+             <img src="./3 coding-bootcamp-testimonials-slider/images/image-tanya.jpg" alt="person" class="pPhoto1"> 
               </section> 
-              
-                <button type="button"  id="bottonBack"  onclick="back"><</button>
-
-                <button type="button"  id="bottonNext"  onclick="next">></button>
+               
+                    <button type="button"  id="bprev"  onclick="prev">
+                        <img src="">
+                    </button>   
+                    <img src="">
+                    <button type="button"  id="bNext"  onclick="next">>
+                    </button>
+             
      
         </aside>
       
