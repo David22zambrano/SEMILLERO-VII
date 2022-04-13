@@ -1,72 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <link href="https://fonts.google.com/?query=inter" rel="stylesheet" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles.css" />
-
-
-
     <title>Document</title>
-   <script>
-
-   let i = 1;
-             function next(){            
-                 document.getElementsByClassName("pPhoto1" + i.toString())[0].style.display = "none"  
-                 
-                 document.getElementsByClassName("text1" + i.toString())[0].style.display = "none"
-
-            i++;
-            if (i == 1){
-                i == 0;
-
-
-            }
-
-        }
-    </script> 
-</head>
-<body>
+  </head>
+  <body>
     <main class="container">
-        <aside id="left"> 
-            <div> <img src="./3 coding-bootcamp-testimonials-slider/images/pattern-quotes.svg" alt="quotes" class="pquotes"></div>
-            <div> <img src="./3 coding-bootcamp-testimonials-slider/images/pattern-curve.svg" alt="pcurve" class="pcurve">    </div>
-            
-         
-                <seccion class="txt1">
-                        <p >
-                            “I’ve been interesting in coding for a while 
-                            but never taken the jump until now. I
-                            couldn’t recommend this course enough.
-                            I’m now in the jop of my dreams an so 
-                            excited about the future.” </p>
-                            <h2 style="font-size: 12px;">Tanya Sinclair <span style="color: #C8C7D0; font-size: 8px;"> UX Enginner</span> </h2> 
-                            </seccion>
+      <aside id="left">
+        <div>
+          <img
+            src="./3 coding-bootcamp-testimonials-slider/images/pattern-quotes.svg"
+            alt="quotes"
+            class="pquotes"
+          />
+        </div>
+        <div>
+          <img
+            src="./3 coding-bootcamp-testimonials-slider/images/pattern-curve.svg"
+            alt="pcurve"
+            class="pcurve"
+          />
+        </div>
 
-                    
-             
-                     
-        </aside>
-        <aside id="right">
+        <seccion class="txt1">
+          <p id="quote">
+            “I’ve been interesting in coding for a while but never taken the
+            jump until now. I couldn’t recommend this course enough. I’m now in
+            the jop of my dreams an so excited about the future.”
+          </p>
+          <h2 id="names" style="font-size: 12px">
+            Tanya Sinclair
+            <span id="role" style="color: #c8c7d0; font-size: 8px"> UX Enginner</span>
+          </h2>
+        </seccion>
 
-            <section>
-                <img src="./3 coding-bootcamp-testimonials-slider/images/pattern-bg.svg" alt="bgPhoto" class="bg">
+      </aside>
+      <aside id="right">
+        <section>
+          <img
+            src="./3 coding-bootcamp-testimonials-slider/images/pattern-bg.svg"
+            alt="bgPhoto"
+            class="bg"
+          />
 
-             <img src="./3 coding-bootcamp-testimonials-slider/images/image-tanya.jpg" alt="person" class="pPhoto1"> 
-              </section> 
-               
-                    <button type="button"  id="bprev"  onclick="prev">
-                        <img src="">
-                    </button>   
-                    <img src="">
-                    <button type="button"  id="bNext"  onclick="next">>
-                    </button>
-             
-     
-        </aside>
-      
+          <img
+            src="./3 coding-bootcamp-testimonials-slider/images/image-tanya.jpg"
+            alt="person"
+            class="pPhoto1"
+            id="photo"
+          />
+        </section>
+
+        <button type="button" id="prev" >
+          <img src="./3 coding-bootcamp-testimonials-slider/images/icon-prev.svg" />
+        </button>
+       
+        <button type="button" id="next" >
+             <img src="./3 coding-bootcamp-testimonials-slider/images/icon-next.svg" /> </button>
+      </aside>
     </main>
+<script src="./src/script.js"></script>
 </body>
 </html>

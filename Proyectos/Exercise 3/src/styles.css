@@ -94,7 +94,7 @@ body{
   top: -377px;
   border-radius: 8px;
   }
-  #bPrev{
+  #prev{
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -109,7 +109,7 @@ body{
   border-radius: 50px 0px 0px 50px;
 
   } 
-  #bNext{
+  #next{
     position: absolute;
     display: flex;
     flex-direction: row;

@@ -36,10 +36,10 @@ const persona2 = {
 }
 
 const personaPorValor = { ...persona2 }
-personaPorValor.tipo = 'vendedor'
+ personaPorValor.tipo = 'vendedor'
 
 
 console.log( persona2 )
 console.log( personaPorValor )
 
-
+////--------------------------------------------

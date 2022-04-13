@@ -19,7 +19,12 @@ body{
 
 
 }
+.txt{
+    color: #76767D; 
+    font-size: 50px;
+}
 .boxes{
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
