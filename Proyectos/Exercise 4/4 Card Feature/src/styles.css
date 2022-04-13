@@ -14,31 +14,32 @@ body{
     height: 100vh;
     position: absolute;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+    color: #FAFAFA;
 
 
 }
-.txt{
-    color: #76767D; 
+.text{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 50px;
+    font-weight: bold;
+    color: #76767D;
 }
-.boxes{
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-}
-
-.tbuilder{
+.box1{
     position: relative; 
+    justify-content: center;
+    align-items: center;
     width: 294px;
-    font-family: 'poppins';
     height: 200px;
     left: 613px;
     top: 395px;
 }
-.supervisor{
+.box2{
     position: relative; 
     width: 294px;
     height: 200px;
@@ -46,7 +47,7 @@ body{
     top: 495px;
  
 }
-.karma{
+.box3{
     position: relative; 
     width: 294px;
     height: 200px;
@@ -55,8 +56,10 @@ body{
 
 
 }
-.calculator{
+.box4{
     position: relative; 
+    justify-content: center;
+    align-items: centers;
     width: 294px;
     height: 200px;
     left: 958px;
