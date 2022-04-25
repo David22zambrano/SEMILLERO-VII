@@ -11,58 +11,95 @@ body{
 .container{
 
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     position: absolute;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     color: #FAFAFA;
-
-
 }
+
 .text{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    font-weight: bold;
+
+    position: absolute;
+    width: 519px;
+    height: 177px;
+    left: 460px;
+    top: 193px;
+
+
+}
+header{
+    width: 485px;
+    height: 55.07px;
+    left: 473px;
+    top: 193px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 57px;
     color: #76767D;
+    }
+.tittle{
+    width: 485px;
+    height: 66.87px;
+    left: 472px;
+    top: 242.17px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 60px;
+    color: #4B4C5F;
+    border: 1px solid #CCCCCC;  
 }
-.box1{
-    position: relative; 
-    justify-content: center;
-    align-items: center;
-    width: 294px;
-    height: 200px;
-    left: 613px;
-    top: 395px;
-}
-.box2{
-    position: relative; 
-    width: 294px;
-    height: 200px;
-    left: 267px;
-    top: 495px;
- 
-}
-.box3{
-    position: relative; 
-    width: 294px;
-    height: 200px;
-    left: 613px;
-    top: 638px;
+.subtittle{
 
+    width: 519px;
+    height: 56px;
+    left: 460px;
+    top: 313.95px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    color: #E5E5E5;
 
 }
-.box4{
-    position: relative; 
-    justify-content: center;
-    align-items: centers;
-    width: 294px;
-    height: 200px;
-    left: 958px;
-    top: 495px;
+.boxs{
 
+}
+
+@media only screen  and (max-width: 800px) {
+    .container{
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: #FAFAFA;
+    }
+    .box1{ 
+        top: 168px;
+        left: 160px;
+    }
+    .box2{ 
+        top: 50px;
+        left: 160px;
+    }
+    .box3{    
+        top: -50px; 
+        left: 160px;
+    }    
+    .box4{
+        top: -168px;
+        left: 958px;
+        
+    
+}
 }

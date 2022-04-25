@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="container">
+      <section id="left">
+        <img src="./images/logo.svg" class="logo" />
+        <h6>WE'RE</h6>
+        <span>COMING SOON</span>
+        <p>
+          Hello fellow shoppers! We’re currenly building our new fashion store.
+          Add your email below to stay up-to-date with announcements and launch
+          deals.
+        </p>
+        <form action="" id="form">
+          <div class="inputBox">
+            <input
+              type="email"
+              id="email"
+              name=""
+              placeholder="Email-Address"
+              onkeyup="validateEmail(form.email.value)"
+              required
+            />
+            <h2 id="error"></h2>
+            <button id="btn">
+              <img src="./images/icon-arrow.svg" alt=""/>
+              <div class="iconError"></div>
+            </button>
+          </div>
+        </form>
+      </section>
+      <section id="right">
+        <img src="./images/hero-desktop.jpg" alt="img" class="img" />
+      </section>
+    </main>
+    <script src="./src/script.js"></script>
+  </body>
+</html>
