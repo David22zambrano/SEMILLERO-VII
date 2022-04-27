@@ -13,25 +13,35 @@ body {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background-image: url("../images/bg-intro-desktop.png");
 }
-.container::before{
+body::before {
   content: "";
-  animation-name: smooth;
-  background-image: url("../images/bg-intro-desktop.png");
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(../images/bg-intro-desktop.png);
+  background-size: cover;
+  background-repeat: repeat;
+  animation: movement 10s linear infinite;
+  z-index: -3;
+  transition: 2s;
+}
+@keyframes movement {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0, 10%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
-@keyframes smooth {
-  0% {
-    top: 0px;
-  }
-  50% {
-    top: 50px;
-  }
-  100% {
-    top: 0px;
-  }
-}
 #left {
   position: relative;
   display: flex;
@@ -42,22 +52,21 @@ body {
   left: -28px;
   top: -48px;
 }
-#txt{
+#txt {
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: left;
   align-items: center;
-
 }
-.tittle{
+.tittle {
   position: relative;
   display: flex;
   width: 477px;
   height: 124px;
   left: 30px;
   top: 67px;
-  font-family:'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -124,7 +133,6 @@ body {
   top: -57px;
 }
 #firstName {
-  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -190,7 +198,6 @@ body {
   justify-content: center;
   color: #d1cfda;
   font-size: 10px;
-  
 }
 
 @media only screen and (max-width: 800px) {
@@ -203,21 +210,21 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .box{
+  .box {
     top: -129px;
     left: -189px;
   }
-  #form{
+  #form {
     left: -135px;
     top: 53px;
   }
-  .tittle{
+  .tittle {
     font-size: 24px;
     letter-spacing: 2px;
     height: 124px;
     left: 82px;
   }
-  .subTittle{
+  .subTittle {
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -226,5 +233,5 @@ body {
     left: 36px;
     top: 4px;
     font-size: 9px;
-}
+  }
 }

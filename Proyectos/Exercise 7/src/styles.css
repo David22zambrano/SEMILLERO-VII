@@ -1,0 +1,257 @@
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e6eff6;
+}
+body::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("../images/background.png");
+  background-size: cover;
+  background-repeat: repeat;
+  animation: movement 5s linear infinite;
+  z-index: -3;
+  transition: 2s;
+}
+@keyframes movement {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(0%, 2%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 819px;
+  height: 612px;
+  left: 334px;
+  top: 206px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+.header {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: left;
+  padding-left: 46px;
+  width: 772px;
+  height: 306px;
+  left: 0px;
+  top: -41px;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 10px 10px 0px 0px;
+}
+.tittle {
+  display: flex;
+  width: 362px;
+  height: 14px;
+  left: 389px;
+  top: 250px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 32px;
+  line-height: 37px;
+
+  color: #40aba8;
+}
+.subTittle {
+  display: flex;
+  width: 537px;
+  height: 26px;
+  left: 389px;
+  top: 318px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 28px;
+  color: #cce163;
+}
+.mainText {
+  display: flex;
+  width: 706px;
+  height: 79px;
+  left: 389px;
+  top: 382px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 33px;
+  letter-spacing: 0.01em;
+  color: #b5bac2;
+}
+
+#container2 {
+  display: flex;
+  flex-direction: row;
+}
+#left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 20px;
+  width: 391px;
+  height: 306px;
+  left: 310px;
+  top: 512px;
+  background: #2bb3b1;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.txt1 {
+  display: flex;
+  width: 245px;
+  height: 10px;
+  left: 389px;
+  top: 562px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 40px;
+  letter-spacing: 0.005em;
+  color: #dcfeff;
+}
+.txt2 {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: space-evenly;
+  width: 300px;
+  height: 41px;
+  left: 389px;
+  top: 600px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 77px;
+  letter-spacing: 0.005em;
+  color: #78dee1;
+}
+.txt3 {
+  width: 256px;
+  height: 23px;
+  left: 390px;
+  top: 694px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 29px;
+  letter-spacing: 0.005em;
+  color: #b2eff1;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Karla";
+  font-style: normal;
+  width: 303px;
+  height: 60px;
+  left: 367px;
+  top: 730px;
+  background: #bfdf32;
+  box-shadow: 0px 4px 50px 2px rgba(0, 0, 0, 0.25);
+  border: none;
+  border-radius: 8px;
+}
+button:hover {
+  background: #d0e965;
+  cursor: pointer;
+}
+#right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 720px;
+  top: 306px;
+  width: 410px;
+  height: 306px;
+  background: #4abebd;
+  border-radius: 0px 0px 0px 0px;
+}
+.textInformation {
+  display: flex;
+  width: 114px;
+  height: 42px;
+  left: 772px;
+  top: 549px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 44px;
+  letter-spacing: 0.005em;
+  color: #f3fffb;
+}
+.information {
+  display: flex;
+  width: 233px;
+  height: 223px;
+  left: 772px;
+  top: 593px;
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.005em;
+  color: #b2eff1;
+}
+@media only screen and (max-width: 800px) {
+  body{
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container {
+    width: 406px;
+    height: 919px;
+    flex-direction: column;
+  }
+  .header {
+    padding-left: 41px;
+    width: 369px;
+    height: 306px;
+  }
+  .subTittle {
+    width: 341px;
+    font-size: 18px;
+  }
+  .mainText {
+    width: 300px;
+    height: 148px;
+    line-height: 26px;
+    font-size: 14px;
+  }
+  #container2 {
+    width: 406px;
+    height: 612px;
+    flex-direction: column;
+  }
+}

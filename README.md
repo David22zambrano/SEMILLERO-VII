@@ -58,9 +58,17 @@ This are some figma desing previously named.
 Proyectos semillero
 <br>
 
+bulletin friday 22/april/2022
 
 fifth week.
 
-In my fifth week working at Sincosoft, I'm learning abouth JavaScript 
+Apr - 22 - 2022
+
+In my fifth week working at Sincosoft, I'm learning abouth JavaScript, i learn abouth css flexbox and javascript. It was a hard week, but i can do more faster the HTML. And I learning about regular expressions.
+
+This week I listened a little of:  reggaeton, jazz, pop
+In my free-time I'm read "Mujeres" By Mario Mendoza
+For the next week I will begin the css GRID course of freecodecamp to understand some concepts and put into practice.
+
 
 </head>
