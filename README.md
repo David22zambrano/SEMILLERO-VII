@@ -83,8 +83,9 @@ In my sixth week working at Sincosoft, I'm learn about @media and css Flexbox , 
 This week I lisened a little of: salsa, merengue, electronica.
 In my free-time I'm continue reading "Mujeres" By Charles Bukowski.
 
-For the next week I will begin the css GRID course of freecodecamp to understand some concepts and put into practice on the next Exercises
-
+For the next week I will begin the css GRID course of freecodecamp to understand some concepts and put into practice on the next Exercises.
 
 
 <br>
+
+seventh week.
