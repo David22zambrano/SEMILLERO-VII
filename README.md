@@ -62,13 +62,29 @@ bulletin friday 22/april/2022
 
 fifth week.
 
-Apr - 22 - 2022
+Apr - 22 - 2022+
 
-In my fifth week working at Sincosoft, I'm learning abouth JavaScript, i learn abouth css flexbox and javascript. It was a hard week, but i can do more faster the HTML. And I learning about regular expressions.
+In my fifth week working at Sincosoft, I'm learning abouth JavaScript, i learn abouth css, javascript. It was a hard week, but i can do more faster the HTML. And I learning about regular expressions.
 
 This week I listened a little of:  reggaeton, jazz, pop
-In my free-time I'm read "Mujeres" By Mario Mendoza
-For the next week I will begin the css GRID course of freecodecamp to understand some concepts and put into practice.
+In my free-time I'm read "Mujeres" By Charles Bukowski
+For the next week I will begin the css GRID course of freecodecamp to understand some concepts and put into practice. and to get better team-work
 
 
-</head>
+<br>
+
+sixth week.
+
+bulletin friday
+29 ~ april/2022.
+
+In my sixth week working at Sincosoft, I'm learn about @media and css Flexbox , also I can do better's HTML. I understand some concepts about positioning with css Flexbox
+
+This week I lisened a little of: salsa, merengue, electronica.
+In my free-time I'm continue reading "Mujeres" By Charles Bukowski.
+
+For the next week I will begin the css GRID course of freecodecamp to understand some concepts and put into practice on the next Exercises
+
+
+
+<br>

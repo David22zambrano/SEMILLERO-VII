@@ -57,6 +57,9 @@ body {
   width: 250px;
 }
 .btnMain1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 303px;
   height: 50px;
   background: #ff52bf;
@@ -339,4 +342,98 @@ footer {
   right: 71px;
   top: 465px;
   font-size: 13px;
+}
+@media only screen and (max-width: 800px) {
+  .mainBox {
+    width: 370px;
+    height: 897px;
+    display: flex;
+    flex-direction: column;
+  }
+  p {
+    font-size: 14px;
+    width: 279px;
+  }
+  #leftMain {
+    flex-direction: column;
+    width: 350px;
+    height: 495px;
+  }
+  #rightMain {
+    flex-direction: column;
+    width: 350px;
+    height: 350px;
+  }
+  .imgMockup {
+    height: 298px;
+    width: 300px;
+  }
+  .box1 {
+    flex-direction: column-reverse;
+    width: 330px;
+    height: 503px;
+    left: 60px;
+    top: 135px;
+  }
+  #leftBox1 {
+    flex-direction: column;
+    width: 281px;
+    height: 504px;
+    text-align: center;
+  }
+  .imgTogether {
+    width: 230px;
+    height: 214px;
+  }
+  .box2 {
+    flex-direction: column;
+    width: 330px;
+    height: 503px;
+    left: 60px;
+    top: 196px;
+  }
+  #rightBox2 {
+    flex-direction: column;
+    width: 281px;
+    height: 504px;
+    text-align: center;
+  }
+  .imgConversation {
+    width: 230px;
+    height: 214px;
+  }
+  .box3 {
+    flex-direction: column-reverse;
+    width: 330px;
+    height: 503px;
+    left: 60px;
+    top: 259px;
+  }
+  #leftBox3 {
+    flex-direction: column;
+    width: 281px;
+    height: 504px;
+    text-align: center;
+  }
+  .imgUsers {
+    width: 230px;
+    height: 214px;
+  }
+  .box4 {
+    width: 375px;
+    height: 143px;
+    left: 54px;
+  }
+  .textBox4 {
+    font-size: 15px;
+  }
+  .information {
+    width: 370px;
+    height: 790px;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+  footer {
+    top: 695px;
+  }
 }
