@@ -2,7 +2,7 @@ let nameContainer = document.getElementById("names");
 let rContainer = document.getElementById("role");
 let pContainer = document.getElementById("photo");
 let qContainer = document.getElementById("quote");
-let buttons = Array.from(document.getElementsByTagName("button"));
+let rules = Array.from(document.getElementsByTagName("rules"));
 let counter = 0;
 import people from '../data/people.js'
 
@@ -29,8 +29,8 @@ function showInformation(counter) {
  window.addEventListener("load", () =>{
   showInformation(0)
  })
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    swapInformation(button);
+rules.forEach((rules) => {
+  rules.addEventListener("click", () => {
+    swapInformation(rules);
   });
 });

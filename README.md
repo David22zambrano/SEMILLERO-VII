@@ -84,8 +84,21 @@ This week I lisened a little of: salsa, merengue, electronica.
 In my free-time I'm continue reading "Mujeres" By Charles Bukowski.
 
 For the next week I will begin the css GRID course of freecodecamp to understand some concepts and put into practice on the next Exercises.
-
+<br>
+seventh week.
+bulletin friday
+06  /May /2022.
+In my seventh week working at Sincosoft, I'm learn about  css Grid, and we can put into practice in the exercises
+This week I lisened a little of: bachata, reggae,  electronica
+In my free-time I'm do exercise at home or sometimes i'm continue reading "Mujeres" by Charles Bukowski.
 
 <br>
+bulletin friday
+13/ May ~ 2022.
 
-seventh week.
+In my sixth week working at Sincosoft, I can do a very much better HTML and use better the class and Id, this week I'm learning how to do 
+
+This week I lisened a little of: techno, reggaeton, merengue.
+In my free-time I'm do exercise, and in some occasions i continue reading "Mujeres" by Charles Charles Bukowski.
+
+For the next week I will begin the 30js days and learning too much about Javascript
