@@ -1,5 +1,6 @@
 # SEMILLERO-VII
 
+Proyectos semillero.
 
 This is the 7th phase of the Semillero starting March 16 2022
 
@@ -38,26 +39,6 @@ In my free-time I continue reading: la locura de nuestro tiempo By Mario Mendoza
 
 For the next week I will begin the JavaScript course of freecodecamp to understand some concepts and put into practice and upgrade my performance.
 
-
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-I finalized the CSS course:
-![image](https://user-images.githubusercontent.com/101721369/159799185-3feee7d7-17f1-4e27-9e29-09d7856d7dd7.png)
-
-<br>
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-This are some figma desing previously named.
-
-<img src="./Proyectos/Exercise 3/3 coding-bootcamp-testimonials-slider/Final result/Desktop final result.png">
-
-<br>
-
-Proyectos semillero
-<br>
-
 bulletin friday 22/april/2022
 
 fifth week.
@@ -69,7 +50,6 @@ In my fifth week working at Sincosoft, I'm learning abouth JavaScript, i learn a
 This week I listened a little of:  reggaeton, jazz, pop
 In my free-time I'm read "Mujeres" By Charles Bukowski
 For the next week I will begin the css GRID course of freecodecamp to understand some concepts and put into practice. and to get better team-work
-
 
 <br>
 
@@ -96,9 +76,13 @@ In my free-time I'm do exercise at home or sometimes i'm continue reading "Mujer
 bulletin friday
 13/ May ~ 2022.
 
-In my sixth week working at Sincosoft, I can do a very much better HTML and use better the class and Id, this week I'm learning how to do 
+In my eigth week working at Sincosoft, I can do a very much better HTML and use better the class and Id, this week I'm learning how to do 
 
 This week I lisened a little of: techno, reggaeton, merengue.
 In my free-time I'm do exercise, and in some occasions i continue reading "Mujeres" by Charles Charles Bukowski.
 
 For the next week I will begin the 30js days and learning too much about Javascript
+<br>
+
+Bulletin friday
+ninth

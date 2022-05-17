@@ -21,7 +21,6 @@ function getRndInteger() {
 const close_rules = (e) => (modal.style.display = "none");
 const display_rules = (e) => (modal.style.display = "flex");
 
-
 const toggleView = (type, comp, counter) => {
   console.log(type, comp, counter);
 
@@ -30,7 +29,6 @@ const toggleView = (type, comp, counter) => {
   computer.src = `./images/choice-${comp}.svg`;
   console.log(type, comp);
 };
-
 
 function star_Game(type) {
   console.log(type, "start game executed");
@@ -41,20 +39,24 @@ function star_Game(type) {
     case 1:
       console.log(type, comp);
       result = comp == 1 ? "DRAW" : comp == 2 ? "YOU WIN" : "YOU LOST";
+      counter += result === "YOU WIN" ? 1 : 0;
+      counter += result === "YOU LOSE" ? -1 : 0;
       toggleView(type, comp, counter, lossCounter);
       update_Score(counter, result);
       break;
     case 2:
       console.log(type, comp);
-
       result = comp == 1 ? "YOU LOSE" : comp == 2 ? "DRAW" : "YOU WIN";
+      counter += result === "YOU WIN" ? 1 : 0;
+      counter += result === "YOU LOSE" ? -1 : 0;
       toggleView(type, comp, counter, lossCounter);
       update_Score(counter, result);
       break;
     case 3:
       console.log(type, comp);
-
       result = comp == 1 ? "YOU WIN" : comp == 2 ? "YOU LOSE" : "DRAW";
+      counter += result === "YOU WIN" ? 1 : 0;
+      counter += result === "YOU LOSE" ? -1 : 0;
       toggleView(type, comp, counter, lossCounter);
       update_Score(counter, result);
       break;
@@ -62,15 +64,10 @@ function star_Game(type) {
   document.getElementById("win").innerText = result;
 }
 const update_Score = (result) => {
-  counter += result === "YOU WIN" ?0 : 1;
-0 
-  lossCounter += result === "YOU LOST" ? 0 : 1;
-
-  document.querySelector(
-    ".score"
-  ).innerText = `Your score is :${counter} You lost : ${lossCounter}`;
+  document.querySelector(".score").innerText = `${counter} `;
 };
 function reset_Game() {
   selection.classList.toggle("show") && selection.classList.toggle("hide");
   mainView.classList.toggle("hide") && mainView.classList.toggle("show");
 }
+/*Your score is : You lost : ${lossCounter}  */

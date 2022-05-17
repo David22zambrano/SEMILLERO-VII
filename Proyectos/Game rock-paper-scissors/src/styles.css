@@ -29,20 +29,20 @@ header {
   padding: 25px;
   font-family: "Barlow", sans-serif;
 }
-.score {
-  background-color: #e6e6e6;
+.container_score {
   display: flex;
+  background-color: #e6e6e6;
   flex-direction: column;
   text-align: center;
   align-items: center;
-  justify-self: center;
+  justify-content: center;
   padding: 10px 10px;
   width: 121px;
   height: 110px;
   border-radius: 10px;
 }
-.score p {
-  color: hsl(229, 25%, 31%);
+.container_score > p {
+   color: hsl(229, 25%, 31%);
   font-weight: 700;
 }
 .container_Buttons {
@@ -52,6 +52,7 @@ header {
   flex-direction: column;
   justify-content: center;
   background-image: url(../images/bg-triangle.svg);
+  background-position: center;
   align-items: center;
   background-position: center;
   background-repeat: no-repeat;
@@ -113,7 +114,7 @@ header {
   letter-spacing: 1px;
   cursor: pointer;
 }
-#reset{
+#reset {
   display: flex;
   align-items: center;
   justify-self: end;
@@ -126,7 +127,7 @@ header {
   width: 100px;
   height: 41px;
 }
-.finish{
+.finish {
   display: flex;
   align-items: center;
   justify-content: start;
@@ -158,36 +159,38 @@ header {
   border: none;
   background: transparent;
 }
-.hide{
-  display : none; 
+.hide {
+  display: none;
 }
-.show{
-  display : flex; 
+.show {
+  display: flex;
 }
 @media only screen and (max-width: 800px) {
+   body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .container {
     display: flex;
-    position: relative;
-    width: 400px; 
+    width: 400px;
     top: 10%;
     left: 18%;
   }
-  .container_Buttons {
-  
-  }
+ 
   header {
     display: flex;
-    width: 400px;
+    width: 470px;
     height: 160px;
   }
   .paper_rock {
     display: flex;
-    width: auto;
-    height: auto;
   }
   .circle {
     display: flex;
-    width: auto;
-    height: auto;
+    width: 185px;
+    height: 184px;
+
   }
 }
