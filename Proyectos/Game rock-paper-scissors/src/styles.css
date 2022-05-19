@@ -3,7 +3,7 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
-  font-family: "Barlow", sans-serif;
+  font-family: 'Barlow', sans-serif;
   background: radial-gradient(
     circle at 50% 0%,
     hsl(214, 47%, 23%),
@@ -44,6 +44,7 @@ header {
 .container_score > p {
    color: hsl(229, 25%, 31%);
   font-weight: 700;
+  font-size: 19px;
 }
 .container_Buttons {
   display: flex;
@@ -78,7 +79,7 @@ header {
 }
 
 .paper_rock {
-  display: grid;
+  display: flex;
   align-items: center;
   justify-content: center;
   grid-template-columns: 50% 50%;
@@ -133,7 +134,7 @@ header {
   justify-content: start;
   flex-direction: column;
   font-size: 30px;
-  font-family: "Barlow", sans-serif;
+  font-family: 'Barlow', sans-serif;
 }
 #modal {
   display: none;
@@ -158,6 +159,14 @@ header {
   margin-top: 15px;
   border: none;
   background: transparent;
+}
+#win{
+  font-family: 'Barlow', sans-serif;
+  font-size: 58px;
+  color: #e6e6e6;
+}
+.efect{
+  
 }
 .hide {
   display: none;
