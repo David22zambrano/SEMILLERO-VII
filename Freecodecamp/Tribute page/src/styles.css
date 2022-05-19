@@ -21,6 +21,7 @@ a:visited {
   color: #1daf97;
 }
 #main {
+  text-align: center;
   margin: 30px 8px;
   padding: 15px;
   border-radius: 5px;
@@ -84,4 +85,11 @@ li {
   h2 {
     font-size: 0.9rem;
   }
+  img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+  }
 }
+
