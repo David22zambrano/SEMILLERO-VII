@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <h1 id="title">David corporation S.A.S <br> Survey Form</h1>
+        <p id="description" class="description ">
+          We working for to get better 
+        </p>
+      </header>
+      <form id="survey-form">
+        <div class="form-group">
+          <label id="name-label" for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-style"
+            placeholder="Enter your full name "
+            required
+          />
+        </div>
+        <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form-style"
+              placeholder="Enter your Email"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label id="number-label" for="number"
+              >Age</label
+            >
+            <input
+              type="number"
+              name="age"
+              id="number"
+              min="18"
+              max="99"
+              class="form-style"
+              placeholder="Age"
+            />
+          </div>
+
+          <div class="form-group">
+            <p>What programming language are you know?</p>
+            <select id="dropdown" name="language" class="form-style" required>
+              <option disabled selected value>Select one</option>
+              <option value="sql">SQL</option>
+              <option value="javaScript">JavaScript</option>
+              <option value="angular">angular</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <p>Where from do you prefer work?</p>
+            <label>
+              <input
+                name="worker-prefer"
+                value="definitely"
+                type="radio"
+                class="input-radio"
+                checked
+              />House (remote)</label
+            >
+            <label>
+              <input
+                name="worker-prefer"
+                value="maybe"
+                type="radio"
+                class="input-radio"
+              />At office </label
+            >
+
+          <div class="form-group">
+            <p>
+              What projects do you prefer?
+            </p>
+  
+            <label
+              ><input
+                name="prefer"
+                value="front-end"
+                type="checkbox"
+                class="input-checkbox"
+              />Front-end </label
+            >
+            <label>
+              <input
+                name="prefer"
+                value="back-end"
+                type="checkbox"
+                class="input-checkbox"
+              />Back-end </label
+            >
+            <label
+            ><input
+              name="prefer"
+              value="dataBase"
+              type="checkbox"
+              class="input-checkbox"
+            />Data Base </label
+          >
+          <label
+            ><input
+              name="prefer"
+              value="other"
+              type="checkbox"
+              class="input-checkbox"
+            /> Other</label
+          >
+        </div>
+            <div class="form-group">
+                <p>comments or suggestions?</p>
+                <textarea
+                  id="comments"
+                  class="input-textarea"
+                  name="comments"
+                  placeholder="Enter your comment here..."
+                ></textarea>
+              </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="submit-button">
+            Submit
+          </button>
+        </div>
+      </form>
+    </main> 
+    <script src="./src/script.js"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
