@@ -87,7 +87,7 @@ For the next week I will begin the 30js days and learning too much about Javascr
 Bulletin friday
 20/ May ~ 2022.
 
-In my ninth week working at Sincosoft, I can do a html pages more fast, and I understand better JavaScript and I can lear much on JS-30
+In my ninth week working at Sincosoft, I can do a html pages more fast, and I understand better JavaScript and I can understand much on JS-30
 
 This week I lisened a little of: rock, metal, hip hop.
 In my free-time I'm go to gym, and in some occasions i continue reading "Mujeres" by Charles Charles Bukowski.
