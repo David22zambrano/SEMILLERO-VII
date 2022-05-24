@@ -1,0 +1,22 @@
+un array : con objetos, donde tenemos las definiciones
+
+
+.sort para mostrar lista ordenada
+
+map = Devuelve el nuevo arreglo como lo queremos.
+join =
+---------------------------------------------------------------------------------
+replace
+1 defino que reemplaza/ 2 con que lo reemplaza
+-----------------------------------------------------------------------------------
+trim() elimina espacio
+--------------------------------------------------------------------------------
+innexHTML = Obtengo el html que esta contenido dentro del elemento.
+innerText = Obtengo el texto contenido dentro del elemento.
+---------------------------------------------------------------------------------
+outerHTML = obtiene el html contenido y el propio mismo, esto viene .
+----------------------------------------------------------------------------
+recorre cada elemento del arreglo
+---------------------------------------------------------------------------
+
+practicar los proyectos, aprender funciones y !! saber consumir datos reales apis

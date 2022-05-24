@@ -1,0 +1,15 @@
+sgp gestion de proyectos
+
+
+push = metodos de arreglo, metiendo atras de la fila, en la ultima posicion siempre 
+
+
+addEventLisenn: escuchador de eventos a un elemento
+agrega o elimina
+
+.target (e) 
+
+evento keyup = cuando la tecla se levanta 
+
+estudiar y practicar con proyectos.
+preguntar mucho.

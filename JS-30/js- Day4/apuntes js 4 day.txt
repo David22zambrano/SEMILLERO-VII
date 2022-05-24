@@ -1,0 +1,85 @@
+objetos de arreglos
+
+En el objeto se describe las propiedades
+Se pueden hacer copia de arreglos 
+
+slice: El método slice() devuelve una copia de una parte 
+del array dentro de un nuevo array empezando,
+ por inicio hasta fin (fin no incluido). El array original no se modificará.
+
+
+push: Nos permite añadir un elemento al final de un arreglo.
+example: 
+let nuevaLongitud = frutas.push('Naranja') // Añade "Naranja" al final
+// ["Manzana", "Banana", "Naranja"]
+
+
+slice ( posicion incial, posicion final), trae un fragmento del array, devuelve una parte
+
+.concat = permite concatenar varios arrays(el arreglo que se va concatenar)
+... = spread = lo convierte en un conjunto de valores 
+y lo concatena en un mismo array.
+
+ = [] modificar el valor y la posicion del array
+array.splice( donde se desea eliminar, hasta la cantidad de posiciones a eliminar)
+example team  [3] = '';
+
+array.splice ( donde se desea eliminar, hasta la cantidad de posiciones a eliminar, con que reemplazar el que se borro)
+
+
+El método Object.assign() copia todas las propiedades
+enumerables de uno o más objetos fuente a un objeto destino.
+ Devuelve el objeto destino. 
+
+const  wes = {
+ name: 'ves'
+social: {
+}
+----------------------------------------------
+el objeto. el indice de lo que queremos traer
+para objetos con un nivel
+el objeto.indice y el indice de este nivel
+
+. es punto de acceso.
+-----------------------------------------------
+agregar nuevo parametro al objeto
+exmaple. person.number = 99;
+
+para eliminar
+delete nombre del objeto . y el indice que se desea eliminar
+
+
+JSON.stringfy = convierte en cadena de formato JSON
+, queda tipo texto
+
+JSON.parse = metodo que convierte de json a objeto
+
+cuando es funcion constructora incia con mayuscula
+nos permite crear objetos de manera mas dinamica
+
+
+this. nos permite traer el objeto en el que estamos
+function capturar(){
+	function Jugador(nombre,puntos){
+		jugador.nombre=nombre;
+		jugador.puntos=puntos;
+	}
+
+	let nombreDigitado = document.getElementById('nombre').value
+	let puntosDigitado = document.getElementById('puntos').value
+
+	nuevoJugador=new Jugador(nombreDigitado,puntosDigitado);
+	
+	agregar();
+
+
+}
+let datosJugador =[] 
+function agregar(){
+	datosJugador.push(nuevoJugador);
+	document.getElementById('tbody').innerHTML += '<tr><td>' + nuevoJugador.nombre + '</td><td>'+ nuevoJugador.puntos + '</td></tr>';
+}
+
+--------------------------
+ser autodidacta.
+hacer demasiados ejercicios.
