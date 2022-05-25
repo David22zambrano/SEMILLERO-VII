@@ -52,7 +52,6 @@ nav > ul {
 .project-section {
   display: flex;
   flex-direction: column;
-  flex-wrap: 4rem;
   background-color: #303841;
   padding-left: 10%;
 }
@@ -80,4 +79,22 @@ nav > ul {
   background: #303030;
 }
 @media only screen and (max-width: 600px) {
+  nav > ul {
+    width: 210px;
+  }
+  .welcome-section > h1 {
+    font-size: 2rem;
+  }
+  .welcome-section > p {
+    font-size: 2rem;
+  }
+  .contact_section > div {
+    padding-right: 23%;
+    font-size: 2rem;
+    width: 300px;
+  }
+  #project-header{
+    font-size: 1.5rem;
+    text-align: left;
+  }
 }

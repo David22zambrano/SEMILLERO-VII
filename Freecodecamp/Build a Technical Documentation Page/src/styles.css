@@ -1,51 +1,66 @@
 body {
-    width: 100vw;
-    height: 100vh;
-    color: #4d4e53;
-    background-color: #ffffff;
-    font-family: 'Open Sans', Arial, sans-serif;
-    line-height: 1.5;
-  }
-  
-  #navbar {
-    position: fixed;
-    display: flex;
-    flex-direction: column;  
-    justify-content: left;
-    background-color: white;
-    height: 100%;
-    left: 0%;
-    top: 0%;
-    z-index: 1;
-    border: 2px solid black;
-    border-bottom: 2px solid;
-   
-  }
-  #navbar > ul { 
-     list-style: none; line-height: 3rem;
-  }
-  header {
-    color: black;
-    margin: 10px;
-    text-align: center;
-    font-size: 1.8em;
+  width: 100vw;
+  height: 100vh;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
 
-  }
-  #main-doc {
-    align-items: center;
-    justify-content: center;
-    position: relative;
-   display: flex;
-   flex-direction: column;
-   justify-content: right;
-   font-size: 0.9rem;
-    width: 75%;
-   height: 100%;
-   right: -21%;
-  }
-  header, p{
-    display: flex;
-    text-align: left;
-  }
+#navbar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  background-color: white;
+  height: 100%;
+  left: 0%;
+  top: 0%;
+  z-index: 1;
+  border: 2px solid black;
+  border-bottom: 2px solid;
+}
+#navbar > ul {
+  list-style: none;
+  line-height: 3rem;
+  font-size: 14px;
+}
+header {
+  color: black;
+  margin: 10px;
+  text-align: center;
+  font-size: 1.8em;
+}
+#main-doc {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  font-size: 0.9rem;
+  width: 75%;
+  height: 100%;
+  right: -21%;
+}
+header,
+p {
+  display: flex;
+  text-align: left;
+}
 @media only screen and (max-width: 600px) {
+  #main-doc {
+    width: 364px;
+  }
+  #navbar {
+    width: 101px;
+    font-size: 8px;
+  }
+  #navbar > ul {
+    position: fixed;
+    flex-direction: column;
+    top: 64px;
+    left: -5%;
+    font-size: 0.39rem;
+  }
 }
