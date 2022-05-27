@@ -42,8 +42,8 @@ function star_Game(type) {
     case 1:
       console.log(type, comp);
       result = comp == 1 ? "DRAW" : comp == 2 ? "YOU WIN" : "YOU LOST";
-      result === "YOU WIN" ? counter += 1 : counter -=1
-      result === "YOU LOSE" ? counter -= 1 : counter += 1
+      result === "YOU WIN" ? counter += 1 : counter -=1;
+      result === "YOU LOSE" ? counter -= 1 : counter += 1;
       toggleView(type, comp, counter);
       left.style.border = "24px solid #dd3654";
       right.style.border = "24px solid #dd3654";
@@ -62,9 +62,9 @@ function star_Game(type) {
       break;
     case 3:
       console.log(type, comp);
-      result = comp == 1 ? "YOU WIN" : comp == 2 ? "YOU LOSE" : "DRAW";
+  
       counter += result === "YOU WIN" ? 1 : 0;
-      counter += result === "YOU LOSE" ? -1 : 0;
+      counter -= result === "YOU LOSE" ? -1 : 0;
       left.style.border = "24px solid #dd3654";
       right.style.border = "24px solid #dd3654";
       update_Score(counter, result);
