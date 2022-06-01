@@ -1,0 +1,33 @@
+Curso JavaScript.
+- Variables: 
+	Cuando se declaran variables de JavaScript, 	
+	tienen un valor inicial de undefined.
+tipos: var,let permite sobre escribir el dato
+	const no se puede sobre-escribir, no va cambiar el dato
+
+-camelCase : 
+	En camelCase , los nombres de variables de 
+	varias palabras tienen la primera palabra en minúsculas 
+	y la primera letra de cada palabra subsiguiente está en mayúscula.
+
+.length : para mostrar la longitud de una cadena
+
+notacion de corchetes: Para hallar el primer caracter 
+[0] =  obtener el primer caracter o la primera posicion
+firstName[firstName.length - 1] = para obtener la ultima posicion
+
+
+-Secuencias de escape en cadena: 
+
+	Código	Producción
+	\'	una frase
+	\"	comillas dobles
+	\\	barra invertida
+	\n	nueva línea
+	\r	retorno de carro
+	\t	pestaña
+	\b	límite de palabras
+	\f	alimentación de formulario
+
+
+	
