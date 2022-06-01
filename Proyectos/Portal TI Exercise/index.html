@@ -1,14 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/styles.css" />
     <title>Portal TI</title>
-</head>
-<body>
+  </head>
+  <body>
+    <main>      
+      <aside id="left">
+        <img
+          src="./src/images/Imageners-teamviewer-2.jpg"
+          alt="Image TeamViewer" class="img"
+        />
+      </aside>
 
+      <aside id="right">
+        <h2 id="title-form">Ayuda remota</h2>
+        <form>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="form-style"
+            placeholder="Nombre y apellido"
+            required
+          />
+          <input
+            type="text"
+            name="nit-company"
+            id="nit-company"
+            class="form-style"
+            placeholder="Nit o nombre de la compañia"
+            required
+          />
+          <input
+            type="text"
+            name="description"
+            id="description"
+            class="form-style"
+            placeholder="Breve descripcion del inconveniente"
+            required
+          />
+          <input
+            type="text"
+            name="phone-number"
+            id="phone-number"
+            class="form-style"
+            placeholder="Telefono o celular"
+            required
+          />
+          <input
+            type="text"
+            name="email"
+            id="email"
+            class="form-style"
+            placeholder="Correo electronico"
+            required
+          />
+          <div id="terms-And-Conditions">
+            <p >
+              <input
+                name="termsConditions-check"
+                value="termsConditions-check"
+                type="checkbox"
+                class="input-checkbox"
+              />
+              Al enviar este formulario autorizo el servicio de software TeamViewer
+              para realizar el acceso remoto, autorizo realizar cambios en el equipo
+              los cuales incluyen puntos de restauración del sistema operativo,
+              manifiesto que conozco la
+              <a class="link" href="">politica de proteccion de datos </a>
+              autorizo de manera voluntaria, previa, expresa e inequivoca a
+              SINCOSOFT S.A.S, para tratar mis datos personales y de caracter
+              sensible ( en caso de ser necesaria su recolección), de acuerdo con
+              las politicas de tratamiento de datos personales de la empresa y para
+              los fines relacionados con su objeto social y especial para fines
+              legales, contractuales y comerciales de SINCOSOFT S.A.S De igual
+              manera, acepto los
+              <a class="link" href=""> terminos condiciones</a>
+              establecidos por SINCOSOFT S.A.S. " "
+            </p>
+            </div>
+          <button type="submit" id="request-session-Button">Solicitar sesión</button> </div>
+        </form>
+      </aside>
+    </main>
+    <footer id="footer">
+     <p> PBX:(571) 5 190 354-Cr 12 # 79-50-Bofotá D.C, Colombia. - Copyright 2016.
+      SINCOSOFT S.A.S. Todos los derechos reservados</p>
+    </footer>
     <script src="./src/script.js"></script>
-</body>
+  </body>
 </html>
