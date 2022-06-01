@@ -55,8 +55,9 @@ form {
   font-size: 12px;
   text-align: center;
   justify-self: end;
-  align-self: center;
+  align-items: center;
   background-color: #1477ff;
+  border: none;
 }
 #request-session-Button:hover {
   background-color: #4c96fe;
