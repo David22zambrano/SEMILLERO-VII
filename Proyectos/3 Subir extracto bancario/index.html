@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <title>Extracto Bancario</title>
+  </head>
+  <body>
+    <header>
+      <p>Subir extracto bancario</p>
+      <hr />
+      <div class="header-information">
+        <p>DEMO SAS NIT 85,133,458-9</p>
+        <p>Fecha: <a id="fecha" href=""> </a></p>
+      </div>
+    </header>
+    <form class="container">
+      <aside id="left">
+        <div class="input-option">
+          <h2 class="option-text">Archivo a procesar</h2>
+        </div>
+        <div class="input-option">
+          <h2 class="option-text">Archivo a en ceros</h2>
+        </div>
+        <div class="input-option"><h2 class="option-text">Mes</h2></div>
+        <div class="input-option"><h2 class="option-text">Banco</h2></div>
+        <div class="input-option"><h2 class="option-text">Cuenta</h2></div>
+        <div class="input-option">
+          <h2 class="option-text">Moneda Conciliacion</h2>
+        </div>
+      </aside>
+      <aside id="right">
+
+        <div id="div-form">
+          <input type="file" id="input-file" accept="image/png, image/jpeg" required/>
+        </div>
+        <div id="div-form" ><div id="btn"></div> </div>
+       
+        <div id="div-form">
+          <input type="month" id="input-week" name="mes" placeholder="Mes" />
+        </div>
+        <div id="div-form">
+          <select id="dropdown-bank-list" name="bank" required>
+            <option disabled selected  id="" value>
+              --Seleccione--
+            </option>
+            <option value="banco-bogota">Banco de Bogotá</option>
+            <option value="bancolombia">Bancolombia S.A</option>
+            <option value="davivienda">davivienda</option>
+          </select>
+        </div>
+        <div id="div-form">
+          <select id="dropdown-type-account" name="account" required>
+            <option disabled selected value></option>
+            <option value="account-ahorros">Ahorros</option>
+            <option value="account-corriente">Corriente</option>
+          </select>
+        </div>
+        <div id="div-form">
+          <select id="bank-currency-conciliation" name="currency-conciliation" required>
+            <option disabled selected value></option>
+            <option value="dolar">Dolar Estados unidos</option>
+            <option value="euro">Euro</option>
+            <option value="cop">COP</option>
+          </select>
+        </div>
+      </aside>
+      <div id="button-submit">
+        <button type="submit" id="submit"><a style="color: #FFF; font-size: 14px;">Subir Archivo</a></button>
+      </div>
+
+    </form>
+ 
+
+    <script src="./src/script.js"></script>
+  </body>
+</html>

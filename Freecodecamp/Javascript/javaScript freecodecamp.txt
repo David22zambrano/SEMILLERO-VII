@@ -29,5 +29,23 @@ firstName[firstName.length - 1] = para obtener la ultima posicion
 	\b	límite de palabras
 	\f	alimentación de formulario
 
+nombreDelArray.push(lo que se va agregar) :
+ 	
 
+push() nos agrega un elemento al final del array
+
+.pop()se utiliza para extraer un valor del final de una matriz. 
+Podemos almacenar este valor extraído asignándolo a una variable.
+ En otras palabras, .pop()elimina el último elemento de una matriz 
+y devuelve ese elemento.
+
+
+shift() Elimina el primer elemento, funciona igual
+ que el pop() pero con el primer elemento
+.unshift() para agregar al principio.
 	
+	-Math.pow(base, exponente)
+
+/^[A-Z]^/;
+
+Array(n).fill().map(_,index) => n - index ) };
