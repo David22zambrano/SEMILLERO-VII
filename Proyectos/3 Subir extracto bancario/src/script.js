@@ -3,8 +3,6 @@ const fecha = document.getElementById('fecha');
 const inputs = document.querySelectorAll('input');
 const image = document.getElementById('btn');
 
-
-
 image.addEventListener('click',()=>{
     image.classList.toggle('btn-act');
 })

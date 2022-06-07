@@ -32,20 +32,22 @@
         </div>
       </aside>
       <aside id="right">
-
         <div id="div-form">
-          <input type="file" id="input-file" accept="image/png, image/jpeg" required/>
+          <input
+            type="file"
+            id="input-file"
+            accept="image/png, image/jpeg"
+            required
+          />
         </div>
-        <div id="div-form" ><div id="btn"></div> </div>
-       
+        <div id="div-form"><div id="btn"></div></div>
+
         <div id="div-form">
           <input type="month" id="input-week" name="mes" placeholder="Mes" />
         </div>
         <div id="div-form">
           <select id="dropdown-bank-list" name="bank" required>
-            <option disabled selected  id="" value>
-              --Seleccione--
-            </option>
+            <option disabled selected id="" value>--Seleccione--</option>
             <option value="banco-bogota">Banco de Bogotá</option>
             <option value="bancolombia">Bancolombia S.A</option>
             <option value="davivienda">davivienda</option>
@@ -59,7 +61,11 @@
           </select>
         </div>
         <div id="div-form">
-          <select id="bank-currency-conciliation" name="currency-conciliation" required>
+          <select
+            id="bank-currency-conciliation"
+            name="currency-conciliation"
+            required
+          >
             <option disabled selected value></option>
             <option value="dolar">Dolar Estados unidos</option>
             <option value="euro">Euro</option>
@@ -68,12 +74,11 @@
         </div>
       </aside>
       <div id="button-submit">
-        <button type="submit" id="submit"><a style="color: #FFF; font-size: 14px;">Subir Archivo</a></button>
+        <button type="submit" id="submit">
+          <a style="color: #fff; font-size: 14px">Subir Archivo</a>
+        </button>
       </div>
-
     </form>
- 
-
     <script src="./src/script.js"></script>
   </body>
 </html>
