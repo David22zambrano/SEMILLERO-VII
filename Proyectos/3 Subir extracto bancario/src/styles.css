@@ -1,15 +1,21 @@
-body {
+body { 
   font-family: "Courier New", Courier, monospace;
   width: 100vw;
   height: 100vh;
 }
 header {
-  font-size: 13px;
+  text-align: center;
+  font-size: 18px;
 }
 .header-information > p {
   display: flex;
   flex-direction: row;
   font-size: 12px;
+}
+.header-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 .container {
   display: flex;
@@ -36,7 +42,7 @@ header {
 }
 .button-active {
   display: flex;
-  background-image: url('./img/btn-archivos\ activo.png');
+  background-image: url("./img/btn-archivos\ activo.png");
 }
 .input-option {
   width: 100%;
@@ -46,6 +52,11 @@ header {
 }
 .input-option > h2 {
   text-align: left;
+
+}
+.option-text{
+  font-size: 13px;
+  padding-left: 2rem;
 }
 
 #right {
@@ -59,7 +70,7 @@ header {
 }
 
 #div-form {
-  width: 100%;
+  width: 98%;
   height: 100%;
   align-items: center;
   text-align: center;
@@ -74,7 +85,7 @@ header {
   right: 9rem;
   top: 14rem;
 }
-#btn{
+#btn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -83,7 +94,7 @@ header {
   background-image: url("./img/btn-archivos\ vacio.png");
   background-repeat: no-repeat;
 }
-#btn.btn-act{
+#btn.btn-act {
   display: flex;
   align-items: center;
   justify-content: center;
