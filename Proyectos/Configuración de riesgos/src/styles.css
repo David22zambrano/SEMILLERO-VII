@@ -1,4 +1,8 @@
 body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
     height: 100vh;
 }
@@ -7,15 +11,16 @@ body{
     align-items: center;
     justify-content: space-evenly;
     height: 50%;
-    width: 900px;
+    width:  150vh;
 }
-#header{
+#header, #header>a{
     display: flex;
     justify-content: left;
     align-items: center;
     padding-left: 4rem;
     font-size: 18px;
     width: 100%;
+    color: #268ED4;
     height: auto
 }
 #left{
@@ -26,11 +31,23 @@ body{
 #nav_Bar{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    width: 240px;
+    height: 215px;
 }
-#nav_Bar >  ul > li{
+.buttons_nav_Bar,a{
     display: flex;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    justify-content: center;
+    text-decoration: none;
+    color: #352626;
     width: 100%;
-    height: 33px;
+    height: 45px;
+}
+.buttons_nav_Bar:hover{
+    background-color: #727272;
 
 }
 #right{
@@ -43,24 +60,36 @@ body{
 
     
 }
-#table{
-    border: solid 1px #B8B8B8;
-}
-.thead.tbody{
+#table,tr,th{
     border: solid 1px #B8B8B8;
 }
 #header_table{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: #B8B8B8;
+    border-radius: 45px;
     width: 90%;
     border-radius: 2px;
+
+}
+#button_add_new{    
     text-align: center;
     font-size: 13px;
+    width: 75px;
+    height: 75px;
+    border-radius: 5px;
+    background-color: #268ED4;
+    color: #FFF;
+    border: none;
 }
-#button_add_new{
-    justify-self: end;
-    padding-right: 1rem;
-    font-size: 12px;
+.Header_tittle{
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .container{
+        flex-direction: column;
+        width: 100vh;
+        height: 150vh;
+    }
 }

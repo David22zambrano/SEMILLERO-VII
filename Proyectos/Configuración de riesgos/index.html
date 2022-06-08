@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Inter:wght@500;700&family=Karla:wght@600&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/styles.css" />
     <title>Configuracion De Riesgos</title>
 </head>
@@ -14,20 +15,19 @@
     </header>
     <main class="container">
         <aside id="left">
-            <nav id="nav_Bar">
-                <ul>
-                  <li><a id="impactos" href="impactos">Impactos</a></li>
-                  <li><a id="probabilidades" href="probabilidades">probabilidades</a></li>
-                  <li><a id="tipos_Riesgo" href="tipos_Riesgo">Tipo De Riesgo</a></li>
-                  <li><a id="evaluacion_Riesgo" href="evaluacion_Riesgo">Evaluacion De Riesgo</a></li>
-                </ul>
-        </nav>
+
+           <div id="nav_Bar">
+                  <button class="buttons_nav_Bar"> <a id="impactos" href="impactos">Impactos</a></button>
+                  <button class="buttons_nav_Bar"> <a id="probabilidades" href="probabilidades">probabilidades</a></button>
+                  <button class="buttons_nav_Bar"> <a id="tipos_Riesgo" href="tipos_Riesgo">Tipo De Riesgo</a></button>
+                  <button class="buttons_nav_Bar"> <a id="evaluacion_Riesgo" href="evaluacion_Riesgo">Evaluacion De Riesgo</a></button>
+                </div>
         </aside>
 
         <aside id="right">
 
                 <div id="header_table">
-                    <h2>Impactos</h2>
+                    <h2 class="Header_tittle">Impactos</h2>
                     <button id="button_add_new">Nuevo</button>
                 </div>
                 <table  id="table">
@@ -42,12 +42,12 @@
                     </thead>
                     <tbody class="tbody">
                         <tr>
-                        <th>a</th>
-                        <th>a</th>
-                        <th>a</th>
+                            <th></th>
+                            <th></th>
+                            <th></th>
                         <th>
-                            <button><img src="./src/img/pencil-edit-svgrepo-com (1).svg" /></button>
-                            <button><img src="./src/img/close-svgrepo-com.svg" /></button>
+                            <button id="button_edit"><img src="./src/img/pencil-edit.svg" alt="img_edit"/></button>
+                            <button id="button_delete"><img src="./src/img/close-svgrepo-com.svg" alt="img_delete" /></button>
                         </th>
                         
                           

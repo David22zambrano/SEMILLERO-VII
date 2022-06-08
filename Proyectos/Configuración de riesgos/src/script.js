@@ -1,0 +1,1 @@
+const addItems = document.querySelector('#button_add_new');
