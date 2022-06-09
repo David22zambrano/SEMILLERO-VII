@@ -11,16 +11,16 @@
 <body>
 
     <header id="header">
-        <a id="header_text">CONFIGURACION DE RIESGOS</a>
+        <spanb id="header_text">CONFIGURACION DE RIESGOS</spanb>
     </header>
     <main class="container">
         <aside id="left">
 
            <div id="nav_Bar">
-                  <button class="buttons_nav_Bar"> <a id="impactos" href="impactos">Impactos</a></button>
-                  <button class="buttons_nav_Bar"> <a id="probabilidades" href="probabilidades">probabilidades</a></button>
-                  <button class="buttons_nav_Bar"> <a id="tipos_Riesgo" href="tipos_Riesgo">Tipo De Riesgo</a></button>
-                  <button class="buttons_nav_Bar"> <a id="evaluacion_Riesgo" href="evaluacion_Riesgo">Evaluacion De Riesgo</a></button>
+                  <button class="buttons_nav_Bar" > <a name="impactos" id="impactos" href="impactos" target="_blank">Impactos</a></button>
+                  <button class="buttons_nav_Bar" > <a name="probabilidades" id="probabilidades" href="probabilidades" target="_blank">probabilidades</a></button>
+                  <button class="buttons_nav_Bar" > <a name="tipos_Riesgo" id="tipos_Riesgo" href="tipos_Riesgo" target="_blank">Tipo De Riesgo</a></button>
+                  <button class="buttons_nav_Bar" > <a name="evaluacion_Riesgo" id="evaluacion_Riesgo" href="evaluacion_Riesgo" target="_blank">Evaluacion De Riesgo</a></button>
                 </div>
         </aside>
 
@@ -29,7 +29,26 @@
                 <div id="header_table">
                     <h2 class="Header_tittle">Impactos</h2>
                     <button id="button_add_new">Nuevo</button>
-                </div>
+
+                    <div id="add_New">
+                        
+                 
+
+                    </div>
+                </div> 
+                
+                <form action="" id="form_Add_New">
+                    <header class="header_Btn_Add"><h2 id="title_Section">Impacto</h2>
+                        <button id="close_Window_Add_New"><img src="./src/img/close-svgrepo-com.svg" id="img_Close_Btn" alt="img_Close"></button>
+                        </header>
+                        <br>
+                    <label>Description: <input type="text"></label><br>
+                     <label>Valor Mínimo: <input type="number"></label><br>
+                        <label>Valor Máximo: <input type="number"></label><br>
+                <input type="submit" value="guardar" >
+                </form>
+
+
                 <table  id="table">
                     <thead class="thead">
                         <tr>
@@ -53,6 +72,9 @@
                           
                     </tbody>
                 </table>
+
+
+               
         </aside>
 
     </main>
