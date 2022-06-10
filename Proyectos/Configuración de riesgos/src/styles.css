@@ -13,16 +13,17 @@ body {
   height: 50%;
   width: 150vh;
 }
-#header,span {
+#header,
+span {
   display: flex;
   justify-self: center;
   align-items: start;
-  padding-left: 4rem;
+  padding-left: 3rem;
   font-size: 18px;
   width: 100%;
   color: #268ed4;
   height: auto;
-  margin-left: 4rem;
+  margin-left: 16rem;
 }
 #left {
   display: flex;
@@ -44,7 +45,7 @@ a {
   list-style: none;
   justify-content: center;
   text-decoration: none;
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   color: #352626;
   border-radius: 5px;
   border: none;
@@ -66,10 +67,9 @@ a {
 tr,
 th {
   border: solid 1px #b8b8b8;
-  display: none;
 }
 #header_table {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: space-between;
   border-radius: 12px;
@@ -92,7 +92,7 @@ th {
   background-color: #268ed4;
   color: #fff;
   border: none;
-  width: 71px;
+  margin-left: 10rem;
 }
 .Header_tittle {
   text-align: center;
@@ -103,6 +103,7 @@ th {
 }
 #section_action {
   display: flex;
+
   align-items: center;
   width: 300px;
   justify-content: right;
@@ -111,32 +112,71 @@ th {
 .tbody:hover {
   background-color: #53a0d3;
 }
-.form_Add_New{
-  background-color: #D9D9D9;
+#form_Add_New {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 230px;
+  background-color: #d9d9d9;
   font-size: 15px;
+  border-radius: 15px 15px 0px 0px;
 }
-.header_Btn_Add{
+#form_Add_New>label{
+  margin-left: 2rem;
+}
+.header_Btn_Add {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 3rem;
+  background-color: #53a0d3;
+  border-radius: 15px 15px 0px 0px;
+  padding-right: 1rem;
 }
-#close_Window_Add_New{
+#close_Window_Add_New {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20px;
   height: 20px;
 }
-#img_Close_Btn{
+#img_Close_Btn {
+  width: 17px;
+  height: 17px;
+}
+#title_Section{
+  margin-left: 1rem;
+}
 
-width: 17px;
-height: 17px;
+#button_Guardar {
+  display: flex;
+  margin-right: 1rem;
+  align-self: end;
+  justify-self: center;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1rem;
+}
+main>.modal{
+position: fixed;
+display: none;
+align-items: center;
+justify-content: center;
+background-color: #515151;
+width: 100vw;
+height: 100vh;
+z-index: 1;
+background-color: rgba(0, 0, 0, 0.4);
 }
 @media only screen and (max-width: 600px) {
   .container {
     flex-direction: column;
     width: 100vh;
     height: 150vh;
+  }
+  #header_table {
+    display: flex;
+    flex-direction: column;
+    width: 340px;
+    height: 136px;
   }
 }

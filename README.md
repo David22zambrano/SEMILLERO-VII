@@ -93,3 +93,13 @@ This week I lisened a little of: rock, metal, hip hop.
 In my free-time I'm go to gym, and in some occasions i continue reading "Mujeres" by Charles Charles Bukowski.
 
 For the next week I will begin  5 days of 30js and learning too much about Javascript.
+
+<br>
+
+Bulletin friday
+10/ June ~ 2022.
+
+In my ten week working at sincosoft
+
+
+

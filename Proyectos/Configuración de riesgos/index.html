@@ -28,25 +28,9 @@
 
                 <div id="header_table">
                     <h2 class="Header_tittle">Impactos</h2>
-                    <button id="button_add_new">Nuevo</button>
-
-                    <div id="add_New">
-                        
-                 
-
-                    </div>
+                    <button id="button_add_new" onclick="open_Form()">Nuevo</button>
                 </div> 
-                
-                <form action="" id="form_Add_New">
-                    <header class="header_Btn_Add"><h2 id="title_Section">Impacto</h2>
-                        <button id="close_Window_Add_New"><img src="./src/img/close-svgrepo-com.svg" id="img_Close_Btn" alt="img_Close"></button>
-                        </header>
-                        <br>
-                    <label>Description: <input type="text"></label><br>
-                     <label>Valor Mínimo: <input type="number"></label><br>
-                        <label>Valor Máximo: <input type="number"></label><br>
-                <input type="submit" value="guardar" >
-                </form>
+           
 
 
                 <table  id="table">
@@ -59,25 +43,24 @@
                         </tr>
                         </tr>
                     </thead>
-                    <tbody class="tbody">
-                        <tr>
-                            <th></th>
-                            <th></th>
-                            <th></th>
-                        <th id="section_action">
-                            <button id="button_edit"><img src="" alt="img_edit"/></button>
-                            <button id="button_delete"><img src="" alt="img_delete" /></button>
-                        </th> 
-                        
-                          
+                    <tbody id="tbody">                 
                     </tbody>
-                </table>
-
-
-               
+                </table>      
         </aside>
-
-    </main>
+        <div class="modal" id="poop">
+            <form action="" id="form_Add_New" >
+                <div class="header_Btn_Add"><h2 id="title_Section">Impacto</h2>
+                    <button id="close_Window_Add_New"><img src="./src/img/close-svgrepo-com.svg" id="img_Close_Btn" alt="img_Close" onclick="close_Form()"></button>
+                    </div>
+                    <br>
+                <label>Description: <input type="text" name="descripcion"></label><br>
+                 <label>Valor Mínimo: <input type="number" name="valorMinimo"></label><br>
+                    <label>Valor Máximo: <input type="number" name="valorMaximo"></label><br>
+            <button type="submit" id="button_Guardar" value="guardar" onclick="addItem()">Guardar</button>
+            </form>
+        </div>
+     </main>     
+    
     <script src="./src/script.js"></script>
 </body>
 </html>
