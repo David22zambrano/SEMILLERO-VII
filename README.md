@@ -99,7 +99,7 @@ For the next week I will begin  5 days of 30js and learning too much about Javas
 Bulletin friday
 10/ June ~ 2022.
 
-In my ten week working at sincosoft
+In my ten week working at sincosoft I Can do better code, Also I can understand too much concepts of JS. On 9th day of JS-30 we can upload files to localStorage. For the next week
 
 
 

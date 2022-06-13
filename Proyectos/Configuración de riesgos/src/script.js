@@ -45,3 +45,7 @@ function mapElementList(elements, tbody)  {
     }).join("");
 }
 poop.addEventListener('submit', addItem);
+
+toggleViewTable = () =>{
+  
+} 
