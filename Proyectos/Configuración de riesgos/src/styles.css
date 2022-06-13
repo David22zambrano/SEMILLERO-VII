@@ -182,4 +182,8 @@ background-color: rgba(0, 0, 0, 0.4);
     width: 340px;
     height: 136px;
   }
+  #form_Add_New {
+justify-content: center;
+align-items: center;
+  }
 }
