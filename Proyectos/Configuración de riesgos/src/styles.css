@@ -37,7 +37,7 @@ span {
   width: 240px;
   height: 215px;
 }
-.buttons_nav_Bar,
+.buttons_nav,
 a {
   display: flex;
   align-items: center;
@@ -52,7 +52,7 @@ a {
   width: 100%;
   height: 45px;
 }
-.buttons_nav_Bar:hover {
+.buttons_nav:hover {
   background-color: #727272;
 }
 #right {
@@ -105,7 +105,29 @@ th {
   border: none;
   margin-left: 10rem;
 }
+#button_add_new.btnAdd{  
+  display: none;
+  text-align: center;
+  align-items: center;
+  margin-right: 0.5rem;
+  justify-content: center;
+  font-size: 13px;
+  width: 71px;
+  height: 44px;
+  border-radius: 5px;
+  background-color: #268ed4;
+  color: #fff;
+  border: none;
+  margin-left: 10rem;
+}
 .Header_tittle {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin-left: 10rem;
+}
+.Header_tittle.titleTable{
   text-align: center;
   display: flex;
   align-items: center;
@@ -148,6 +170,11 @@ th {
 }
 #title_Section{
   margin-left: 1rem;
+}
+.img{
+  display: flex;
+  width: 10px;
+  height: 10px;
 }
 
 #button_Guardar {

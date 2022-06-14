@@ -17,28 +17,25 @@
         <aside id="left">
 
            <div id="nav_Bar">
-                  <button class="buttons_nav_Bar" > <a name="impactos" id="impactos" href="impactos" target="_blank">Impactos</a></button>
-                  <button class="buttons_nav_Bar" > <a name="probabilidades" id="probabilidades" href="probabilidades" target="_blank">probabilidades</a></button>
-                  <button class="buttons_nav_Bar" > <a name="tipos_Riesgo" id="tipos_Riesgo" href="tipos_Riesgo" target="_blank">Tipo De Riesgo</a></button>
-                  <button class="buttons_nav_Bar" > <a name="evaluacion_Riesgo" id="evaluacion_Riesgo" href="evaluacion_Riesgo" target="_blank">Evaluacion De Riesgo</a></button>
+                  <button class="buttons_nav" id="impactos" name="impactos"> <a>Impactos</a></button>
+                  <button class="buttons_nav" id="probabilidades" name="probabilidades"> <a>probabilidades</a></button>
+                  <button class="buttons_nav" id="tipos_Riesgo" name="tipos_Riesgo"> <a>Tipo De Riesgo</a></button>
+                  <button class="buttons_nav" id="evaluacion_Riesgo" name="evaluacion_Riesgo" > <a>Evaluacion De Riesgo</a></button>
                 </div>
         </aside>
 
         <aside id="right">
 
-                <div id="header_table">
-                    <h2 class="Header_tittle">Impactos</h2>
+                <header id="header_table">
+                    <h2 class="Header_tittle" name="header_table">Impactos</h2>
                     <button id="button_add_new" onclick="open_Form()">Nuevo</button>
-                </div> 
-           
-
-
-                <table  id="table" class="">
+                </header> 
+                <table  id="table">
                     <thead class="thead">
                         <tr>
                             <th>Codigo</th>
                             <th>Descripcion</th>
-                            <th> Valor</th>
+                            <th>Valor</th>
                             <th>Accion</th>
                         </tr>
                         </tr>
@@ -47,10 +44,10 @@
                     </tbody>
                 </table>      
         </aside>
-        <div class="modal" id="poop">
+        <div class="modal" id="pop">
             <form action="" id="form_Add_New" >
                 <div class="header_Btn_Add"><h2 id="title_Section">Impacto</h2>
-                    <button id="close_Window_Add_New"><img src="./src/img/close-svgrepo-com.svg" id="img_Close_Btn" alt="img_Close" onclick="close_Form()"></button>
+                    <button id="close_Window_Add_New" onclick="close_Form()"><img src="./src/img/close-svgrepo-com.svg" id="img_Close_Btn" alt="img_Close" ></button>
                     </div>
                     <br>
                 <label>Description: <input type="text" name="descripcion"></label><br>
