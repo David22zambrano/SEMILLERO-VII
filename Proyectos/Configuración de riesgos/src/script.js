@@ -20,7 +20,7 @@ buttons_Navegation.forEach(btn => btn.addEventListener('click',(e)=>{
   toggleHeader(e)
 }))
 
-toggleHeader(items, tbody);
+// toggleHeader(items, tbody);
 
 const inputsForm = document.getElementsByTagName("label");
 let arrayInputs = Array.from(inputsForm);
@@ -45,9 +45,9 @@ function addItem(e) {
   items.push(item);
   localStorage.setItem(document.querySelector('h2').innerText,JSON.stringify(items));
   location.reload();
-  let resetForm = document.querySelector("form").reset();
+  // let resetForm = document.querySelector("form").reset();
   validateForm();
-}
+}  
 
 function toggleHeader({target}){
  document.querySelector('h2').innerText = target.innerText;
@@ -61,21 +61,20 @@ function toggleHeader({target}){
             <td>${item.valMin}</td>
             <td>${item.valMax}</td>
             <td>
-            <img src="./src/img/editar.svg" alt="Edit">
-            <img src="./src/img/eliminar.svg" alt="Delete">
+            <button><img src="./src/img/editar.svg" alt="Edit"></button>
+            <button><img src="./src/img/eliminar.svg" alt="Delete"></button>
             </td>
         </tr>
         `;
     })
     .join("");
 }
-
-
 const createEl = (tagName, clase, texto, parent) => {
   let element = document.createElement(`${tagName}`);
   element.classList.add(`${clase}`);
   element.innerText = `${texto}`;
   parent.append(element);
 };
-pop.addEventListener("submit", addItem);
 
+
+pop.addEventListener("submit", addItem);
