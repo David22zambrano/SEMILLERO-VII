@@ -6,7 +6,7 @@ const form = document.getElementById("form_Add_New");
 const button_Open_Form = document.getElementById("form_Add_New");
 const button_Close_Form = document.getElementById("close_Window_Add_New");
 const submit = document.getElementById("button_Guardar");
-const tbody = document.getElementById("tbody");
+const tbody = document.getElementById("tBody");
 let items = JSON.parse(localStorage.getItem("items")) || [];
 const table_Aside_Right = document.querySelector('#right');
 const tableView = document.querySelector("table");
@@ -15,13 +15,11 @@ const header_table = document.getElementById("impactos");
 const buttons_Navegation = [...document.querySelectorAll('.buttons_nav')];
 
 open_Form = () => (pop.style.display = "flex");
-close_Form = () => (pop.style.display = "none");
+close_Form = () => (pop.style.display = "none" );
+
 buttons_Navegation.forEach(btn => btn.addEventListener('click',(e)=>{
   toggleHeader(e)
 }))
-
-// toggleHeader(items, tbody);
-
 const inputsForm = document.getElementsByTagName("label");
 let arrayInputs = Array.from(inputsForm);
 arrayInputs.forEach((label) => {
@@ -45,14 +43,12 @@ function addItem(e) {
   items.push(item);
   localStorage.setItem(document.querySelector('h2').innerText,JSON.stringify(items));
   location.reload();
-  // let resetForm = document.querySelector("form").reset();
   validateForm();
 }  
 
 function toggleHeader({target}){
  document.querySelector('h2').innerText = target.innerText;
  items = JSON.parse(localStorage.getItem(target.innerText)) || [];
- console.log(items);
  tbody.innerHTML = items
     .map((item, i) => {
       return ` 
@@ -70,6 +66,7 @@ function toggleHeader({target}){
     .join("");
 }
 const createEl = (tagName, clase, texto, parent) => {
+
   let element = document.createElement(`${tagName}`);
   element.classList.add(`${clase}`);
   element.innerText = `${texto}`;

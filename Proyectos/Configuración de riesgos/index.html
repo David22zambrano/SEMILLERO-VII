@@ -30,7 +30,7 @@
                     <h2 class="Header_tittle" name="header_table"></h2>
                     <button id="button_add_new" onclick="open_Form()">Nuevo</button>
                 </header> 
-                <table  id="table">
+                <table  id="table" border="1">
                     <thead class="thead">
                         <tr>
                             <th>Codigo</th>
@@ -40,19 +40,19 @@
                         </tr>
                         </tr>
                     </thead>
-                    <tbody id="tbody">                 
+                    <tbody id="tBody">                 
                     </tbody>
                 </table>      
         </aside>
         <div class="modal" id="pop">
             <form action="" id="form_Add_New" >
-                <div class="header_Btn_Add"><h2 id="title_Section">Impacto</h2>
+                <div class="header_Btn_Add"><h2 id="title_Section"></h2>
                     <button id="close_Window_Add_New" onclick="close_Form()"><img src="./src/img/close-svgrepo-com.svg" id="img_Close_Btn" alt="img_Close" ></button>
                     </div>
                     <br>
-                <label>Description: <input type="text" name="descripcion"></label><br>
-                 <label>Valor Mínimo: <input type="number" name="valorMinimo"></label><br>
-                    <label>Valor Máximo: <input type="number" name="valorMaximo"></label><br>
+                <label>Description: <input type="text" name="descripcion" ></label><br>
+                 <label>Valor Mínimo: <input type="number" name="valorMinimo" required></label><br>
+                    <label>Valor Máximo: <input type="number" name="valorMaximo" required></label><br>
             <button type="submit" id="button_Guardar" value="guardar" onclick="addItem()" >Guardar</button>
             </form>
         </div>
