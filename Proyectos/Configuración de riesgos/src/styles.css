@@ -134,7 +134,7 @@ th {
   justify-self: center;
   margin-left: 10rem;
 }
-td:hover {
+tr:hover {
   background-color: #53a0d3;
 }
 #form_Add_New {

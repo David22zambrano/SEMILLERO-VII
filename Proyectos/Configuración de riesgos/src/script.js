@@ -47,14 +47,16 @@ function addItem(e) {
 }  
 
 function toggleHeader({target}){
+  let rows = [...document.querySelectorAll(".trRow")];
  document.querySelector('h2').innerText = target.innerText;
  items = JSON.parse(localStorage.getItem(target.innerText)) || [];
  tbody.innerHTML = items
     .map((item, i) => {
       return ` 
-      <tr>
-            <td>${item.description}</td>
+      <tr class="trRow" id=${i}>
+      
             <td>${item.valMin}</td>
+            <td>${item.description}</td>
             <td>${item.valMax}</td>
             <td>
             <button><img src="./src/img/editar.svg" alt="Edit"></button>
@@ -64,9 +66,12 @@ function toggleHeader({target}){
         `;
     })
     .join("");
+
+}
+function deleteData(){
+
 }
 const createEl = (tagName, clase, texto, parent) => {
-
   let element = document.createElement(`${tagName}`);
   element.classList.add(`${clase}`);
   element.innerText = `${texto}`;
@@ -75,3 +80,10 @@ const createEl = (tagName, clase, texto, parent) => {
 
 
 pop.addEventListener("submit", addItem);
+
+// function editTable(){
+//     tableView.rows[buttons_Navegation[0]].innerText = document.getElementById('descripcion');
+//     tableView.rows[buttons_Navegation[1]].innerText = document.getElementById('valorMinimo');
+//     tableView.rows[buttons_Navegation[2]].innerText = document.getElementById('valorMaximo');
+// location.reload();
+// }
