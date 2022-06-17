@@ -13,6 +13,8 @@ const tableView = document.querySelector("table");
 const button_add_new = document.getElementById("button_add_new");
 const header_table = document.getElementById("impactos");
 const buttons_Navegation = [...document.querySelectorAll('.buttons_nav')];
+let edit = [];
+let btnDelete = [];
 
 open_Form = () => (pop.style.display = "flex");
 close_Form = () => (pop.style.display = "none" );
@@ -46,6 +48,8 @@ function addItem(e) {
   validateForm();
 }  
 
+
+
 function toggleHeader({target}){
   let rows = [...document.querySelectorAll(".trRow")];
  document.querySelector('h2').innerText = target.innerText;
@@ -53,24 +57,35 @@ function toggleHeader({target}){
  tbody.innerHTML = items
     .map((item, i) => {
       return ` 
-      <tr class="trRow" id=${i}>
+      <tr class="trRow" id=${i+1}>
       
             <td>${item.valMin}</td>
             <td>${item.description}</td>
             <td>${item.valMax}</td>
             <td>
-            <button><img src="./src/img/editar.svg" alt="Edit"></button>
-            <button><img src="./src/img/eliminar.svg" alt="Delete"></button>
+            <button><img src="./src/img/editar.svg" alt="Edit" class="edit" id="${i}"></button>
+            <button><img src="./src/img/eliminar.svg" alt="Delete" class="delete" id="${i}"></button>
             </td>
         </tr>
         `;
     })
     .join("");
+  edit = [...document.querySelectorAll(".edit")];
+  btnDelete = [...document.querySelectorAll(".delete")];
+  btnDelete.forEach((btn) =>{
+    btn.addEventListener('click', (e) => {
+      deleteRows(e);
+    })}
 
+  );
 }
-function deleteData(){
+function deleteRows({target}) {
+let datosActuales = document.querySelector('h2').innerText;
+let datosRecibidos = [...JSON.parse(localStorage.getItem(`${datosActuales.toLowerCase()}`))] || [];
+let nuevo_arreglo =  datosRecibidos.filter((datos)=> datos.target.id!== target.id);
+  localStorage.setItem( `${datosActuales.toLowerCase()}`,JSON.stringify(nuevo_arreglo) );
 
-}
+};
 const createEl = (tagName, clase, texto, parent) => {
   let element = document.createElement(`${tagName}`);
   element.classList.add(`${clase}`);
