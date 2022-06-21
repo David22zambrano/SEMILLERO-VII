@@ -1,3 +1,5 @@
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
 const expReg = {
   descripcion: /^[\s\S]{5,25}$/
 };
@@ -43,7 +45,7 @@ function addItem(e) {
     valMax,
   };
   items.push(item);
-  localStorage.setItem(document.querySelector('h2').innerText,JSON.stringify(items));
+  localStorage.setItem(document.querySelector('h2').innerText.toLowerCase(),JSON.stringify(items));
   location.reload();
   validateForm();
 }  
@@ -51,20 +53,21 @@ function addItem(e) {
 
 
 function toggleHeader({target}){
+  let id = UUID.create(4)
   let rows = [...document.querySelectorAll(".trRow")];
  document.querySelector('h2').innerText = target.innerText;
- items = JSON.parse(localStorage.getItem(target.innerText)) || [];
+ items = JSON.parse(localStorage.getItem(target.innerText.toLowerCase())) || [];
  tbody.innerHTML = items
     .map((item, i) => {
       return ` 
-      <tr class="trRow" id=${i+1}>
-      
+      <tr class="trRow" id=${id}>
+
             <td>${item.valMin}</td>
             <td>${item.description}</td>
             <td>${item.valMax}</td>
             <td>
-            <button><img src="./src/img/editar.svg" alt="Edit" class="edit" id="${i}"></button>
-            <button><img src="./src/img/eliminar.svg" alt="Delete" class="delete" id="${i}"></button>
+            <button><img src="./src/img/editar.svg" alt="Edit" class="edit" id="${id}" onclick="editTable()"></button>
+            <button><img src="./src/img/eliminar.svg" alt="Delete" class="delete" id="${id}" ></button>
             </td>
         </tr>
         `;
@@ -75,6 +78,7 @@ function toggleHeader({target}){
   btnDelete.forEach((btn) =>{
     btn.addEventListener('click', (e) => {
       deleteRows(e);
+      editTable(e)
     })}
 
   );
@@ -82,10 +86,20 @@ function toggleHeader({target}){
 function deleteRows({target}) {
 let datosActuales = document.querySelector('h2').innerText;
 let datosRecibidos = [...JSON.parse(localStorage.getItem(`${datosActuales.toLowerCase()}`))] || [];
-let nuevo_arreglo =  datosRecibidos.filter((datos)=> datos.target.id!== target.id);
+let nuevo_arreglo =  datosRecibidos.filter((datos)=> datos.item != datos.item);
   localStorage.setItem( `${datosActuales.toLowerCase()}`,JSON.stringify(nuevo_arreglo) );
 
 };
+function editTable({target}) {
+  let datosRecibidos = [...JSON.parse(localStorage.getItem(`${datosActuales.toLowerCase()}`))];
+  console.log(target.id)
+  let nuevo_arreglo =  datosRecibidos.filter((datos)=> datos.item != datos.item);
+  localStorage.setItem( `${datosActuales.toLowerCase()}`,JSON.stringify(nuevo_arreglo) );
+ document.getElementById
+  };
+
+
+  
 const createEl = (tagName, clase, texto, parent) => {
   let element = document.createElement(`${tagName}`);
   element.classList.add(`${clase}`);
@@ -95,10 +109,3 @@ const createEl = (tagName, clase, texto, parent) => {
 
 
 pop.addEventListener("submit", addItem);
-
-// function editTable(){
-//     tableView.rows[buttons_Navegation[0]].innerText = document.getElementById('descripcion');
-//     tableView.rows[buttons_Navegation[1]].innerText = document.getElementById('valorMinimo');
-//     tableView.rows[buttons_Navegation[2]].innerText = document.getElementById('valorMaximo');
-// location.reload();
-// }
