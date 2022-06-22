@@ -1,2 +1,0 @@
-Font: 'Century Gothic',Verdana
-Frame: 1428 x 950
