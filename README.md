@@ -101,5 +101,6 @@ Bulletin friday
 
 In my ten week working at sincosoft I Can do better code, Also I can understand too much concepts of JS. On 9th day of JS-30 we can upload files to localStorage. For the next week
 
+In my eleven week working at Sincosoft
 
 
