@@ -26,7 +26,8 @@ window.onload = function filters()
         {
             let currentData = getData(e.target.innerText);
             tHeadMaker(e.target);
-            tbodyMaker(currentData, e.target.innerText);
+            tBodyMaker
+          (currentData, e.target.innerText);
             let icons = [...document.querySelectorAll('img')];
             icons.forEach(icon => 
             (
@@ -144,60 +145,40 @@ function otherTables(option)
         thArray[3].innerText = "accion";
     });
 };
-function tbodyMaker(currentData,currentOption)
+function tBodyMaker(target)
 {
     currentData.map(data=>
     {
-        if (currentOption == "EVALUACION DE RIESGO") 
+        if (currentOption === "EVALUACION DE RIESGO") 
+        getData(target.innerText).map((currentObj))=>{
         {
             tbody.innerHTML += `
             <tr>
+                <td>${data.code}</td>
+                <td>${data.desc}</td>
+                <td>${data.val1}</td>
+                <td>${data.val2}</td>
                 <td>
-                    ${data.code}
-                </td>
-
-                <td>
-                    ${data.desc}
-                </td>
-
-                <td>
-                    ${data.val1}
-                </td>
-
-                <td>
-                    ${data.val2}
-                </td>
-
-                <td>
-                    <img src="./images/editar.svg" id="${data.code}" class="editar">
-                    <img src="./images/eliminar.svg" id="${data.code}" class="eliminar">
+                    <img src="./img/editar.svg" id="${data.code}" class="editar">
+                    <img src="./img/eliminar.svg" id="${data.code}" class="eliminar">
                 </td>
             </tr> 
             `;
         }
         else
         {
-            tbody.innerHTML += `
+            tbody.innerHTML = `
             <tr>
-                <td>
-                    ${data.code}
-                </td>
-
-                <td>
-                    ${data.desc}
-                </td>
-
-                <td>
-                    ${data.val1}
-                </td>
-
+                <td>${data.code}</td>
+                <td>${data.desc}</td>
+                <td>${data.val1}</td>
                 <td>
                     <img src="./images/editar.svg" id="${data.code}" class="editar">
                     <img src="./images/eliminar.svg" id="${data.code}" class="eliminar">
                 </td>
             </tr> 
             `;
-        }
+        }}
     });
 };
 function deleteData(id)
@@ -209,7 +190,7 @@ function deleteData(id)
 };
 function editData(id)
 {
-    console.log(id)
+ 
     let currentData = getData();
     let currentObject = currentData.find(obj => obj.code === parseInt(id));
     switch (moduleHeader.innerText) 
@@ -234,8 +215,8 @@ function createData()
                 ({
                     code:Math.floor(Math.random()*100),
                     desc : desc.value,
-                    val : val1.values,
-                    val2 : val2.value
+                    val : val1.value,
+              
                 });
             localStorage.setItem('IMPACTOS' , JSON.stringify(impactArray))
             break;
@@ -244,8 +225,8 @@ function createData()
                 ({
                     code:Math.floor(Math.random()*100),
                     desc : desc.value,
-                    val : val1.values,
-                    val2 : val2.value
+                    val : val1.value,
+   
                 });
             localStorage.setItem('PROBABILIDADES' , JSON.stringify(impactArray))
             break;
@@ -254,8 +235,7 @@ function createData()
                 ({
                     code:Math.floor(Math.random()*100),
                     desc : desc.value,
-                    val : val1.values,
-                    val2 : val2.value
+                    val : val1.value,
                 });
             localStorage.setItem('TIPOS DE RIESGO' , JSON.stringify(impactArray))
             break;
@@ -264,7 +244,7 @@ function createData()
                 ({
                     code:Math.floor(Math.random()*100),
                     desc : desc.value,
-                    val : val1.values,
+                    val : val1.value,
                     val2 : val2.value
                 });
             localStorage.setItem('EVALUACION DE RIESGO' , JSON.stringify(impactArray))
