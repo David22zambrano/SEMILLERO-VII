@@ -1,3 +1,6 @@
+*{
+    font-size: 15px;
+}
 html{
     margin: auto;
     padding: auto;
@@ -26,7 +29,8 @@ header{
     color: #FFFFFF;
     margin-bottom: 45px;
     line-height: 1px;
-    border: 1px solid purple;
+
+
 }
 header>h2{
     /* charades online game */
@@ -43,18 +47,23 @@ line-height: 1px;
 main{
     display: flex;
 justify-content: center;
+flex-direction: row;
 width: 90%;
 height: auto;
 
+padding: 10px;
 
 }
 main>section{
 display: flex;
 justify-content: center;
 align-items: center;
+border-radius: 20px;
+margin: 5px;
+
 }
 main>section>img{
-    width: 90%;
+    width: 100%;
     height: auto;
     cursor: pointer;
 }
@@ -62,6 +71,9 @@ main>article{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: auto;
+    margin: 5px;
+    border-radius: 20px;
 }
 
 .imgSetting{
@@ -75,7 +87,7 @@ main>article{
     align-items: center;
     width: 90%;
     height:auto;
-    border: 1px solid red;
+
 }
 #setting>aside{
     display: flex;
@@ -83,19 +95,19 @@ main>article{
     justify-content: center;
     flex-direction: column;
     width: 22%;
-    height: 60vh;
+    height: 45vh;
     background: rgba(52, 77, 122, 0.57);
     border-radius: 9.39937px;
-    margin: 10px;
+    margin: 5px;
     list-style: none;
     padding: 15px;
-    border: 1px solid yellow;
+ 
     
 }
 #setting>aside>.img_setting{
     width: 100%;
     height: auto;
-    border: 1px solid pink;
+
 }
 #setting>aside>form{
     display: flex;
@@ -104,19 +116,21 @@ main>article{
     align-items: center;
     width: 90%;
     height: 30vh;
-    border: 1px solid lime;
+   
 }
 #setting>aside>form>.container_category{
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
 #setting>aside>form>.container_category>.option{
     display: flex;
     align-self: center;
+    align-items: center;
+    justify-content: flex-start;
     width: 11.92vw;
     height:  5.39vh;
     background-color: #182547;
@@ -133,9 +147,57 @@ main>article{
     padding: 5px;
 }
 
+#setting>aside>form>.container_category img{
+   margin-right: 10px;
+}
+
+#setting>aside>form>.groups_container{
+display: flex;
+flex-direction: row;
+width: 90%;
+height: auto;
+align-items: center;
+justify-content: space-between;
+color:#fff;
+font-weight:400;
+font-size: 10px;
+}
+
+
+#setting>aside>form>.time_container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: center;
+    width: 9.92vw;
+    height:  3.39vh;
+    background-color: #182547;
+    /* English words */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: left;
+    border-radius: 5px;
+    color: #FFFFFF;
+    margin: 5px;
+    padding: 5px;
+}
+
+#setting>aside>form>.points_container{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: auto;
+    align-items: center;
+    justify-content: space-between;
+    color:#fff;
+    font-weight:400;
+    font-size: 10px;
+}
 #setting>aside>form>.categoryLabel{
     /* English words */
-    
     font-family: 'Inter';
     font-style: normal;
     font-weight: 200;
@@ -144,29 +206,42 @@ main>article{
     text-align: left;
     border-radius: 5px;
     color: white;
-    
 }
-#setting>aside>form>input[type="text"]{
-    width: 11.92vw;
-    height:  6.39vh;
+#setting>aside>form input[type="text"],input[type="number"]{
+    width: 60%;
+    height:  5.39vh;
     background-color: #182547;
     color:#FFFFFF;
     border: none;
     border-radius: 5px;
-
+    outline: none;
 }
+
+#setting>aside>form input[type="text"]::placeholder{
+    font-size: 10px;
+    padding-left:10px ;
+}
+
+#setting>aside>form input[type="number"]::placeholder{
+    font-size: 10px;
+    padding-left:10px ;
+}
+#setting>aside>form input[type="radio"]{
+margin-right: 10px;
+}
+
 footer{
     margin: 10px;
     display: none;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 90%;
     height: auto;
-    border: 1px solid white;
 }
-
-#buttonStarGame{
+.buttonStarGame{
 width: 25%;
-height: 5vh;
+height: 10vh;
 background-color: #07D603;
 border-radius: 15px;
 border:none;
@@ -183,10 +258,10 @@ color: #FFFFFF;
 
 
 }
-#buttonStarGame:hover{
+.buttonStarGame:hover{
     background-color: limegreen;
 }
-#btnRules,#modal{
+#openModalBtn{
     position: fixed;
     right: 1rem;
     bottom: 1rem;
@@ -195,12 +270,12 @@ color: #FFFFFF;
     border: none;
     cursor: pointer;
 }
-#btnRules:hover{background-color:#0d71dbad ;}
+#openModalBtn:hover{background-color:#0d71dbad ;}
 .iconCategory{
 width: 23px;
 height: 23px;
 }
-.modal {
+.modal,#poopScore {
     display: none;
     align-items: center;
     justify-content: center;
@@ -212,40 +287,121 @@ height: 23px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.637);
 }
-.modal>#rulesPop{
+.modal>#rulesPop{ 
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
     width:50%;
     height: auto;
     background-color: #182547;
     box-shadow: 0px 0px 105.649px 14.5008px rgba(60, 60, 60, 0.81);
+    border-radius: 10px;
     
 }
 .modal>#rulesPop>header{
     display: flex;
-    align-items: flex-end;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 10vh;
+    background-color: #182547;
+}
+.modal>#rulesPop>header>h3{
+    margin: auto;
+}
+
+.modal>#rulesPop>header>img{
+    margin-right: 15px;
+}
+
+.modal>#rulesPop>img{
     width: 100%;
     height: auto;
-    background-color: blue;
 }
+
 .modal>#rulesPop>header>.closeRules{
     cursor: pointer;
 }
-.headerCloseRules{
-display: flex;
-justify-content: space-between;
-align-items: center;
-color: #fff;
-border-radius: 20px;
-}
-.startGame{
 
+#scorePop{ 
     display: flex;
-flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width:40%;
+    height: 37.60vh;
+    background-color: #182547;
+    border-radius: 10px;
+    box-shadow: 0px 0px 105.649px 14.5008px rgba(60, 60, 60, 0.81);
+    
+}
+#scorePop>header{
+    display: flex;
+    
+    align-items: center;
+    justify-content:end;
+    flex-direction: row;
+    width: 100%;
+    height: 9vh;
+    color: white;
+    background-color: transparent;
+    margin-bottom: 35px;
+
+}
+
+#scorePop>header> h3{
+margin: auto;
+}
+#scorePop>header> img{
+    margin-right: 20px;
+}
+
+#scorePop>table{
+
+    width: 60%;
+    height: auto;
+    margin: 10px;
+    border-collapse: collapse; 
+    border: 1px solid white;
+    background: rgba(52, 77, 122, 0.5);
+
+
+}
+
+#scorePop>table>tr,th,td{
+    border: 1px solid white;
+}
+
+#scorePop>table>thead{
+    width: 100%;
+    height: 5.417vh;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+
+#scorePop>table>tbody>tr{
+    width: 100%;
+    height: 7.417vh;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 12px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+#startGameSection{
+
+    display: none;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 .headerStarGame{
     font-size: 15px;
