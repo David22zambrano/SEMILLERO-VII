@@ -1,18 +1,4 @@
-//Validaciones ( Regex ) 
-const expReg = {
-    option: /^[\s\S]{4,16}$/,
 
-  };
-  const inputs = document.getElementsByTagName("input");
-  let arrayInputs = Array.from(inputs);
-  arrayInputs.forEach((input) => {
-    input.addEventListener("keyup", validateForm);
-  });
-  function validateInput({ target }) {
-    expReg[`${target.name}`].test(target.value)
-      ? target.style.border = "2px solid green"
-      : target.style.border = "2px solid red"
-  }
 
 
 
@@ -29,7 +15,21 @@ const modalRules = document.getElementById('poop');
 
 console.log(sectionStarGame)
 
+//Validaciones ( Regex ) 
+const expReg = {
+    option: /^[\s\S]{4,16}$/,
 
+  };
+  const inputs = document.getElementsByTagName("input");
+  let arrayInputs = Array.from(inputs);
+  arrayInputs.forEach((input) => {
+    input.addEventListener("keyup", validateForm);
+  });
+  function validateInput({ target }) {
+    expReg[`${target.name}`].test(target.value)
+      ? target.style.border = "2px solid green"
+      : target.style.border = "2px solid red"
+  }
 
 //funciones
 
@@ -98,3 +98,9 @@ function close()
 
 close();
 //eventos
+function returnSettings(){
+
+console.log("Me estrese");
+//alv
+
+}
