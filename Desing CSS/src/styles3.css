@@ -1,0 +1,19 @@
+.rebote {
+  font-family: Arial;
+  background-color: #a8cf45;
+  text-align: center;
+  font-weight: bolder;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 200px 50px;
+  line-height: 100px;
+}
+.rebote { border-radius: 50%; animation: rebote 2s infinite; }
+@keyframes rebote {
+  20%, 40%, 60%, 80% { transform: translateY(0px);  }
+  30% { transform: translateY(-150px); }
+  50% { transform: translateY(-100px); }
+  70% { transform: translateY(-40px);  }
+  90% { transform: translateY(-20px);  }
+}

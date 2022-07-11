@@ -1,0 +1,48 @@
+.descolgado {
+  font-family: Arial;
+  background-color: #a8cf45;
+  text-align: center;
+  font-weight: bolder;
+  width: 200px;
+  height: 100px;
+  position: relative;
+  margin: 100px;
+  line-height: 100px;
+}
+
+/* Asignamos la animación al elemento */
+.descolgado {
+  animation-name: descolgado;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  transform-origin: top left;
+  animation-fill-mode: forwards;
+}
+
+/* Creamos la animación (con keyframes) */
+
+@keyframes descolgado {
+  10% {
+    transform: rotate(110deg);
+  }
+
+  30% {
+    transform: rotate(55deg);
+  }
+
+  50% {
+    transform: rotate(80deg);
+  }
+
+  70% {
+    transform: rotate(65deg);
+  }
+
+  90% {
+    transform: rotate(70deg);
+  }
+
+  100% {
+    transform: translateY(100vh);
+  }
+}

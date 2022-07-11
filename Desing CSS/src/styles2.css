@@ -1,0 +1,34 @@
+.giro  {
+  
+  font-family: Arial;
+  background-color: #a8cf45;
+  text-align: center;
+  font-weight: bolder;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  margin: 100px 200px;
+  line-height: 150px;
+  
+}
+
+
+.giro {
+ 
+  animation: giro 3s infinite;
+
+}
+
+
+
+/* Creamos la animación (con keyframes) */
+
+@keyframes giro {
+ 
+  0% {
+    opacity: 0;
+    transform: rotate(-200deg);
+  }
+  
+
+}
