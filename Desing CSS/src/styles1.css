@@ -1,7 +1,5 @@
 .giro {
-  position: fixed;
-  top: 50%;
-  right: 50%;
+
 }
 .giro {animation: giro 3s infinite; }
 @keyframes giro {

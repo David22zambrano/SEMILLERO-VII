@@ -1,4 +1,41 @@
-.reboteOut_izquierda {
+body{
+  background-color: black;
+}
+.burbuja{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  animation: burbujas  3s linear infinite;
+
+}
+@keyframes burbujas {
+	0% {
+		transform: translateY(100vh) ;
+	}
+	100% {
+		transform: translateY(-100vh);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .reboteOut_abajo {
   font-family: Arial;
   background-color: #a8cf45;
   text-align: center;
@@ -9,21 +46,75 @@
   margin: 100px 50px;
   line-height: 150px;
 }
-
-.reboteOut_izquierda {
-  animation: reboteOut_izquierda 1s infinite;
+.reboteOut_abajo {
+  animation: reboteOut_abajo 3s infinite;
 }
-
-/* Creamos la animación ReboteOut hacia la izquierda (con keyframes) */
-
-@keyframes reboteOut_izquierda {
+@keyframes reboteOut_abajo {
   25% {
-    transform: translateX(20px);
+    transform: translateY(-20px);
     opacity: 1;
   }
 
   100% {
-    transform: translateX(-100vh);
+    transform: translateY(100vh);
     opacity: 0;
   }
 }
+.rebote {
+  font-family: Arial;
+  background-color: #bb8f28;
+  text-align: center;
+  font-weight: bolder;
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  right: 2rem;
+  line-height: 100px;
+}
+
+.rebote {
+  border-radius: 50%;
+  animation: rebote 2s infinite;
+}
+@keyframes rebote {
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateY(0px);
+  }
+  30% {
+    transform: translateY(-150px);
+  }
+  50% {
+    transform: translateY(-100px);
+  }
+  70% {
+    transform: translateY(-40px);
+  }
+  90% {
+    transform: translateY(-20px);
+  }
+}
+
+.sombra {
+  height: 20px;
+  width: 80px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.4) 25%, white 60%);
+}
+.sombra {
+  animation: transparencia 1s infinite;
+}
+
+@keyframes transparencia {
+  0% {
+    opacity: 0;
+    width: 10%;}
+  100% {
+   opacity: 1;   width: 100%;
+  }
+} */
