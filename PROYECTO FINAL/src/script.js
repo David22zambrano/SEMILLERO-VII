@@ -31,9 +31,16 @@ function filterInputsValue() {
         return inputsV
     })
 }
+function playAudio(){
+   
+    boton.addEventListener("click", () => {
+      let etiquetaAudio = document.createElement("audio")
+      etiquetaAudio.setAttribute("src", "./here we go.mp3")
+      etiquetaAudio.play()
+    })}
 function start()
 { 
-
+    
     let secondGroup = document.querySelector('#secondGroup')
     let first = document.querySelector('#firstGroup')
     let points_number = document.querySelector('#points_number')
@@ -81,6 +88,7 @@ function start()
         })
     })
 }
+
 function display() {
 
     const openPoopUp = [...document.querySelectorAll('#openModalBtn')]
