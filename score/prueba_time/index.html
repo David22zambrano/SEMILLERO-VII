@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+<section id="section_checks">
+    <div class="container_time">
+        <input type="radio" id="oneMinute" class="radio oneMinute"  name="optionTime" value="60" >
+        <label for="oneMinute" class=""> <p>1 minute</p></label>
+    </div>
+    <div class="container_time">
+        <input type="radio" id="thirtySecond" class="radio thirtySecond" name="optionTime" value="30">
+        <label for="thirtySecond"> <p>30 seconds</p></label>
+    </div>
+    <div class="container_time">
+        <input type="radio" id="fiftenSecond" class="radio fiftenSecond" name="optionTime" value="15" required>
+        <label for="fiften"> <p>15 Seconds</p></label>
+    </div>
+</section>
+
+
+    <section class="game">
+        <header>
+            <h2>Time: <span id="temporizador"></span></h2>
+        </header>
+            <span id="randomWord">palabra random</span>
+            <img src="./images/correct.svg" alt="Icon Incorrect"  id="buttonCorrect" class="img">
+                <img src="./images/incorrect.svg" alt="Icon correct" id="buttonIncorrect">
+                <br>
+                <button id="buttonNextWord">Next Word</button>
+
+    </section>
+</body>
+<script src="./src/main.js"></script>
+</html>
