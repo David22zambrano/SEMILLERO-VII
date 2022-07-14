@@ -12,8 +12,34 @@ const incorrectBtn = document.getElementById('buttonIncorrect')
 const nextWordBtn = document.getElementById('buttonNextWord')
 
 
+
 console.log(h2)
 
+
+const score = () => {
+    count = 0;
+    const contador = document.getElementsByClassName("");
+    const sumPoint = document.getElementsByClassName("imgCorrect");
+    const reset = document.getElementsByClassName(""); 
+
+    sumPoint.addEventListener("click", () => {
+        count++;
+        contador.innerHTML = count;
+    })
+    restPoint.addEventListener("click", ()=>{
+        if(count==0){}
+        else{
+        count--;
+        contador.innerHTML = count;
+        }
+        reset.addEventListener("click", () => {
+            count = 0;
+            contador.innerHTML = count;
+        })
+
+    })
+    
+}
 function checkValue()
 {
     const timeChecks = [...document.querySelectorAll('.radio')]
