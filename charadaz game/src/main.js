@@ -26,6 +26,15 @@ function filterInputsValue() {
   llenarCamposScoreBoard(newValues) 
   console.log(newValues) 
 };
+function validateInput({ target }) {
+  const expReg = {
+    teamName: /^[A-Za-z]+((\s)?([A-Za-z])+)*$/,
+    pointsLimit: /^\d{2}$/,
+  };
+  expReg[`${target.name}`].test(target.value)
+    ? target.classList.add("incomplete")
+    : target.classList.add("complete");
+}
 function score (){
 const score_group = [...document.querySelectorAll(".score_group")];
 countTeam1 = 0;
@@ -55,6 +64,7 @@ function TimerQuestion (newValues)
 {
   let temporizador = document.getElementById('temporizador')
   let segundos = newValues[1]
+
   let correctBtn = document.getElementById('buttonCorrect')
   let incorrectBtn = document.getElementById('buttonIncorrect')
   let h2 = document.querySelector('.timeResult')
@@ -112,15 +122,6 @@ function start() {
   let first = document.querySelector("#firstGroup");
   let points_number = document.querySelector("#points_number");
   const btnNextSite = [...document.querySelectorAll(".nextPart")];
-  const expReg = {
-    teamName: /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/,
-    pointsLimit: /^[0-9]+$/,
-  };
-  function validateInput({ target }) {
-    expReg[`${target.name}`].test(target.value)
-      ? target.classList.add("incomplete")
-      : target.classList.remove("incomplete");
-  }
   btnNextSite.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       if (btn.classList.contains("toSettings")) {
@@ -128,20 +129,22 @@ function start() {
         sectionSettings.style.display = "flex";
         footer.style.display = "flex";
       } 
-      else if (
-          secondGroup.value == "" ||
-          first.value == "" ||
-          points_number.value == ""
-        ) {
-          const inputs = document.getElementsByTagName("input");
-          let arrayInputs = Array.from(inputs);
-          arrayInputs.forEach((input) => {
-            input.addEventListener( "keyup", (e)=> validateInput(e));
-          });
-
-        }
-        else 
+      else 
         {
+          if (
+            secondGroup.value == "" ||
+            first.value == "" ||
+            points_number.value == ""
+          ) {
+            const inputs = document.getElementsByTagName("input");
+            let arrayInputs = Array.from(inputs);
+            arrayInputs.forEach((input) => {
+              input.addEventListener( "keyup", (e)=> validateInput(e));
+            });
+  
+          }
+          else{
+            
             filterInputsValue()
             TimerQuestion(newValues)
             sectionSettings.style.display = "none";
@@ -150,6 +153,8 @@ function start() {
             return e.target.setAttribute.name != "starGame"
             ? e.preventDefault()
             : "";
+          }
+  
         }   
     
     });
