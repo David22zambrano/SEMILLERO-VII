@@ -17,15 +17,12 @@ console.log(h2)
 
 
 const score = () => {
-    count = 0;
-    const contador = document.getElementsByClassName("");
-    const sumPoint = document.getElementsByClassName("imgCorrect");
-    const reset = document.getElementsByClassName(""); 
-
-    sumPoint.addEventListener("click", () => {
-        count++;
-        contador.innerHTML = count;
-    })
+    let count = 0;
+    const teams = {
+        fi
+    }
+  
+  
     restPoint.addEventListener("click", ()=>{
         if(count==0){}
         else{

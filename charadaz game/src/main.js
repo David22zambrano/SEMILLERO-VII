@@ -7,14 +7,11 @@ const rulesBtn = document.querySelector("#btnRules");
 const modalScore = document.getElementById("poopScore");
 const modalRules = document.getElementById("poop");
 const btnStarGame = document.querySelector(".toStartGame");
-const buttonHome = document.getElementsByClassName("buttonHome");
+
 let inputValues = [...document.querySelectorAll("input")];
-let newValues = []
+let newValues = [];
 //funciones
-
-
 function filterInputsValue() {
-
   let inputchekeds = inputValues.filter((input) => input.checked == true);
   let inputOthers = inputValues.filter((input) =>
     input.classList.contains("other")
@@ -24,9 +21,30 @@ function filterInputsValue() {
     newValues.push(input.value);
     return newValues;
   });
-    console.log(newValues);
+  llenarCamposScoreBoard(newValues);
+  console.log(newValues);
 }
-
+function score() {
+  const score_group = [...document.querySelectorAll(".score_group")];
+  countTeam1 = "0";
+  countTeam2 = "0";
+  score_group[1] = countTeam1.value;
+  score_group[2] = countTeam2.value;
+}
+function llenarCamposScoreBoard(newValues) {
+  let ElemetsScore = [...document.querySelectorAll(".ValueScore")];
+  ElemetsScore.forEach((element) => {
+    if (element.classList.contains("FirstGroupName")) {
+      element.innerHTML = newValues[2];
+    }
+    if (element.classList.contains("limit_points")) {
+      element.innerHTML = `${newValues[4]} points`;
+    }
+    if (element.classList.contains("SecondGroup")) {
+      element.innerHTML = `${newValues[3]}`;
+    }
+  });
+}
 
 let ruido = document.querySelector(".sonido1");
 let audioEtiqueta = document.querySelector("#audio1");
@@ -61,32 +79,27 @@ function start(e) {
         main.style.display = "none";
         sectionSettings.style.display = "flex";
         footer.style.display = "flex";
-      } 
-      else if (
-          secondGroup.value == "" ||
-          first.value == "" ||
-          points_number.value == ""
-        ) {
-          const inputs = document.getElementsByTagName("input");
-          let arrayInputs = Array.from(inputs);
-          arrayInputs.forEach((input) => {
-            input.addEventListener( "keyup", (e)=> validateInput(e));
-          });
-
-        }
-        else 
-        {
-            filterInputsValue()
-            sectionSettings.style.display = "none";
-            footer.style.display = "none";
-            sectionStarGame.style.display = "flex";
-            return e.target.setAttribute.name != "starGame"
-            ? e.preventDefault()
-            : "";
-        }   
-    
+      } else if (
+        secondGroup.value == "" ||
+        first.value == "" ||
+        points_number.value == ""
+      ) {
+        const inputs = document.getElementsByTagName("input");
+        let arrayInputs = Array.from(inputs);
+        arrayInputs.forEach((input) => {
+          input.addEventListener("keyup", (e) => validateInput(e));
+        });
+      } else {
+        filterInputsValue();
+        sectionSettings.style.display = "none";
+        footer.style.display = "none";
+        sectionStarGame.style.display = "flex";
+        return e.target.setAttribute.name != "starGame"
+          ? e.preventDefault()
+          : "";
+      }
     });
-});
+  });
 }
 let ruido2 = document.querySelector(".sonido3");
 let audioEtiqueta2 = document.querySelector("#audio3");
@@ -100,6 +113,13 @@ ruido3.addEventListener("click", () => {
   audioEtiqueta3.setAttribute("src", "./src/puntoMal.wav");
   audioEtiqueta3.play();
 });
+
+const buttonHome = document.querySelector(".buttonHome");
+buttonHome.addEventListener("click", () => {
+  main.style.display = "flex";
+  sectionStarGame.style.display = "none";
+});
+
 function display() {
   const openPoopUp = [...document.querySelectorAll(".openModalBtn")];
   openPoopUp.forEach((btn) => {
@@ -130,4 +150,3 @@ function close() {
 start();
 display();
 close();
-
