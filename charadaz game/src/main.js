@@ -9,9 +9,11 @@ const modalRules = document.getElementById("poop");
 const btnStarGame = document.querySelector(".toStartGame");
 
 let inputValues = [...document.querySelectorAll("input")];
-let newValues = [];
+let newValues = []
+let segundos;
 //funciones
 function filterInputsValue() {
+
   let inputchekeds = inputValues.filter((input) => input.checked == true);
   let inputOthers = inputValues.filter((input) =>
     input.classList.contains("other")
@@ -21,17 +23,21 @@ function filterInputsValue() {
     newValues.push(input.value);
     return newValues;
   });
-  llenarCamposScoreBoard(newValues);
-  console.log(newValues);
-}
-function score() {
-  const score_group = [...document.querySelectorAll(".score_group")];
-  countTeam1 = "0";
-  countTeam2 = "0";
-  score_group[1] = countTeam1.value;
-  score_group[2] = countTeam2.value;
+  llenarCamposScoreBoard(newValues) 
+  console.log(newValues) 
+};
+function score (){
+const score_group = [...document.querySelectorAll(".score_group")];
+countTeam1 = 0;
+countTeam2 = 0;
+score_group[1] = countTeam1;
+score_group[2] = countTeam2;
+
+
 }
 function llenarCamposScoreBoard(newValues) {
+ 
+
   let ElemetsScore = [...document.querySelectorAll(".ValueScore")];
   ElemetsScore.forEach((element) => {
     if (element.classList.contains("FirstGroupName")) {
@@ -45,14 +51,56 @@ function llenarCamposScoreBoard(newValues) {
     }
   });
 }
+function TimerQuestion (newValues)
+{
+  let temporizador = document.getElementById('temporizador')
+  let segundos = newValues[1]
+  let correctBtn = document.getElementById('buttonCorrect')
+  let incorrectBtn = document.getElementById('buttonIncorrect')
+  let h2 = document.querySelector('.timeResult')
+  const nextWordBtn = document.getElementById('buttonNextWord')
+  let randomWord = document.querySelector('#randomWord')
 
+    const time = setInterval(()=>
+    {
+      
+        segundos--;
+        console.log(segundos)
+        temporizador.innerHTML = segundos
+        correctBtn.addEventListener('click',()=>
+         {
+             clearInterval(time)
+             h2.innerText = "respuesta correcta"
+             nextWordBtn.style.display="flex"
+             nextWordBtn.style.backgroundColor = "lime"
+             randomWord.innerHTML = 'asp';
+         })
+
+         if(segundos < 10)
+         {
+             temporizador.innerText=`0${segundos}`
+         }
+
+         if(segundos == 0)
+         {
+        
+             clearInterval(time)
+             h2.innerText= "punto incorrecto"
+             correctBtn.style.display="none"
+             incorrectBtn.style.display="flex"
+             nextWordBtn.style.display="flex"
+             nextWordBtn.style.backgroundColor="red"
+           ;
+         }
+    },1000);
+}
 let ruido = document.querySelector(".sonido1");
 let audioEtiqueta = document.querySelector("#audio1");
 ruido.addEventListener("click", () => {
   audioEtiqueta.setAttribute("src", "./src/inicio.wav");
   audioEtiqueta.play();
 });
-function start(e) {
+function start() {
   let ruido2 = document.querySelector(".sonido2");
   let audioEtiqueta2 = document.querySelector("#audio2");
   ruido2.addEventListener("click", () => {
@@ -65,7 +113,7 @@ function start(e) {
   let points_number = document.querySelector("#points_number");
   const btnNextSite = [...document.querySelectorAll(".nextPart")];
   const expReg = {
-    teamName: /^[a-zA-ZÀ-ÿ\s]{4,16}$/,
+    teamName: /^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$/,
     pointsLimit: /^[0-9]+$/,
   };
   function validateInput({ target }) {
@@ -79,27 +127,33 @@ function start(e) {
         main.style.display = "none";
         sectionSettings.style.display = "flex";
         footer.style.display = "flex";
-      } else if (
-        secondGroup.value == "" ||
-        first.value == "" ||
-        points_number.value == ""
-      ) {
-        const inputs = document.getElementsByTagName("input");
-        let arrayInputs = Array.from(inputs);
-        arrayInputs.forEach((input) => {
-          input.addEventListener("keyup", (e) => validateInput(e));
-        });
-      } else {
-        filterInputsValue();
-        sectionSettings.style.display = "none";
-        footer.style.display = "none";
-        sectionStarGame.style.display = "flex";
-        return e.target.setAttribute.name != "starGame"
-          ? e.preventDefault()
-          : "";
-      }
+      } 
+      else if (
+          secondGroup.value == "" ||
+          first.value == "" ||
+          points_number.value == ""
+        ) {
+          const inputs = document.getElementsByTagName("input");
+          let arrayInputs = Array.from(inputs);
+          arrayInputs.forEach((input) => {
+            input.addEventListener( "keyup", (e)=> validateInput(e));
+          });
+
+        }
+        else 
+        {
+            filterInputsValue()
+            TimerQuestion(newValues)
+            sectionSettings.style.display = "none";
+            footer.style.display = "none";
+            sectionStarGame.style.display = "flex";
+            return e.target.setAttribute.name != "starGame"
+            ? e.preventDefault()
+            : "";
+        }   
+    
     });
-  });
+});
 }
 let ruido2 = document.querySelector(".sonido3");
 let audioEtiqueta2 = document.querySelector("#audio3");
@@ -113,13 +167,96 @@ ruido3.addEventListener("click", () => {
   audioEtiqueta3.setAttribute("src", "./src/puntoMal.wav");
   audioEtiqueta3.play();
 });
+  const buttonHome = document.querySelector(".buttonHome");
+  buttonHome.addEventListener("click", ()=>{
+    main.style.display = "flex";
+    sectionStarGame.style.display = "none";
+    location.reload();
+  })
+//lOGICA DE LAS PALABRAS
+let numerosqYaSalieron = [];
+let yaSalieronTodos = false;
+function wordsJs() {
+  if (!yaSalieronTodos) {
+    fetch("data/wordsJS.JSON")
+      .then((respuesta) => {
+        return respuesta.json();
+      })
+      .then(function (jsonData) {
+        if (!yaSalieronTodos) {
+          let aleatorio = Math.floor(
+            Math.random() * Object.keys(jsonData).length + 1
+          ).toString();
+          var lenghtJs = Object.keys(jsonData).length;
+          while (
+            numerosqYaSalieron.filter((num) => num == aleatorio).length > 0 &&
+            numerosqYaSalieron.length < lenghtJs &&
+            yaSalieronTodos == false
+          ) {
+            aleatorio = Math.floor(
+              Math.random() * Object.keys(jsonData).length + 1
+            ).toString();
+          }
+          if (numerosqYaSalieron.length == Object.keys(jsonData).length) {
+            console.log("Ya salieron todos los elementos del array preubas");
+            yaSalieronTodos = true;
+          } else {
+            var resp = jsonData["wordsJs" + aleatorio];
+            numerosqYaSalieron.push(aleatorio);
 
-const buttonHome = document.querySelector(".buttonHome");
-buttonHome.addEventListener("click", () => {
-  main.style.display = "flex";
-  sectionStarGame.style.display = "none";
-});
+            console.log( "java: "+ resp);
+          }
+        } else {
+          console.log("Ya salieron todos los elementos del array");
+        }
+      });
+  } else {
+    console.log("Ya salieron todos los elementos del array");
+  }
+}
+wordsJs();
 
+let numerosqueYaSalieron = [];
+let yaSalieronTodas = false;
+function wordsEnglis() {
+  if (!yaSalieronTodas) {
+    fetch("data/wordsEnglish.json")
+      .then((respuesta) => {
+        return respuesta.json();
+      })
+      .then(function (jsonData) {
+        if (!yaSalieronTodas) {
+          let aleatorio = Math.floor(
+            Math.random() * Object.keys(jsonData).length + 1
+          ).toString();
+          var lenghtJs = Object.keys(jsonData).length;
+          while (
+            numerosqueYaSalieron.filter((num) => num == aleatorio).length > 0 &&
+            numerosqueYaSalieron.length < lenghtJs &&
+            yaSalieronTodas == false
+          ) {
+            aleatorio = Math.floor(
+              Math.random() * Object.keys(jsonData).length + 1
+            ).toString();
+          }
+          if (numerosqueYaSalieron.length == Object.keys(jsonData).length) {
+            console.log("Ya salieron todos los elementos del array preubas");
+            yaSalieronTodos = true;
+          } else {
+            var resp = jsonData["English: " + aleatorio];
+            numerosqueYaSalieron.push(aleatorio);
+
+            console.log('english'+resp);
+          }
+        } else {
+          console.log("Ya salieron todos los elementos del array");
+        }
+      });
+  } else {
+    console.log("Ya salieron todos los elementos del array");
+  }
+}
+wordsEnglis()
 function display() {
   const openPoopUp = [...document.querySelectorAll(".openModalBtn")];
   openPoopUp.forEach((btn) => {
@@ -150,3 +287,4 @@ function close() {
 start();
 display();
 close();
+
