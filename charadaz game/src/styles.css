@@ -653,13 +653,23 @@ footer>.modal>#rulesPop>img{
 input.incomplete {
   border: 2px solid red;
   background-image: url("../images/incorrect.svg");
-  background-color: rgba(243, 171, 171, 0.445);
   background-repeat: no-repeat;
-  background-position-x: 80%;
+  background-position-x: 85%;
   background-position-y: center;
   background-size: 20%;
   background:-margin;
 }
+
+input.complete {
+  border: 2px solid lime;
+  background-image: url("../images/correct.svg");
+  background-repeat: no-repeat;
+  background-position-x: 85%;
+  background-position-y: center;
+  background-size: 20%;
+  background:-margin;
+}
+
 .buttonHome {
   position: fixed;
   bottom: 1.5rem;
