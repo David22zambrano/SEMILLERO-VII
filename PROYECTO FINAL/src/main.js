@@ -7,11 +7,22 @@ const rulesBtn = document.querySelector("#btnRules");
 const modalScore = document.getElementById("poopScore");
 const modalRules = document.getElementById("poop");
 const btnStarGame = document.querySelector(".toStartGame");
-
+let header = document.getElementById('header')
 let inputValues = [...document.querySelectorAll("input")];
-let newValues = [];
+let newValues = []
 let segundos;
+let firstTeam = true;
+var resp;
 //funciones
+
+function updateGame(newValues)
+{
+  firstTeam = !firstTeam
+  header.innerHTML = `<h2></h2>`;
+  console.log(newValues)
+  console.log( ` si sirvio man ${wordsJs()}` )
+}
+
 function filterInputsValue() {
   let inputchekeds = inputValues.filter((input) => input.checked == true);
   let inputOthers = inputValues.filter((input) =>
@@ -22,8 +33,16 @@ function filterInputsValue() {
     newValues.push(input.value);
     return newValues;
   });
-  llenarCamposScoreBoard(newValues);
-  console.log(newValues);
+  llenarCamposScoreBoard(newValues) 
+};
+function score (){
+const score_group = [...document.querySelectorAll(".score_group")];
+countTeam1 = 0;
+countTeam2 = 0;
+score_group[1] = countTeam1;
+score_group[2] = countTeam2;
+
+
 }
 function llenarCamposScoreBoard(newValues) {
   let ElemetsScore = [...document.querySelectorAll(".ValueScore")];
@@ -39,49 +58,47 @@ function llenarCamposScoreBoard(newValues) {
     }
   });
 }
-function TimerQuestion(newValues) {
-  let temporizador = document.getElementById("temporizador");
-  let segundos = newValues[1];
-  let correctBtn = document.getElementById("buttonCorrect");
-  let incorrectBtn = document.getElementById("buttonIncorrect");
-  let h2 = document.querySelector(".timeResult");
-  const nextWordBtn = document.getElementById("buttonNextWord");
-  let randomWord = document.querySelector("#randomWord");
+function TimerQuestion (newValues)
+{
+  let temporizador = document.getElementById('temporizador')
+  let segundos = newValues[1]
+  let correctBtn = document.getElementById('buttonCorrect')
+  let incorrectBtn = document.getElementById('buttonIncorrect')
+  let h2 = document.querySelector('.timeResult')
+  const nextWordBtn = document.getElementById('buttonNextWord')
+  let randomWord = document.querySelector('#randomWord')
 
-  const time = setInterval(() => {
-    segundos--;
-    console.log(segundos);
-    temporizador.innerHTML = segundos;
-    correctBtn.addEventListener("click", () => {
-      clearInterval(time);
-      h2.innerText = "respuesta correcta";
-      nextWordBtn.style.display = "flex";
-      nextWordBtn.style.backgroundColor = "lime";
-      randomWord.innerHTML = "asp";
-    });
+    const time = setInterval(()=>
+    {
+      
+        segundos--;
+        temporizador.innerHTML = segundos
+        correctBtn.addEventListener('click',()=>
+         {
+             clearInterval(time)
+             h2.innerText = "respuesta correcta"
+             nextWordBtn.style.display="flex"
+             nextWordBtn.style.backgroundColor = "lime"
+             randomWord.innerHTML = 'asp';
+         })
 
-    if (segundos < 10) {
-      temporizador.innerText = `0${segundos}`;
-    }
+         if(segundos < 10)
+         {
+             temporizador.innerText=`0${segundos}`
+         }
 
-    if (segundos == 0) {
-      clearInterval(time);
-      h2.innerText = "punto incorrecto";
-      correctBtn.style.display = "none";
-      incorrectBtn.style.display = "flex";
-      nextWordBtn.style.display = "flex";
-      nextWordBtn.style.backgroundColor = "red";
-    }
-  }, 1000);
-}
-function scorePoints() {
-  const scoreGroup = [...document.querySelectorAll("#scoreGroup")];
-  countTeam1 = 0;
-  countTeam2 = 0;
-  scoreGroup[0].innerHTML = countTeam1;
-  scoreGroup[1].innerHTML = countTeam2;
-
-
+         if(segundos == 0)
+         {
+        
+             clearInterval(time)
+             h2.innerText= "punto incorrecto"
+             correctBtn.style.display="none"
+             incorrectBtn.style.display="flex"
+             nextWordBtn.style.display="flex"
+             nextWordBtn.style.backgroundColor="red"
+           ;
+         }
+    },1000);
 }
 
 let ruido = document.querySelector(".sonido1");
@@ -117,28 +134,34 @@ function start() {
         main.style.display = "none";
         sectionSettings.style.display = "flex";
         footer.style.display = "flex";
-      } else if (
-        secondGroup.value == "" ||
-        first.value == "" ||
-        points_number.value == ""
-      ) {
-        const inputs = document.getElementsByTagName("input");
-        let arrayInputs = Array.from(inputs);
-        arrayInputs.forEach((input) => {
-          input.addEventListener("keyup", (e) => validateInput(e));
-        });
-      } else {
-        filterInputsValue();
-        TimerQuestion(newValues);
-        sectionSettings.style.display = "none";
-        footer.style.display = "none";
-        sectionStarGame.style.display = "flex";
-        return e.target.setAttribute.name != "starGame"
-          ? e.preventDefault()
-          : "";
-      }
+      } 
+      else if (
+          secondGroup.value == "" ||
+          first.value == "" ||
+          points_number.value == ""
+        ) {
+          const inputs = document.getElementsByTagName("input");
+          let arrayInputs = Array.from(inputs);
+          arrayInputs.forEach((input) => {
+            input.addEventListener( "keyup", (e)=> validateInput(e));
+          });
+
+        }
+        else 
+        {          
+            filterInputsValue()
+            TimerQuestion(newValues)
+            updateGame(newValues)
+            sectionSettings.style.display = "none";
+            footer.style.display = "none";
+            sectionStarGame.style.display = "flex";
+            return e.target.setAttribute.name != "starGame"
+            ? e.preventDefault()
+            : "";
+        }   
+    
     });
-  });
+});
 }
 let ruido2 = document.querySelector(".sonido3");
 let audioEtiqueta2 = document.querySelector("#audio3");
@@ -152,17 +175,17 @@ ruido3.addEventListener("click", () => {
   audioEtiqueta3.setAttribute("src", "./src/puntoMal.wav");
   audioEtiqueta3.play();
 });
-const buttonHome = document.querySelector(".buttonHome");
-buttonHome.addEventListener("click", () => {
-  main.style.display = "flex";
-  sectionStarGame.style.display = "none";
-  location.reload();
-});
-
+  const buttonHome = document.querySelector(".buttonHome");
+  buttonHome.addEventListener("click", ()=>{
+    main.style.display = "flex";
+    sectionStarGame.style.display = "none";
+    location.reload();
+  })
 //lOGICA DE LAS PALABRAS
 let numerosqYaSalieron = [];
 let yaSalieronTodos = false;
 function wordsJs() {
+  console.log('se ejecuto')
   if (!yaSalieronTodos) {
     fetch("data/wordsJS.JSON")
       .then((respuesta) => {
@@ -187,10 +210,10 @@ function wordsJs() {
             console.log("Ya salieron todos los elementos del array preubas");
             yaSalieronTodos = true;
           } else {
-            var resp = jsonData["wordsJs" + aleatorio];
+            resp = jsonData["wordsJs" + aleatorio];
             numerosqYaSalieron.push(aleatorio);
 
-            console.log("java: " + resp);
+            console.log( "java: "+ resp);
           }
         } else {
           console.log("Ya salieron todos los elementos del array");
@@ -199,7 +222,9 @@ function wordsJs() {
   } else {
     console.log("Ya salieron todos los elementos del array");
   }
+  return resp
 }
+wordsJs();
 
 let numerosqueYaSalieron = [];
 let yaSalieronTodas = false;
@@ -228,10 +253,10 @@ function wordsEnglis() {
             console.log("Ya salieron todos los elementos del array preubas");
             yaSalieronTodos = true;
           } else {
-            var resp = jsonData["English:" + aleatorio];
+            var resp = jsonData["English: " + aleatorio];
             numerosqueYaSalieron.push(aleatorio);
 
-            console.log("english" + resp);
+            console.log('english'+resp);
           }
         } else {
           console.log("Ya salieron todos los elementos del array");
@@ -241,6 +266,7 @@ function wordsEnglis() {
     console.log("Ya salieron todos los elementos del array");
   }
 }
+wordsEnglis()
 function display() {
   const openPoopUp = [...document.querySelectorAll(".openModalBtn")];
   openPoopUp.forEach((btn) => {
@@ -269,7 +295,5 @@ function close() {
 }
 //eventos
 start();
-wordsEnglis();
-wordsJs();
 display();
 close();
