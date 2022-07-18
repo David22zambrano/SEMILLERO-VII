@@ -26,24 +26,6 @@ function filterInputsValue() {
   llenarCamposScoreBoard(newValues) 
   console.log(newValues) 
 };
-function validateInput({ target }) {
-  const expReg = {
-    teamName: /^[A-Za-z]+((\s)?([A-Za-z])+)*$/,
-    pointsLimit: /^\d{2}$/,
-  };
-  expReg[`${target.name}`].test(target.value)
-    ? target.classList.add("incomplete")
-    : target.classList.add("complete");
-}
-function score (){
-const score_group = [...document.querySelectorAll(".score_group")];
-countTeam1 = 0;
-countTeam2 = 0;
-score_group[1] = countTeam1;
-score_group[2] = countTeam2;
-
-
-}
 function llenarCamposScoreBoard(newValues) {
  
 
@@ -64,12 +46,12 @@ function TimerQuestion (newValues)
 {
   let temporizador = document.getElementById('temporizador')
   let segundos = newValues[1]
-
   let correctBtn = document.getElementById('buttonCorrect')
   let incorrectBtn = document.getElementById('buttonIncorrect')
   let h2 = document.querySelector('.timeResult')
   const nextWordBtn = document.getElementById('buttonNextWord')
   let randomWord = document.querySelector('#randomWord')
+
 
     const time = setInterval(()=>
     {
@@ -103,6 +85,32 @@ function TimerQuestion (newValues)
            ;
          }
     },1000);
+
+    const scorePoints = () =>{
+      const scoreGroup = [...document.querySelectorAll(".scoreGroup")];
+      countTeam1 = 0;
+      countTeam2 = 0;
+      scoreGroup[0].innerHTML = countTeam1;
+      scoreGroup[1].innerHTML = countTeam2;
+
+        scoreGroup.forEach((group)=>{
+          group.addEventListener('click',()=>{
+          if (  scoreGroup[0] && (segundos >= 1) )  {
+         countTeam1++
+        } else if(scoreGroup[0] && (segundos = 0)){
+          countTeam1--
+        }else if ( scoreGroup[1] && (segundos >= 1)){
+          countTeam2++
+        }else if( scoreGroup[0] && (segundos = 0)){
+          countTeam2--
+        }
+        })
+
+    })
+
+
+
+    }
 }
 let ruido = document.querySelector(".sonido1");
 let audioEtiqueta = document.querySelector("#audio1");
@@ -122,6 +130,15 @@ function start() {
   let first = document.querySelector("#firstGroup");
   let points_number = document.querySelector("#points_number");
   const btnNextSite = [...document.querySelectorAll(".nextPart")];
+  const expReg = {
+    teamName: /^[a-zA-ZÀ-ÿ\s]{4,16}$/,
+    pointsLimit: /^[0-9]+$/,
+  };
+  function validateInput({ target }) {
+    expReg[`${target.name}`].test(target.value)
+      ? target.classList.add("incomplete")
+      : target.classList.remove("incomplete");
+  }
   btnNextSite.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       if (btn.classList.contains("toSettings")) {
@@ -129,22 +146,20 @@ function start() {
         sectionSettings.style.display = "flex";
         footer.style.display = "flex";
       } 
-      else 
+      else if (
+          secondGroup.value == "" ||
+          first.value == "" ||
+          points_number.value == ""
+        ) {
+          const inputs = document.getElementsByTagName("input");
+          let arrayInputs = Array.from(inputs);
+          arrayInputs.forEach((input) => {
+            input.addEventListener( "keyup", (e)=> validateInput(e));
+          });
+
+        }
+        else 
         {
-          if (
-            secondGroup.value == "" ||
-            first.value == "" ||
-            points_number.value == ""
-          ) {
-            const inputs = document.getElementsByTagName("input");
-            let arrayInputs = Array.from(inputs);
-            arrayInputs.forEach((input) => {
-              input.addEventListener( "keyup", (e)=> validateInput(e));
-            });
-  
-          }
-          else{
-            
             filterInputsValue()
             TimerQuestion(newValues)
             sectionSettings.style.display = "none";
@@ -153,8 +168,6 @@ function start() {
             return e.target.setAttribute.name != "starGame"
             ? e.preventDefault()
             : "";
-          }
-  
         }   
     
     });
@@ -178,6 +191,7 @@ ruido3.addEventListener("click", () => {
     sectionStarGame.style.display = "none";
     location.reload();
   })
+  
 //lOGICA DE LAS PALABRAS
 let numerosqYaSalieron = [];
 let yaSalieronTodos = false;
@@ -219,7 +233,6 @@ function wordsJs() {
     console.log("Ya salieron todos los elementos del array");
   }
 }
-wordsJs();
 
 let numerosqueYaSalieron = [];
 let yaSalieronTodas = false;
@@ -242,15 +255,15 @@ function wordsEnglis() {
           ) {
             aleatorio = Math.floor(
               Math.random() * Object.keys(jsonData).length + 1
-            ).toString();
+              ).toString();
           }
           if (numerosqueYaSalieron.length == Object.keys(jsonData).length) {
             console.log("Ya salieron todos los elementos del array preubas");
             yaSalieronTodos = true;
           } else {
-            var resp = jsonData["English: " + aleatorio];
+            var resp = jsonData["English:" + aleatorio];
             numerosqueYaSalieron.push(aleatorio);
-
+            
             console.log('english'+resp);
           }
         } else {
@@ -261,7 +274,6 @@ function wordsEnglis() {
     console.log("Ya salieron todos los elementos del array");
   }
 }
-wordsEnglis()
 function display() {
   const openPoopUp = [...document.querySelectorAll(".openModalBtn")];
   openPoopUp.forEach((btn) => {
@@ -281,15 +293,17 @@ function close() {
       if (
         btn.classList.contains("closeRules") ||
         btn.classList.contains("closeScore")
-      ) {
-        modalRules.style.display = "none";
-        modalScore.style.display = "none";
-      }
+        ) {
+          modalRules.style.display = "none";
+          modalScore.style.display = "none";
+        }
+      });
     });
-  });
-}
-//eventos
-start();
-display();
-close();
-
+  }
+  //eventos
+  start();
+  wordsEnglis()
+  wordsJs();
+  display();
+  close();
+  
