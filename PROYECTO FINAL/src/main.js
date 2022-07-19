@@ -7,23 +7,59 @@ const rulesBtn = document.querySelector("#btnRules");
 const modalScore = document.getElementById("poopScore");
 const modalRules = document.getElementById("poop");
 const btnStarGame = document.querySelector(".toStartGame");
+let randomWord = document.getElementById('randomWord')
 let header = document.getElementById('header')
+
+let resp;
+let numerosqYaSalieron = [];
+let yaSalieronTodos = false;
+
 let inputValues = [...document.querySelectorAll("input")];
-let newValues = []
+let newValues = ['0','0']
 let segundos;
-let firstTeam = true;
-var resp;
+let firstTeam = true
 //funciones
-
-function updateGame(newValues)
-{
-  firstTeam = !firstTeam
-  header.innerHTML = `<h2></h2>`;
-  console.log(newValues)
-  console.log( ` si sirvio man ${wordsJs()}` )
+function wordsRandom(archivoJSON) {
+  //let archivoJSON = tipo == 1 ? "wordsJS" : "wordsEnglish";
+  if (!yaSalieronTodos) {
+    fetch("data/"+archivoJSON+".JSON" )
+      .then((respuesta) => {
+        return respuesta.json();
+      })
+      .then(function (jsonData) {
+        if (!yaSalieronTodos) {
+          let aleatorio = Math.floor(
+            Math.random() * Object.keys(jsonData).length + 1
+          ).toString();
+          var lenghtJs = Object.keys(jsonData).length;
+          while (
+            numerosqYaSalieron.filter((num) => num == aleatorio).length > 0 &&
+            numerosqYaSalieron.length < lenghtJs &&
+            yaSalieronTodos == false
+          ) {
+            aleatorio = Math.floor(
+              Math.random() * Object.keys(jsonData).length + 1
+            ).toString();
+          }
+          if (numerosqYaSalieron.length == Object.keys(jsonData).length) {
+            console.log("Ya salieron todos los elementos del array preubas");
+            yaSalieronTodos = true;
+          } else {
+            resp = jsonData[archivoJSON + aleatorio];
+            numerosqYaSalieron.push(aleatorio);
+            document.getElementById('randomWord').innerHTML = resp
+            console.log(resp)
+          }
+        } else {
+          console.log("Ya salieron todos los elementos del array");
+        }
+      });
+  } else {
+    console.log("Ya salieron todos los elementos del array");
+  }
 }
-
 function filterInputsValue() {
+
   let inputchekeds = inputValues.filter((input) => input.checked == true);
   let inputOthers = inputValues.filter((input) =>
     input.classList.contains("other")
@@ -34,17 +70,11 @@ function filterInputsValue() {
     return newValues;
   });
   llenarCamposScoreBoard(newValues) 
+  console.log(newValues) 
 };
-function score (){
-const score_group = [...document.querySelectorAll(".score_group")];
-countTeam1 = 0;
-countTeam2 = 0;
-score_group[1] = countTeam1;
-score_group[2] = countTeam2;
-
-
-}
 function llenarCamposScoreBoard(newValues) {
+ 
+
   let ElemetsScore = [...document.querySelectorAll(".ValueScore")];
   ElemetsScore.forEach((element) => {
     if (element.classList.contains("FirstGroupName")) {
@@ -61,27 +91,35 @@ function llenarCamposScoreBoard(newValues) {
 function TimerQuestion (newValues)
 {
   let temporizador = document.getElementById('temporizador')
-  let segundos = newValues[1]
-  let correctBtn = document.getElementById('buttonCorrect')
-  let incorrectBtn = document.getElementById('buttonIncorrect')
+  let segundos = newValues[3]
+
+  let buttonCorrect = document.getElementById('buttonCorrect')
+  let buttonIncorrect = document.getElementById('buttonIncorrect')
+
+  let btnPoint = [...document.querySelectorAll('.btnPoint')]
   let h2 = document.querySelector('.timeResult')
   const nextWordBtn = document.getElementById('buttonNextWord')
   let randomWord = document.querySelector('#randomWord')
 
-    const time = setInterval(()=>
+    let time = setInterval(()=>
     {
       
         segundos--;
         temporizador.innerHTML = segundos
-        correctBtn.addEventListener('click',()=>
-         {
-             clearInterval(time)
-             h2.innerText = "respuesta correcta"
-             nextWordBtn.style.display="flex"
-             nextWordBtn.style.backgroundColor = "lime"
-             randomWord.innerHTML = 'asp';
-         })
-
+        
+        btnPoint.forEach(btn =>
+          {
+            btn.addEventListener("click",()=>
+            {
+              if(btn.classList.contains('correctBtn'))
+              {
+                clearInterval(time)
+                h2.innerText = "respuesta correcta"
+                nextWordBtn.style.display="flex"
+                nextWordBtn.style.backgroundColor = "lime"
+              }
+            })
+          })
          if(segundos < 10)
          {
              temporizador.innerText=`0${segundos}`
@@ -92,22 +130,30 @@ function TimerQuestion (newValues)
         
              clearInterval(time)
              h2.innerText= "punto incorrecto"
-             correctBtn.style.display="none"
-             incorrectBtn.style.display="flex"
+             btnPoint.forEach(btn =>
+              {
+                  if(btn.classList.contains('correctBtn'))
+                  {
+                    btn.style.display = "none"
+                  }
+                  else
+                  {
+                    btn.style.display = "flex"
+                  }
+              })
              nextWordBtn.style.display="flex"
-             nextWordBtn.style.backgroundColor="red"
+             nextWordBtn.style.backgroundColor = "red"
            ;
          }
     },1000);
 }
-
 let ruido = document.querySelector(".sonido1");
 let audioEtiqueta = document.querySelector("#audio1");
 ruido.addEventListener("click", () => {
   audioEtiqueta.setAttribute("src", "./src/inicio.wav");
   audioEtiqueta.play();
 });
-function start() {
+function start(resp) {
   let ruido2 = document.querySelector(".sonido2");
   let audioEtiqueta2 = document.querySelector("#audio2");
   ruido2.addEventListener("click", () => {
@@ -148,17 +194,26 @@ function start() {
 
         }
         else 
-        {          
+        {
             filterInputsValue()
             TimerQuestion(newValues)
-            updateGame(newValues)
+            
             sectionSettings.style.display = "none";
             footer.style.display = "none";
             sectionStarGame.style.display = "flex";
-            return e.target.setAttribute.name != "starGame"
+            e.target.setAttribute.name != "starGame"
             ? e.preventDefault()
             : "";
-        }   
+            
+          }
+          
+          if (document.querySelector(".words:checked") != null){
+            var chkWordsJS = document.querySelector(".words:checked").value
+            wordsRandom(chkWordsJS)
+          }
+
+         
+         
     
     });
 });
@@ -182,91 +237,6 @@ ruido3.addEventListener("click", () => {
     location.reload();
   })
 //lOGICA DE LAS PALABRAS
-let numerosqYaSalieron = [];
-let yaSalieronTodos = false;
-function wordsJs() {
-  console.log('se ejecuto')
-  if (!yaSalieronTodos) {
-    fetch("data/wordsJS.JSON")
-      .then((respuesta) => {
-        return respuesta.json();
-      })
-      .then(function (jsonData) {
-        if (!yaSalieronTodos) {
-          let aleatorio = Math.floor(
-            Math.random() * Object.keys(jsonData).length + 1
-          ).toString();
-          var lenghtJs = Object.keys(jsonData).length;
-          while (
-            numerosqYaSalieron.filter((num) => num == aleatorio).length > 0 &&
-            numerosqYaSalieron.length < lenghtJs &&
-            yaSalieronTodos == false
-          ) {
-            aleatorio = Math.floor(
-              Math.random() * Object.keys(jsonData).length + 1
-            ).toString();
-          }
-          if (numerosqYaSalieron.length == Object.keys(jsonData).length) {
-            console.log("Ya salieron todos los elementos del array preubas");
-            yaSalieronTodos = true;
-          } else {
-            resp = jsonData["wordsJs" + aleatorio];
-            numerosqYaSalieron.push(aleatorio);
-
-            console.log( "java: "+ resp);
-          }
-        } else {
-          console.log("Ya salieron todos los elementos del array");
-        }
-      });
-  } else {
-    console.log("Ya salieron todos los elementos del array");
-  }
-  return resp
-}
-wordsJs();
-
-let numerosqueYaSalieron = [];
-let yaSalieronTodas = false;
-function wordsEnglis() {
-  if (!yaSalieronTodas) {
-    fetch("data/wordsEnglish.json")
-      .then((respuesta) => {
-        return respuesta.json();
-      })
-      .then(function (jsonData) {
-        if (!yaSalieronTodas) {
-          let aleatorio = Math.floor(
-            Math.random() * Object.keys(jsonData).length + 1
-          ).toString();
-          var lenghtJs = Object.keys(jsonData).length;
-          while (
-            numerosqueYaSalieron.filter((num) => num == aleatorio).length > 0 &&
-            numerosqueYaSalieron.length < lenghtJs &&
-            yaSalieronTodas == false
-          ) {
-            aleatorio = Math.floor(
-              Math.random() * Object.keys(jsonData).length + 1
-            ).toString();
-          }
-          if (numerosqueYaSalieron.length == Object.keys(jsonData).length) {
-            console.log("Ya salieron todos los elementos del array preubas");
-            yaSalieronTodos = true;
-          } else {
-            var resp = jsonData["English: " + aleatorio];
-            numerosqueYaSalieron.push(aleatorio);
-
-            console.log('english'+resp);
-          }
-        } else {
-          console.log("Ya salieron todos los elementos del array");
-        }
-      });
-  } else {
-    console.log("Ya salieron todos los elementos del array");
-  }
-}
-wordsEnglis()
 function display() {
   const openPoopUp = [...document.querySelectorAll(".openModalBtn")];
   openPoopUp.forEach((btn) => {
@@ -293,7 +263,20 @@ function close() {
     });
   });
 }
+
+function updateGame(newValues)
+{
+  firstTeam = !firstTeam
+  console.log(newValues['1'])
+  header.innerHTML = `<h2>${firstTeam ? newValues[4] : newValues[5]}</h2>`;
+}
+
 //eventos
+btnPoint.forEach(btn =>
+  {
+    btn.addEventListener('click', updateGame)
+  })
 start();
 display();
 close();
+

@@ -30,8 +30,7 @@
     </main>
 
     <section id="setting">
-    <form>
-            
+    <form>  
             <aside class="option" id="categories ">
                 <img src="./images/categories.svg" alt="Icon-categories" class="imgSetting" >
                        <article>
@@ -40,9 +39,10 @@
                             <label for="englishWords" class="option categoryLabel"><img src="./images/english_icon.svg" alt="" > <p>English sentences</p></label>
                         </div>
                         <div class="container_category">
-                            <input type="radio" id="wordsCodes" name="option" class="input radio words" value="wordsCodes" required>
-                            <label for="wordsCodes" class="option categoryLabel"><img src="./images/code_icon.svg" alt="Icon code" class="iconCategory" > <p>Code snipped</p></label>
+                            <input type="radio" id="CodeSnipped" name="option" class="input radio words" value="CodeSnipped" required>
+                            <label for="CodeSnipped" class="option categoryLabel"><img src="./images/code_icon.svg" alt="Icon code" class="iconCategory" > <p>Code snipped</p></label>
                         </div>
+                        
                        </article>
             </aside>
 
@@ -107,10 +107,10 @@
             <header>
                 <h2 class="timeResult">Time: <span id="temporizador"></span></h2>
             </header>
-                <span id="randomWord">palabra random</span>
-                <img src="./images/correct.svg" alt="Icon Incorrect"  id="buttonCorrect" class="img sonido3">
+                <span id="randomWord"></span>
+                <img src="./images/correct.svg" alt="Icon Incorrect"  id="buttonCorrect " class="btnPoint correctBtn sonido3" >
                 <audio src="" id="audio3"></audio>
-                <img src="./images/incorrect.svg" alt="Icon correct" id="buttonIncorrect" class="sonido4">
+                <img src="./images/incorrect.svg" alt="Icon correct" id="buttonIncorrect" class="btnPoint incorrectBtn sonido4"  >
                 </audio src="" id="audio4"></audio>
                     <br>
                     <button id="buttonNextWord">Next Word</button>
