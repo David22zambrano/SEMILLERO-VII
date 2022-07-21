@@ -146,6 +146,7 @@ function TimerQuestion (newValues)
           })
           nextWordBtn.style.display="flex"
           nextWordBtn.style.backgroundColor = "red"
+          ruido4.click()
           if(header.innerText == `${newValues[4]}` && segundos == 0)
           {
             
@@ -196,7 +197,7 @@ function start(resp)
   };
   function validateInput({ target }) {
     expReg[`${target.name}`].test(target.value)
-      ? target.classList.add("incomplete")
+      ? target.classList.add("complete")
       : target.classList.remove("incomplete");
   }
   btnNextSite.forEach((btn) => {
@@ -250,6 +251,12 @@ ruido4.addEventListener("click", () => {
   audioEtiqueta4.setAttribute("src", "./src/puntoMal.wav");
   audioEtiqueta4.play();
 });
+let ruido5 = document.querySelector(".sonido5");
+let audioEtiqueta5 = document.querySelector(".audio5");
+audioEtiqueta5.setAttribute("src", "./src/cambioPalabra.wav");
+ruido5.addEventListener("click", () => {
+  audioEtiqueta5.play();
+})
   const buttonHome = document.querySelector(".buttonHome");
   buttonHome.addEventListener("click", ()=>{
     sectionSettings.style.display = "flex";
@@ -350,7 +357,7 @@ function points(newValues)
       })
 
       })
-  
+
 }
 
 function finishGame(newValues)
@@ -362,10 +369,9 @@ function finishGame(newValues)
     score_view.style.display = "none"
     game_container.innerHTML = `
     <header>
-        <h1>${newValues[4]} is the winner with ${pointG1} points</h1>
+        <h1>${newValues[4]} is the winner ${pointG1} points</h1>
     </header>
-
-    <img src="./images/miggi-you-win.gif" alt="Img rules">
+    <img src="./images/winner.gif" alt="Img rules" style="width:50%;height: auto; margin: 20px; border: 3px solid goldenrod;">
     <button class="reload">reload game</button>
     `
   }
@@ -373,19 +379,16 @@ function finishGame(newValues)
   { 
     score_view.style.display = "none"
     game_container.innerHTML = 
-    `
+     `
     <header>
         <h1>${newValues[5]} is the winner with ${pointG2} points</h1>
     </header>
-    <br>
+    <img src="./images/winner.gif" alt="Img rules" style="width:50%;height: auto; margin: 20px; border: 3px solid goldenrod;">
     <button class="reload">reload game</button>
     <br>
     `
-  }
- 
-  
+  } 
 }
-
 //eventos
 start();
 display();
