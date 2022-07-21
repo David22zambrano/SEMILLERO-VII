@@ -47,7 +47,10 @@ body>main {
   height: auto;
   padding: 10px;
 }
-.burbuja {
+.backgroundAnimation{
+
+}
+/* .burbuja {
   position: absolute;
   z-index: -10;
   width: 100vw;
@@ -88,7 +91,7 @@ body>main {
   100% {
     transform: translateY(100vh);
   }
-}
+} */
 
 main > section {
   width: 50%;
@@ -132,14 +135,12 @@ main > article > img {
   align-items: center;
   width: 90%;
   height: auto;
-  border: 1px solid red;
 }
 #setting > form {
   width: 99%;
   height: auto;
   display: flex;
   justify-content: center;
-  border: 1px solid skyblue;
   margin: 1px;
 }
 #setting > form > aside {
@@ -373,7 +374,7 @@ input[type="number"]::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-family: "Inter";
   font-style: normal;
   color: #fff;
@@ -390,6 +391,8 @@ input[type="number"]::placeholder {
 #startGameSection>.game > header {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 10vh;
   background-color: #3f5688;
@@ -729,9 +732,9 @@ footer>.modal>#rulesPop>img{
   font-family: "DotGothic16", sans-serif;
 }
 
-#scorePop > aside > form > .score_body_Section > .return {
+#scorePop > aside > form > .score_body_Section > .return,.reload {
   background-color: lime;
-  width: 40%;
+  width: 30%;
   height: 4vh;
   outline: none;
   border-radius: 4px;

@@ -3,6 +3,7 @@ const main = document.querySelector("main");
 const sectionSettings = document.getElementById("setting");
 const footer = document.querySelector("footer");
 const sectionStarGame = document.getElementById("startGameSection");
+
 const rulesBtn = document.querySelector("#btnRules");
 const modalScore = document.getElementById("poopScore");
 const modalRules = document.getElementById("poop");
@@ -18,14 +19,15 @@ let inputValues = [...document.querySelectorAll("input")];
 let newValues = ['0','0']
 let firstTeam = true
 
-// let scoreLeft = document.querySelector('.score_groupOne')
-
-
 let scoreLeft = [...document.querySelectorAll('.score_groupOne')]
-
 let scoreRight = [...document.querySelectorAll('.score_groupTwo')]
+let pointG1 = 0;
+let pointG2 = 0;
+let incorrect_groupB = document.getElementById('incorrect_groupB')
+let incorrect_groupA = document.getElementById('incorrect_groupA')
+let pointIncorrectGa = 0;
+let pointIncorrectGb = 0;
 
-console.log(scoreLeft,scoreRight)
 //funciones
 function wordsRandom(archivoJSON) {
   //let archivoJSON = tipo == 1 ? "wordsJS" : "wordsEnglish";
@@ -95,55 +97,77 @@ function llenarCamposScoreBoard(newValues) {
 }
 function TimerQuestion (newValues)
 {
+            
   let temporizador = document.getElementById('temporizador')
+  let h2 = document.getElementById('timeResult')
   let segundos;
   segundos = newValues[3]
-  let h2 = document.getElementById('timeResult')
-    let time = setInterval(()=>
-    {
+  let time = setInterval(()=>
+  {
+    
+    segundos--;
+    temporizador.innerText = `Time: ${segundos}`
+    
+    btnPoint.forEach(btn =>
+      {
+        btn.addEventListener("click",()=>
+        {
+          if(btn.classList.contains('correctBtn'))
+          {
+            clearInterval(time)
+            h2.style.display = "flex"
+            h2.innerText = "respuesta correcta"
+            nextWordBtn.style.display="flex"
+            nextWordBtn.style.backgroundColor = "lime"
+          }
+        })
+      })
+      if(segundos < 10)
+      {
+        temporizador.innerText=`Time:  0${segundos}`
+      }
+      
+      if(segundos == 0)
+      {
 
-        segundos--;
-        temporizador.innerText = `Time: ${segundos}`
-
+        clearInterval(time)
+        h2.style.display = "flex"
+        h2.innerText= "punto incorrecto"
         btnPoint.forEach(btn =>
           {
-            btn.addEventListener("click",()=>
+            if(btn.classList.contains('correctBtn'))
             {
-              if(btn.classList.contains('correctBtn'))
-              {
-                clearInterval(time)
-                h2.style.display = "flex"
-                h2.innerText = "respuesta correcta"
-                nextWordBtn.style.display="flex"
-                nextWordBtn.style.backgroundColor = "lime"
-              }
-            })
+              btn.style.display = "none"
+            }
+            else
+            {
+              btn.style.display = "flex"
+            }
           })
-         if(segundos < 10)
-         {
-             temporizador.innerText=`Time:  0${segundos}`
-         }
-
-         if(segundos == 0)
-         {
-
-             clearInterval(time)
-             h2.style.display = "flex"
-             h2.innerText= "punto incorrecto"
-             btnPoint.forEach(btn =>
+          nextWordBtn.style.display="flex"
+          nextWordBtn.style.backgroundColor = "red"
+          if(header.innerText == `${newValues[4]}` && segundos == 0)
+          {
+            
+            pointIncorrectGa++
+            incorrect_groupA.innerHTML= pointIncorrectGa
+            pointG1--
+            scoreLeft.forEach(p =>
               {
-                  if(btn.classList.contains('correctBtn'))
-                  {
-                    btn.style.display = "none"
-                  }
-                  else
-                  {
-                    btn.style.display = "flex"
-                  }
+                p.innerText = pointG1
               })
-             nextWordBtn.style.display="flex"
-             nextWordBtn.style.backgroundColor = "red"
-           ;
+           
+            }
+          else if(header.innerText == `${newValues[5]}` && segundos == 0)
+            {
+              pointIncorrectGb++
+              incorrect_groupB.innerHTML= pointIncorrectGa
+              pointG2--
+              scoreRight.forEach(p =>
+                {
+                  p.innerText = pointG2
+                })
+            };
          }
     },1000);
 }
@@ -203,13 +227,9 @@ function start(resp)
             e.target.setAttribute.name != "starGame"
             ? e.preventDefault()
             : "";
-            //  if(btnPoint.length > 0){btnPoint.forEach(btn =>
-            //    {
-            //      btn.addEventListener('click', points(newValues) )
-            //    })}
-
             points(newValues)
             nextWordBtn.addEventListener('click', updateGame(newValues) )
+            
           }
           if (document.querySelector(".words:checked") != null){
             var chkWordsJS = document.querySelector(".words:checked").value
@@ -232,7 +252,7 @@ ruido4.addEventListener("click", () => {
 });
   const buttonHome = document.querySelector(".buttonHome");
   buttonHome.addEventListener("click", ()=>{
-    main.style.display = "flex";
+    sectionSettings.style.display = "flex";
     sectionStarGame.style.display = "none";
     location.reload();
   })
@@ -266,11 +286,13 @@ function close() {
 function updateGame(newValues, id)
 {
   nextWordBtn.addEventListener('click', change)
-  header.innerHTML = `<h2>${newValues[4]}</h2>`;
+  header.innerHTML = `<h1>${newValues[4]}</h1>`;
 
 }
 function change()
 {
+  finishGame(newValues)
+  segundos = 0;
   firstTeam = !firstTeam
   let h2 = document.getElementById('timeResult')
   h2.style.display ="none"
@@ -294,12 +316,10 @@ function change()
           btn.style.display = "none"
         }
     })
-    header.innerHTML = `<h2>${firstTeam ? newValues[4] : newValues[5]}</h2`;
+    header.innerHTML = `<h1>${firstTeam ? newValues[4] : newValues[5]}</h1`;
+    
 }
 
-
-let pointG1 = 0;
-let pointG2 = 0;
 function points(newValues)
 {
 
@@ -328,7 +348,41 @@ function points(newValues)
           console.log(` ${newValues[5]} obtuvo un punto , ${pointG2}`)
         }
       })
+
       })
+  
+}
+
+function finishGame(newValues)
+{
+  let game_container = document.getElementById('game_container')
+  let score_view = document.getElementById('score_view')
+  if (pointG1 >= newValues[6]) 
+  {
+    score_view.style.display = "none"
+    game_container.innerHTML = `
+    <header>
+        <h1>${newValues[4]} is the winner with ${pointG1} points</h1>
+    </header>
+
+    <button class="reload">reload game</button>
+    `
+  }
+  else if(pointG2 >= newValues[6])
+  { 
+    score_view.style.display = "none"
+    game_container.innerHTML = 
+    `
+    <header>
+        <h1>${newValues[5]} is the winner with ${pointG2} points</h1>
+    </header>
+    <br>
+    <button class="reload">reload game</button>
+    <br>
+    `
+  }
+ 
+  
 }
 
 //eventos

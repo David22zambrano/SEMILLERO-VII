@@ -9,8 +9,13 @@
     <link rel="stylesheet" href="./src/styles.css">
 </head>
 <body>
+    <!-- <section class="backgroundAnimation">
 
-    <img src="./images/burbujas.svg" class="burbuja">
+        <div class="figure"></div>
+        <div class="figure"></div>
+        <div class="figure"></div>
+    </section> -->
+    <!-- <img src="./images/burbujas.svg" class="burbuja"> -->
     <header id="header">
         <h2 class="titulo-1">charades online game</h2>
         <p class="subtitulo-1">guess the word</p>
@@ -104,19 +109,19 @@
             <h2 class="nameTeam"></h2>
         </header>
 
-        <section class="score_pre">
+        <section id="score_view" class="score_pre">
             <article class="score_body_Section left">
                 <header class="ValueScore FirstGroupName" name="nameFisrtTeam"></header>
-                <p id="score_group"></p>
+                <p class="score_groupOne"></p>
             </article>
             <h2>Score</h2> 
             <article class="score_body_Section right">
                 <header class="ValueScore SecondGroup" name="nameSecondTeam"></header>
-                <p id="score_group"></p>
+                <p class="score_groupTwo"></p>
              </article> 
         </section>
             <br>
-        <aside class="game">
+        <aside id="game_container" class="game">
             <header id="header_game">
                 <h2 id="timeResult"></h2>
                 <span id="temporizador"></span>
@@ -136,7 +141,6 @@
                 <header class="headerScore">
                     <img src="./images/close.svg" id="closePopup" class="closeScore"  alt="Score" onclick="close()">    
                 </header>  
-    
                 <aside>
                     <header>
                         <p>Score</p>
@@ -144,19 +148,19 @@
                     <form>
                         <article class="score_body_Section left">
                                 <header class="ValueScore FirstGroupName" name="nameFisrtTeam"></header>
-                                <p id="score_group"></p>
+                                <p class="score_groupOne scoreFirtsGrpup"></p>
                         </article>
     
                         <article class="score_body_Section center">
                             <div class="data_center one"><span class="ValueScore limit_points"></span></div>
-                            <div class="data_center two"> <span class="incorrect_groupA"></span> <span id="incorrect_groupB"></span></div>
+                            <div class="data_center two"> <span id="incorrect_groupA"></span> <span id="incorrect_groupB"></span></div>
                             <button class="data_center return">return</button>
     
                         </article>
     
                         <article class="score_body_Section right">
                             <header class="ValueScore SecondGroup" name="nameSecondTeam"></header>
-                            <p id="score_group"></p>
+                            <p class="score_groupTwo popupGrouoTwo"></p>
                          </article>
                     </form>
                 </aside>
@@ -164,8 +168,6 @@
         </div>
             <button class="buttonHome">Home</button>
             <button class="openModalBtn openScore">score</button>
-
-
     </section>
 
     <footer>
