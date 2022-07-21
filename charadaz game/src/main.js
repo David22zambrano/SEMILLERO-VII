@@ -17,6 +17,15 @@ let yaSalieronTodos ;
 let inputValues = [...document.querySelectorAll("input")];
 let newValues = ['0','0']
 let firstTeam = true
+
+// let scoreLeft = document.querySelector('.score_groupOne')
+
+
+let scoreLeft = [...document.querySelectorAll('.score_groupOne')]
+
+let scoreRight = [...document.querySelectorAll('.score_groupTwo')]
+
+console.log(scoreLeft,scoreRight)
 //funciones
 function wordsRandom(archivoJSON) {
   //let archivoJSON = tipo == 1 ? "wordsJS" : "wordsEnglish";
@@ -47,7 +56,6 @@ function wordsRandom(archivoJSON) {
             resp = jsonData[archivoJSON + aleatorio];
             numerosqYaSalieron.push(aleatorio);
             document.getElementById('randomWord').innerHTML = resp
-            console.log(resp)
           }
         } else {
           console.log("Ya salieron todos los elementos del array");
@@ -68,8 +76,8 @@ function filterInputsValue() {
     newValues.push(input.value);
     return newValues;
   });
-  llenarCamposScoreBoard(newValues) 
-  console.log(newValues) 
+  llenarCamposScoreBoard(newValues)
+  console.log(newValues)
 };
 function llenarCamposScoreBoard(newValues) {
   let ElemetsScore = [...document.querySelectorAll(".ValueScore")];
@@ -93,10 +101,10 @@ function TimerQuestion (newValues)
   let h2 = document.getElementById('timeResult')
     let time = setInterval(()=>
     {
-      
+
         segundos--;
         temporizador.innerText = `Time: ${segundos}`
-        
+
         btnPoint.forEach(btn =>
           {
             btn.addEventListener("click",()=>
@@ -118,7 +126,7 @@ function TimerQuestion (newValues)
 
          if(segundos == 0)
          {
-        
+
              clearInterval(time)
              h2.style.display = "flex"
              h2.innerText= "punto incorrecto"
@@ -173,7 +181,7 @@ function start(resp)
         main.style.display = "none";
         sectionSettings.style.display = "flex";
         footer.style.display = "flex";
-      } 
+      }
       else if (
           secondGroup.value == "" ||
           first.value == "" ||
@@ -185,7 +193,7 @@ function start(resp)
             input.addEventListener( "keyup", (e)=> validateInput(e));
           });
         }
-        else 
+        else
         {
             filterInputsValue()
             TimerQuestion(newValues)
@@ -194,11 +202,14 @@ function start(resp)
             sectionStarGame.style.display = "flex";
             e.target.setAttribute.name != "starGame"
             ? e.preventDefault()
-            : ""; 
-            if(btnPoint.length > 0){btnPoint.forEach(btn =>
-              {
-                btn.addEventListener('click', updateGame(newValues, btn.id) )
-              })}
+            : "";
+            //  if(btnPoint.length > 0){btnPoint.forEach(btn =>
+            //    {
+            //      btn.addEventListener('click', points(newValues) )
+            //    })}
+
+            points(newValues)
+            nextWordBtn.addEventListener('click', updateGame(newValues) )
           }
           if (document.querySelector(".words:checked") != null){
             var chkWordsJS = document.querySelector(".words:checked").value
@@ -258,7 +269,6 @@ function updateGame(newValues, id)
   header.innerHTML = `<h2>${newValues[4]}</h2>`;
 
 }
-
 function change()
 {
   firstTeam = !firstTeam
@@ -284,8 +294,43 @@ function change()
           btn.style.display = "none"
         }
     })
-    header.innerHTML = `<h2>${firstTeam ? newValues[4] : newValues[5]}</h2>`;
+    header.innerHTML = `<h2>${firstTeam ? newValues[4] : newValues[5]}</h2`;
 }
+
+
+let pointG1 = 0;
+let pointG2 = 0;
+function points(newValues)
+{
+
+ newValues[0] =  pointG1;
+ newValues[1] =  pointG2;
+  btnPoint.forEach(btn =>
+    {
+      btn.addEventListener('click',()=>
+      {
+        if(header.innerText == `${newValues[4]}` && btn.classList.contains('correctBtn'))
+        {
+          pointG1++;
+          scoreLeft.forEach(p =>
+            {
+              p.innerText = pointG1
+            })
+          console.log(` ${newValues[4]} obtuvo un punto , ${pointG1}`)
+        }
+        else if(header.innerText == `${newValues[5]}`&& btn.classList.contains('correctBtn') )
+        {
+         pointG2++;
+         scoreRight.forEach(p =>
+          {
+            p.innerText = pointG2
+          })
+          console.log(` ${newValues[5]} obtuvo un punto , ${pointG2}`)
+        }
+      })
+      })
+}
+
 //eventos
 start();
 display();

@@ -17,16 +17,15 @@ html {
     align-items: center;
     flex-direction: column;
     width: 80%;
-    height: 18.58vh;
+    height: auto;
     /* guess the word */
     font-family: "Inter";
     font-style: normal;
     font-weight: 200;
     font-size: 1.48vw;
-    line-height: 25px;
     color: #ffffff;
     margin-bottom: 45px;
-    line-height: 1px;
+    line-height:0;
   }
   body>header > h2 {
     /* charades online game */
@@ -133,14 +132,12 @@ html {
     align-items: center;
     width: 90%;
     height: auto;
-    border: 1px solid red;
   }
   #setting > form {
     width: 99%;
     height: auto;
     display: flex;
     justify-content: center;
-    border: 1px solid skyblue;
     margin: 1px;
   }
   #setting > form > aside {
@@ -298,6 +295,196 @@ html {
     cursor: pointer;
   }
   
+  
+  #startGameSection {
+    width: 80%;
+    height: auto;
+    border: 1px solid red;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #startGameSection>.headerStarGame {
+    font-size: 1.09vw;
+    font-style: normal;
+    font-family: "Inter";
+    color: #fff;
+  }
+  #startGameSection>.score_pre
+  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 55%;
+    height: auto;
+    border: 1px solid yellow;
+    margin: auto
+  }
+  #startGameSection > .score_pre> .score_body_Section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 25%;
+    height: auto;
+    font-size: 25px;
+    font-family: "DotGothic16", sans-serif;
+    color: #f5b231;
+    border: 1px solid white;
+    margin: 2px;
+  }
+  
+    #startGameSection > .score_pre> .score_body_Section> header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4vh;
+    border-bottom: 1px solid #ffffff;
+    font-family: "Gugi", cursive;
+    font-size: 1.1713vw;
+  }
+
+  #startGameSection > .score_pre> .left > header {
+    background-color: #f44336;
+    font-size: 1.24vw;  
+    color: #ffffff;
+  }
+
+  #startGameSection > .score_pre>h2{
+    color: white;
+  }
+
+  #startGameSection > .score_pre>  .right > header {
+    background-color: #006df0;
+    font-size: 1.24vw;
+    color: #ffffff;
+  }
+  #startGameSection>.game {
+    width: 55%;
+    height: auto;
+    font-size: 13px;
+    border-radius: 5px;
+    padding-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Inter";
+    font-style: normal;
+    color: #fff;
+    background-color: #212f4d;
+    border: 1px solid lime;
+    margin: auto;
+  }
+  #startGameSection>.game>img {
+    cursor: pointer;
+    width: 10%;
+    height: auto;
+  }
+  
+  #startGameSection>.game > header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 10vh;
+    background-color: #3f5688;
+    border-radius: 5px 5px 0px 0px;
+  }
+  
+  #startGameSection>.game > header > h2{
+    display: none;
+    margin: auto;
+    
+  }
+
+  
+  #startGameSection>.game > header > span{
+    margin: auto;
+  }
+
+  #startGameSection>.game > #randomWord {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 35%;
+    height: 8vh;
+    background-color: #182339;
+    border-radius: 5px;
+    margin: 30px;
+    font-size: 1.46vw;
+    font-weight: 100;
+    color: #3a568f;
+  }
+  #startGameSection>.game > #buttonCorrect {
+    display: flex;
+  }
+  #startGameSection>.game > #buttonIncorrect {
+    display: none;
+  }
+  #startGameSection>.game > #buttonNextWord {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 8vh;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    background: #3f5688;
+    cursor: pointer;
+    border: none;
+  }
+  .buttonsCheck {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 66px;
+    height: 66px;
+  }
+  .buttonNextWord {
+    width: 300px;
+    height: 65px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    background: rgba(0, 109, 240, 0.96);
+    cursor: pointer;
+    border: none;
+  }
+  input.incomplete {
+    border: 2px solid red;
+    background-image: url("../images/incorrect.svg");
+    background-color: rgba(243, 171, 171, 0.445);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+    background-size: 20%;
+  }
+  .buttonHome {
+    position: fixed;
+    bottom: 0.5rem;
+    left: 3em;
+    width: 85px;
+    height: 5vh;
+    background-color: #07d603;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-family: "Gugi";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.464vw;
+    line-height: 37px;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+
+
   footer {
     margin: 10px;
     display: none;
@@ -374,7 +561,10 @@ html {
     background-color: limegreen;
   }
   
-  #openModalBtn {
+  .openModalBtn {
+    width: 5%;
+    height: auto;
+    padding:5px;
     position: fixed;
     right: 1rem;
     bottom: 1rem;
@@ -382,8 +572,9 @@ html {
     border-radius: 3px;
     border: none;
     cursor: pointer;
+    color: white;
   }
-  #openModalBtn:hover {
+  .openModalBtn:hover {
     background-color: #0d71dbad;
   }
 
@@ -559,122 +750,5 @@ html {
       height: 10vh;
       margin: 5px;
     }
-  }
-  
-  #startGameSection {
-    width: 90%;
-    border: 1px solid red;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .headerStarGame {
-    font-size: 1.09vw;
-    font-style: normal;
-    font-family: "Inter";
-    color: #fff;
-  }
-  
-  .game {
-    width: 50%;
-    height: auto;
-    font-size: 13px;
-    border-radius: 5px;
-    padding-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    font-family: "Inter";
-    font-style: normal;
-    color: #fff;
-    background-color: #212f4d;
-  }
-  
-  .game > header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    height: auto;
-    background-color: #3f5688;
-    border-radius: 5px 5px 0px 0px;
-    font-size: 14px;
-  }
-  
-  .game > #randomWord {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 40%;
-    height: 7vh;
-    background-color: #182339;
-    border-radius: 5px;
-    margin: 30px;
-  }
-  .game > #buttonCorrect {
-    display: flex;
-  }
-  .game > #buttonIncorrect {
-    display: none;
-  }
-  .game > #buttonNextWord {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 8vh;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 20px;
-    background: #3f5688;
-    cursor: pointer;
-    border: none;
-  }
-  .buttonsCheck {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    width: 66px;
-    height: 66px;
-  }
-  .buttonNextWord {
-    width: 300px;
-    height: 65px;
-    border-radius: 10px;
-    color: #fff;
-    font-size: 20px;
-    background: rgba(0, 109, 240, 0.96);
-    cursor: pointer;
-    border: none;
-  }
-  input.incomplete {
-    border: 2px solid red;
-    background-image: url("../images/incorrect.svg");
-    background-color: rgba(243, 171, 171, 0.445);
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: center;
-    background-size: 20%;
-  }
-  .buttonHome {
-    position: fixed;
-    bottom: 1.5rem;
-    left: 3em;
-    width: 85px;
-    height: 5vh;
-    background-color: #07d603;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    font-family: "Gugi";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.464vw;
-    line-height: 37px;
-    text-align: center;
-    color: #ffffff;
   }
   
