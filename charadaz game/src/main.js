@@ -365,6 +365,7 @@ function finishGame(newValues)
         <h1>${newValues[4]} is the winner with ${pointG1} points</h1>
     </header>
 
+    <img src="./images/miggi-you-win.gif" alt="Img rules">
     <button class="reload">reload game</button>
     `
   }
