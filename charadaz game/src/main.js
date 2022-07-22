@@ -146,6 +146,7 @@ function TimerQuestion (newValues)
           })
           nextWordBtn.style.display="flex"
           nextWordBtn.style.backgroundColor = "red"
+          nextWordBtn.style.boxShadow = "1px 1px 10px 2px #f44336"
           ruido4.click()
           if(header.innerText == `${newValues[4]}` && segundos == 0)
           {
