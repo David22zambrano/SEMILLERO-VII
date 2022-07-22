@@ -119,6 +119,8 @@ function TimerQuestion (newValues)
             h2.innerText = "respuesta correcta"
             nextWordBtn.style.display="flex"
             nextWordBtn.style.backgroundColor = "lime"
+            nextWordBtn.style.boxShadow = "1px 1px 10px 2px lime"
+
           }
         })
       })
@@ -185,24 +187,25 @@ audioEtiqueta2.setAttribute("src", "./src/inicio.wav");
 ruido2.addEventListener("click", () => {
   audioEtiqueta2.play();
 });
+// btnNextSite.forEach(btn => {btn.addEventListener('keyup', validateInput())})
 function start(resp)
- {
-
+{
+  
   let secondGroup = document.querySelector("#secondGroup");
   let first = document.querySelector("#firstGroup");
   let points_number = document.querySelector("#points_number");
   const btnNextSite = [...document.querySelectorAll(".nextPart")];
   const expReg = {
     teamName: /^[a-zA-ZÀ-ÿ\s]{4,16}$/,
-    pointsLimit: /^[0-9]+$/,
+    pointsLimit: /^[0-99]+$/
   };
   function validateInput({ target }) {
     expReg[`${target.name}`].test(target.value)
-      ? target.classList.add("complete")
-      : target.classList.remove("incomplete");
+    ? target.style.border = "2px solid green"
+    : target.style.border = "2px solid red";
   }
   btnNextSite.forEach((btn) => {
-    btn.addEventListener("click", (e) => {
+    btn.addEventListener("click",(e) => {
       if (btn.classList.contains("toSettings")) {
         main.style.display = "none";
         sectionSettings.style.display = "flex";
@@ -213,9 +216,9 @@ function start(resp)
           first.value == "" ||
           points_number.value == ""
         ) {
-          const inputs = document.getElementsByTagName("input");
+          // const inputs = document.getElementsByTagName("input");
           let arrayInputs = Array.from(inputs);
-          arrayInputs.forEach((input) => {
+          arrayInputs.forEach(input=> {
             input.addEventListener( "keyup", (e)=> validateInput(e));
           });
         }
@@ -258,12 +261,19 @@ audioEtiqueta5.setAttribute("src", "./src/cambioPalabra.wav");
 ruido5.addEventListener("click", () => {
   audioEtiqueta5.play();
 })
-  const buttonHome = document.querySelector(".buttonHome");
-  buttonHome.addEventListener("click", ()=>{
-    sectionSettings.style.display = "flex";
+const buttonHome = document.querySelector(".buttonHome");
+buttonHome.addEventListener("click", () => {
+  let opcion = confirm("Desea salir del juego Aceptar/Cancelar")
+  if (opcion == true) {
     sectionStarGame.style.display = "none";
     location.reload();
-  })
+    return true
+  }
+  else{
+    return false
+    
+  }
+});
 //lOGICA DE LAS PALABRAS
 function display() {
   const openPoopUp = [...document.querySelectorAll(".openModalBtn")];
