@@ -1,0 +1,28 @@
+{
+  "tipoDeSalario": "Salario ordinario",
+  "salario": {
+    "valor": 2000000.0,
+    "moneda": 0
+  },
+  "valorHora": {
+    "valor": 8333.3333333333339,
+    "moneda": 0
+  },
+  "esSalarioVariable": false,
+  "tipoSalarioDetalle": {
+    "id": 1,
+    "descripcion": "Salario ordinario",
+    "porcentajePrestacional": 1.0,
+    "unidadSalario": {
+      "id": 1,
+      "descripcion": "Mensual"
+    },
+    "topeMinimoEnSmlv": 1,
+    "idItemSalario": "SAL1",
+    "tieneDerechoCesantias": true,
+    "tieneDerechoPrimas": true,
+    "tieneDerechoVacaciones": true,
+    "tieneDerechoSubsidioTransporte": true,
+    "idItemRetroactivo": "SAL4"
+  }
+}

@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "@material/textfield": "^14.0.0",
+    "@material/top-app-bar": "^14.0.0",
+    "material-components-web": "^14.0.0",
     "uuid-js": "^0.7.5"
   }
 }
