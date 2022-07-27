@@ -57,12 +57,13 @@ ul > li {
   width: 70px;
   z-index: -10;
 }
-.topBarNav {
+.mdc-text-field__input{
   display: flex;
   justify-content: left;
-  width: 30rem;
+  width: 40rem;
   height: 30px;
-  border: 1px solid yellow;
+  padding-left: 1em;
+
 }
 main {
   display: flex;
