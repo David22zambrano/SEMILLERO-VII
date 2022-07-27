@@ -12,23 +12,41 @@
   <body> 
     <header>
       <img src="./img/icono bitakora.png" class="logo" alt="iconBitakora" >
-      <div class="topBarNav">espacio para la barra de navegacion</div>
-      <nav>
-      <ul>
-        <li class="nomina" > <a>Nómina <img src="./img/transladarText.svg" class="iconTransladar" alt="" ></a></img> 
-          <a>Expedicion quincenarl</a>
-        </li>
-        <li class="periodoActual" name="periodoActual"> <a> Periodo Actual: <br>
-        <a>06/04/2020-27/07/2022</a> </a></li>
-        <li class="fullName"> <a>Fenix <br>
-         Augusto Romero Arango </a> </li>
-      </ul>
-    </nav>
-    </header>
-    <main class="profileEmployed">
-      <div class="employedImage">
-        <div class="iconCameraContainer"> <img src="./img/iconCamera.svg" class="iconCamera" alt=""> </div>        
+      <div class="topBarNav">
+        <label class="mdc-text-field mdc-text-field--filled">
+          <span class="mdc-text-field__ripple"></span>
+          <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
+          <span class="mdc-line-ripple"></span>
+        </label>
+
       </div>
+      <nav>
+        <ul>
+          <li > 
+              <a> Nómina <img src="./img/transladarText.svg" class="iconTransladar" alt=" "> </a> </img> 
+              <a> Expedicion quincenarl </a>  </li>
+        
+          <li class="periodoActual" name="periodoActual"> 
+              <a> Periodo Actual: </a> 
+              <a> 06/04/2020-27/07/2022 </a>  </li>
+
+          <li > <a  class="modulo">Fenix </a>
+              <a> Augusto Romero Arango</a>  </li> 
+        </ul >
+      </nav>
+    </header>
+    <main class="profileInformation" >
+      <section class="employeePhoto" >
+        <aside id="left">
+        <section class="containerPhoto" >
+          <div class="iconCameraContainer" > <img src="./img/iconCamera.svg" class="iconCamera" alt=" "> </div>        
+        </section>
+
+      </aside>
+      <aside id="rigth">
+
+      </aside>
+      </section>
     </main>
   </body>
   <script type="module" src="./script.js"> </script>
