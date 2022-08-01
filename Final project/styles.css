@@ -86,7 +86,6 @@ ul > li {
   padding-top: 2em;
 }
 .employeeInformation {
-  /* position: fixed; */
   top: 10%;
   flex-direction: row;
   justify-content: center;
@@ -101,28 +100,19 @@ ul > li {
   display: flex;
   justify-content: right;
   align-items: end;
-  width: 110px;
-  height: 110px;
-  border-radius: 50%;
-  background-color: #d9d9d9;
 }
 .iconCameraContainer {
   position: relative;
-  right: 0px;
+  right: 36px;
   bottom: -10px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: #447da9;
 }
-.iconCamera {
-  width: 30px;
-  height: 25px;
-}
-
 #content {
   display: flex;
   justify-content: center;
