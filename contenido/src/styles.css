@@ -1,0 +1,19 @@
+/* @use "@material/icon-button";
+@use "@material/top-app-bar/mdc-top-app-bar";
+
+@include icon-button.core-styles; */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+#content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  width: 1329px;
+  height: 688px;
+  background: #FFFFFF;
+border-radius: 10px;
+border: 1px solid red;
+}
