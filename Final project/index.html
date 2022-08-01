@@ -1,57 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Gugi&family=Inter:wght@500;700&family=Karla:wght@600&family=Poppins:wght@500;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="text/css" rel="stylesheet" href="./styles.css" />
-    <title>Bitakora</title>
-  </head>
-  <body> 
-    <header>
-      <img src="./img/icono bitakora.png" class="logo" alt="iconBitakora" >
-      <div class="topBarNav" >
-        <label class="mdc-text-field mdc-text-field--filled">
-          <span class="mdc-text-field__ripple"></span>
-          <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
-          <span class="mdc-line-ripple"></span>
-        </label>
 
-      </div>
-      <nav>
-        <ul>
-          <li > 
-              <a name="nomina"> Nómina <img src="./img/transladarText.svg" class="iconTransladar" alt=" "> </a> </img> 
-              <a class="textStyleHeader"> Expedicion quincenarl </a>  </li>
-        
-          <li class="periodoActual" > 
-              <a > Periodo Actual: </a> 
-              <a class="textStyleHeader"> 16/03/2021-31/03/2021 </a>  </li>
+<head>
+  <meta charset="UTF-8" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Gugi&family=Inter:wght@500;700&family=Karla:wght@600&family=Poppins:wght@500;600&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link type="text/css" rel="stylesheet" href="./styles.css" />
+  <title>Bitakora</title>
+</head>
 
-          <li > <a  class="modulo">Fenix </a>
-              <a class="textStyleHeader"> Judas Tadeo</a>  </li> 
-        </ul >
-      </nav>
-    </header>
-    <section class="employeeInformation">
-      <aside id="left">
+<body>
+  <header>
+    <img src="./img/icono bitakora.png" class="logo" alt="iconBitakora">
+    <div class="topBarNav">
+      <label class="mdc-text-field mdc-text-field--filled">
+        <span class="mdc-text-field__ripple"></span>
+        <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
+        <span class="mdc-line-ripple"></span>
+      </label>
+
+    </div>
+    <nav>
+      <ul>
+        <li>
+          <a name="nomina"> Nómina <img src="./img/transladarText.svg" class="iconTransladar" alt=" "> </a> </img>
+          <a class="textStyleHeader"> Expedicion quincenarl </a>
+        </li>
+
+        <li class="periodoActual">
+          <a> Periodo Actual: </a>
+          <a class="textStyleHeader"> 16/03/2021-31/03/2021 </a>
+        </li>
+
+        <li> <a class="modulo">Fenix </a>
+          <a class="textStyleHeader"> Judas Tadeo</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section class="employeeInformation">
+    <aside id="left">
       <!-- <section class="employeePhoto" > -->
-        <section class="containerPhoto">
-          <img src="./img/photoContainer.svg"  class="containerImagePerson" alt=" ">
-          <div class="iconCameraContainer" > <img src="./img/iconCamera.svg" class="iconCamera" alt=" "> </div>        
-        </section>
-      </aside>
-      <aside id="rigth">
-
-      </aside>
+      <section class="containerPhoto">
+        <img src="./img/photoContainer.svg" class="containerImagePerson" alt=" ">
+        <div class="iconCameraContainer"> <img src="./img/iconCamera.svg" class="iconCamera" alt=" "> </div>
       </section>
-    </section>
-    <main id="content">
-      <div>
-        
+    </aside>
+    <aside id="rigth">
+      <div class="workerInformation">
+        <h2>Julio Tadeo</h2>
+        <h2>Lider de Desarrollo</h2>
+        <h2>Área: Administrativa </h2>
+        <h2>Identificación: </h2>
+        <h2>Fecha de ingreso: </h2>
+        <h2>Correo: </h2>
       </div>
-    </main>
-  </body>
-  <script type="module" src="./src/script.js"> </script>
+      <div class="workerInformation">
+       <h2>Salario</h2>
+       <h2>2,000,000 </h2>
+       <h2>Salario ordinario</h2>
+       <h2>Valor hora: 8,333,33</h2>
+       <h2>Jornada: Lunes a viernes 360 días</h2>
+      </div>
+      <div class="workerInformation">
+        <h2>Última liquidación</h2>
+        <h2>966,869 <span></span></h2>
+        <h2> <img src="./img/icon liquidacion.png"> liquidación <img src="./img/icon bitakora.svg"> Bitakora </h2>
+       </div>
+    </aside>
+    <footer>
+
+    </footer>
+  </section>
+  <main id="content">
+    <section>
+      Bitákora del Empleado
+      <label></label>
+      <button></button>
+    </section>
+  </main>
+</body>
+<script type="module" src="./src/script.js"> </script>
+
 </html>
