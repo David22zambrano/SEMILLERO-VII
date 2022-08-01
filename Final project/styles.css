@@ -6,17 +6,28 @@
 @use "@material/icon-button";
 @use "@material/top-app-bar/mdc-top-app-bar";
 @include icon-button.core-styles;
+@use "@material/button";
+
+.custom-text-button,
+.custom-outlined-button {
+  --mdc-theme-primary: #FEDBD0;
+  --mdc-theme-on-primary: #442C2E;
+
+  @include button.ink-color(#84565E);
+}
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
-body {
+
+html, body {
   width: 100%;
   height: 100vh;
   background-color: #f2f2f2;
   font-family: "Roboto", sans-serif;
 }
+
 header {
   display: flex;
   margin: auto;
@@ -29,24 +40,28 @@ header {
   background-color: #141d29;
   color: #e2f4fe;
 }
-header > img {
+
+header>img {
   width: auto;
   height: 2rem;
   padding-left: 1em;
 }
+
 nav {
   display: flex;
   align-items: center;
 
   font-size: 10px;
 }
-nav > ul {
+
+nav>ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   list-style: none;
 }
-ul > li {
+
+ul>li {
   display: flex;
   flex-direction: column;
   border-left: 2px solid #39414b;
@@ -54,11 +69,13 @@ ul > li {
   padding-left: 1em;
   padding-right: 1em;
 }
+
 .modulo {
   text-align: right;
   font-size: 14px;
   font-style: "bold";
 }
+
 .iconTransladar {
   position: relative;
   bottom: -5px;
@@ -68,6 +85,7 @@ ul > li {
   height: 15px;
   z-index: 4;
 }
+
 .mdc-text-field__input {
   display: flex;
   justify-content: left;
@@ -75,48 +93,59 @@ ul > li {
   height: 30px;
   padding-left: 1em;
 }
+
+.hideShowEmployeeInformation {
+  display: flex;
+  justify-content: center;
+  padding-right: 15em;
+  font-size: 12px;
+  color: #67853B;
+}
+
 .textStyleHeader {
   color: #d2d0d0;
-}
-.actualizar{ width: auto; height: auto;}
-#left {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  color: #628FBD ; 
-  padding-left: 1em;
-  padding-top: 2em;
-  font-size: 10px;
-  line-height: 2.5em;
-  width: 30%;
-  height: auto;
 }
 
 .employeeInformation {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   top: 10%;
   height: 12.5rem;
   width: 100vw;
-  padding: 1em;
+  padding-bottom: 3em;
   background-color: #dde2e6;
   border-bottom: 18px solid rgba(202, 211, 216, 0.09);
   box-shadow: 0px 3px 4px #c5ced6;
 }
-#rigth{
-display: flex;
-justify-content: space-evenly;
-align-items: center;
-width: 70%;
-height: auto;
+
+#left {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: #628FBD;
+  padding-left: 1em;
+  padding-top: 2em;
+  font-size: 10px;
+  line-height: 25px;
+  width: 30%;
+  height: auto;
 }
+
+#rigth {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
+  height: auto;
+}
+
 .containerPhoto {
   display: flex;
   justify-content: right;
   align-items: end;
 }
+
 .iconCameraContainer {
   position: relative;
   right: 36px;
@@ -129,12 +158,26 @@ height: auto;
   border-radius: 50%;
   background-color: #447da9;
 }
-.workerInformation>h2{ 
-  font-size: 12px;
+
+.workerInformation>h2 {
+  font-size: 13.5px;
   line-height: 1.5em;
-  color: #628FBD ; }
+  color: #628FBD;
+}
+.actualizar {
+  width: auto;
+  height: auto;
+}
+
+.footerInformationWorker {
+  position: relative;
+  bottom: 3.1em;
+  left: 19em;
+}
+
 #content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: auto;
@@ -144,6 +187,26 @@ height: auto;
   border-radius: 0px;
   border: 1px solid red;
 }
+.headerContentBitakora{
+display: flex;
+justify-content: space-evenly ;
+align-items: flex-start;
+color: #447da9;
+text-align: center;
+width: 100%;
+
+}
+.mdc-button{
+  width: 136px;
+  height: 34px;
+  background-color: #79a735;
+  border: none;
+  border-radius: 5px;
+}
+#mounth{
+  display: flex;
+  padding-top: 1em;
+}
 @media screen and (min-width: 400px) and (max-width: 800px) {
   nav {
     display: flex;
@@ -151,9 +214,11 @@ height: auto;
     font-family: "Inter", sans-serif;
     font-size: 8px;
   }
+
   .iconTransladar {
     display: none;
   }
+
   .mdc-text-field__input {
     width: 13rem;
     padding-left: 0em;
