@@ -86,26 +86,14 @@ ul>li {
   z-index: 4;
 }
 
-.mdc-text-field__input {
-  display: flex;
-  justify-content: left;
-  width: 28rem;
-  height: 30px;
-  padding-left: 1em;
-}
-
-.hideShowEmployeeInformation {
-  display: flex;
-  justify-content: center;
-  padding-right: 15em;
-  font-size: 12px;
-  color: #67853B;
-}
 
 .textStyleHeader {
   color: #d2d0d0;
 }
-
+.actualizar {
+  width: auto;
+  height: auto;
+}
 .employeeInformation {
   display: flex;
   justify-content: space-between;
@@ -119,6 +107,7 @@ ul>li {
   box-shadow: 0px 3px 4px #c5ced6;
 }
 
+
 #left {
   display: flex;
   align-items: center;
@@ -126,17 +115,9 @@ ul>li {
   color: #628FBD;
   padding-left: 1em;
   padding-top: 2em;
-  font-size: 10px;
-  line-height: 25px;
+  font-size: 8px;
+  line-height: 21px;
   width: 30%;
-  height: auto;
-}
-
-#rigth {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 70%;
   height: auto;
 }
 
@@ -160,19 +141,41 @@ ul>li {
 }
 
 .workerInformation>h2 {
-  font-size: 13.5px;
-  line-height: 1.5em;
+  font-size: 12.5px;
+  line-height: 1.4em;
   color: #628FBD;
 }
-.actualizar {
-  width: auto;
+#rigth {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 70%;
   height: auto;
 }
+.icon-Liquidacion-Bitakora{
+  width: 15px;
+  height: 15px;
+}
 
+.mdc-text-field__input {
+  display: flex;
+  justify-content: left;
+  width: 31rem;
+  height: 28px;
+  padding-left: 1em;
+}
+
+.hideShowEmployeeInformation {
+  display: flex;
+  justify-content: center;
+  padding-right: 15em;
+  font-size: 12px;
+  color: #67853B;
+}
 .footerInformationWorker {
   position: relative;
   bottom: 3.1em;
-  left: 19em;
+  left: 10em;
 }
 
 #content {
