@@ -6,4 +6,12 @@ const topAppBarElement = document.querySelector('.mdc-top-app-bar');
 const topAppBar = new MDCTopAppBar(topAppBarElement);
 
 import lineaPago from '../data/lineaPago';
-import lineaDias from '../data/lineaDias';
+
+import lineaDeDias from "./data/lineaDias";
+
+    const createBoxDay =  lineaDeDias.map(function(){
+        lineaDeDias.forEach(day => {
+            document.createElement('div')
+        });
+        
+    })

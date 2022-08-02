@@ -1,4 +1,4 @@
-[
+let lineaDeDias = [
     {
       "fecha": "2022-03-01T00:00:00",
       "evento": "T",
@@ -279,3 +279,5 @@
       "dia": 31
     }
   ]
+
+  export default lineaDeDias;
