@@ -1,4 +1,4 @@
-@use "@material/floating-label/mdc-floating-label";
+/* @use "@material/floating-label/mdc-floating-label";
 @use "@material/line-ripple/mdc-line-ripple";
 @use "@material/notched-outline/mdc-notched-outline";
 @use "@material/textfield";
@@ -7,21 +7,21 @@
 @use "@material/top-app-bar/mdc-top-app-bar";
 @include icon-button.core-styles;
 @use "@material/button";
-
 .custom-text-button,
 .custom-outlined-button {
   --mdc-theme-primary: #FEDBD0;
   --mdc-theme-on-primary: #442C2E;
 
   @include button.ink-color(#84565E);
-}
+} */
 * {
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100vh;
   background-color: #f2f2f2;
@@ -86,27 +86,27 @@ ul>li {
   z-index: 4;
 }
 
-
 .textStyleHeader {
   color: #d2d0d0;
 }
+
 .actualizar {
   width: auto;
   height: auto;
 }
+
 .employeeInformation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   top: 10%;
-  height: 12.5rem;
-  width: 100vw;
+  height: 11.5rem;
+  width: 100%;
   padding-bottom: 3em;
   background-color: #dde2e6;
   border-bottom: 18px solid rgba(202, 211, 216, 0.09);
   box-shadow: 0px 3px 4px #c5ced6;
 }
-
 
 #left {
   display: flex;
@@ -116,7 +116,7 @@ ul>li {
   padding-left: 1em;
   padding-top: 2em;
   font-size: 8px;
-  line-height: 21px;
+  line-height: 19px;
   width: 30%;
   height: auto;
 }
@@ -145,6 +145,7 @@ ul>li {
   line-height: 1.4em;
   color: #628FBD;
 }
+
 #rigth {
   display: flex;
   justify-content: space-evenly;
@@ -152,17 +153,24 @@ ul>li {
   width: 70%;
   height: auto;
 }
-.icon-Liquidacion-Bitakora{
+
+.icon-Liquidacion-Bitakora {
   width: 15px;
   height: 15px;
 }
 
 .mdc-text-field__input {
+  background-image: url("./img/Gestionar.svg");
+  background-repeat: no-repeat;
+  background-position: left;
   display: flex;
   justify-content: left;
   width: 31rem;
   height: 28px;
-  padding-left: 1em;
+  padding-left: 6.5em;
+  border-radius: 3px;
+  border: none;
+
 }
 
 .hideShowEmployeeInformation {
@@ -171,9 +179,12 @@ ul>li {
   padding-right: 15em;
   font-size: 12px;
   color: #67853B;
+
 }
+
 .footerInformationWorker {
   position: relative;
+  width: 75%;
   bottom: 3.1em;
   left: 10em;
 }
@@ -190,29 +201,39 @@ ul>li {
   border-radius: 0px;
   border: 1px solid red;
 }
-.headerContentBitakora{
-display: flex;
-justify-content: space-evenly ;
-align-items: center;
-color: #447da9;
-text-align: center;
-width: 100%;
-border: 2px solid green;
+
+.headerContentBitakora {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #447da9;
+  text-align: center;
+  width: 100%;
+  border: 2px solid green;
 }
-.mdc-button{
+.mdc-list{ background-color: red;}
+@use "@material/list/mdc-list";
+@use "@material/menu-surface/mdc-menu-surface";
+@use "@material/menu/mdc-menu";
+.mdc-button {
   width: 110px;
   height: 28px;
   background-color: #79a735;
-  border: none;
-  border-radius: 5px;
+border: none;
+  border-radius: 0px;
 }
-#boxMounth{
+.mdc-button:hover{
+  border: 2px solid #95B3CA;
+  cursor: pointer;
+}
+#boxMounth {
   border: 1px solid blue;
   display: flex;
   margin-top: 1em;
   width: 95%;
   height: 100%;
 }
+
 @media screen and (min-width: 400px) and (max-width: 800px) {
   nav {
     display: flex;

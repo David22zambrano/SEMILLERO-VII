@@ -17,7 +17,7 @@
     <img src="./img/icono bitakora.png" class="logo" alt="iconBitakora">
     <div class="topBarNav">
       <label class="mdc-text-field mdc-text-field--filled">
-        <span class="mdc-text-field__ripple"></span>
+        <span class="mdc-text-field__ripple">  Buscar empleado</span>
         <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
         <span class="mdc-line-ripple"></span>
       </label>
@@ -47,7 +47,7 @@
         <img src="./img/photoContainer.svg" class="containerImagePerson" alt=" ">
         <div class="iconCameraContainer"> <img src="./img/iconCamera.svg" class="iconCamera" alt=" "> </div>
       </section>
-      <div >
+      <div>
         <h2 style="color: #000">Julio Tadeo <img src="./img/icon green percil.svg"></h2>
         <h2 style="color: #728698;">Lider de Desarrollo</h2>
         <h2>Área: </h2>
@@ -59,52 +59,70 @@
     <aside id="rigth">
       <div class="workerInformation">
         <h2 class="styleText-WorkerInformation">Salario</h2>
-        <h2 style="font-size: 20px; color: #000;">COP 2,000,000 </h2>
+        <h2 style="font-size: 18px; color: #000;">COP 2,000,000 </h2>
         <h2 style="color: #728698;">Salario ordinario</h2>
         <h2>Valor hora: 8,333,33</h2>
         <h2 style="color: #728698;">Jornada: Lunes a viernes 360 días</h2>
       </div>
       <div class="workerInformation">
         <h2>Última liquidación</h2>
-        <h2 style="font-size: 20px; color:#000;"> COP 966,869
-           <img src="./img/actualizar.svg" class="actualizar" alt=" ">
+        <h2 style="font-size: 18px; color:#000;"> COP 966,869
+          <img src="./img/actualizar.svg" class="actualizar" alt=" ">
         </h2>
         <h2 style="color: #63812C;">
-          <img src="./img/icon liquidacion.png" alt=" " class="icon-Liquidacion-Bitakora" > liquidación <img
-            src="./img/icon bitakora.svg" alt="" class="icon-Liquidacion-Bitakora" > Bitakora </h2>
+          <img src="./img/icon liquidacion.png" alt=" " class="icon-Liquidacion-Bitakora"> liquidación <img
+            src="./img/icon bitakora.svg" alt="" class="icon-Liquidacion-Bitakora"> Bitakora
+        </h2>
       </div>
   </section>
-      <section class="footerInformationWorker">
-        <label class="mdc-text-field mdc-text-field--filled">
-          <span class="mdc-text-field__ripple"></span>
-          <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
-          <span class="mdc-line-ripple"> </span>
-        </label>
-        <span class="hideShowEmployeeInformation" > <img src="./img/icono mostrar ocultar.svg"> Ocultar perfil </span >
-      </section>
-    </aside>
+  <section class="footerInformationWorker">
+    <label class="mdc-text-field mdc-text-field--filled">
+
+      <input class="mdc-text-field__input" 
+          type="text" 
+          aria-labelledby="my-label-id"  
+          placeholder=" Incapacidades, prima, modificacion, salario, etc">
+      <span class="mdc-line-ripple"> </span>
+    </label>
+    <span class="hideShowEmployeeInformation"> <img src="./img/icono mostrar ocultar.svg"> Ocultar perfil </span>
+  </section>
+  </aside>
 
   <main id="content">
-    <section class="headerContentBitakora"> 
+    <section class="headerContentBitakora">
       <h2>Bitákora del Empleado</h2>
-       <label style="color: #000;"> Visualizar bitakora por:
-       <button class="mdc-button mdc-button--icon-trailing">
-        <span class="mdc-button__ripple">Periodo</span>
-        <span class="mdc-button__label">Meses</span>
-      </button>
-    </label>
-    <label style="color: #000;"> Marzo de 2022
-      <button class=" mdc-button--icon-trailing"><</button>
-      <button>></button>
-   </label>
+      <label style="color: #000;"> Visualizar bitakora por:
+        <button class="mdc-button mdc-button--icon-trailing">
+          <span class="mdc-button__ripple">Periodo</span>
+          <button class="mdc-button mdc-button--icon-trailing">
+            <span class="mdc-button__label">Meses</span>
+          </button>
+        </button>
+      </label>
+      <label style="color: #000;"> Marzo de 2022
+        <button> < </button>
+        <button> > </button>
+      </label>
     </section>
 
     <section id="boxMounth" >
-        
-    </section >
+      <h6> Concepto &nbsp;&nbsp; Valor mensual </h6>
 
-  </main>
+        <div id="sal1" class="flag-Box" > </div>
+        <div id="vac1" class="flag-Box" > </div>
+        <div id="vac2" class="flag-Box" > </div>
+        <div id="tra1" class="flag-Box" > </div>
+        <div id="seg1" class="flag-Box" > </div>
+        <div id="seg1.2" class="flag-Box" > </div>
+        <div id="seg2" class="flag-Box" > </div>
+        <div id="seg2.2" class="flag-Box" > </div>
+      
+    </section>
+
+          </main>
+          <script type="module" src="./src/script.js" > </script>
+
+          </script>
 </body>
-<script type="module" src="./src/script.js"> </script>
 
 </html>
