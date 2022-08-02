@@ -7,10 +7,15 @@
 
 // import lineaPago from '../data/lineaPago';
 import lineaDeDias from "../data/lineaDias";
-const 
 const createBoxDay =  lineaDeDias.map(()=>{
         lineaDeDias.forEach(day => {
-            document.createElement('div').style('width: 20px, heigth: 20px')
+            document.createElement =
+             `<div class="flagBox">
+                </div>
+            
+            
+            
+            `
         });
         console.log(lineaDeDias.dias[1])
         

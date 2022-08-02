@@ -17,11 +17,10 @@
     <img src="./img/icono bitakora.png" class="logo" alt="iconBitakora">
     <div class="topBarNav">
       <label class="mdc-text-field mdc-text-field--filled">
-        <span class="mdc-text-field__ripple">  Buscar empleado</span>
+        <span class="mdc-text-field__ripple"> Buscar empleado</span>
         <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
         <span class="mdc-line-ripple"></span>
       </label>
-
     </div>
     <nav>
       <ul>
@@ -78,10 +77,8 @@
   <section class="footerInformationWorker">
     <label class="mdc-text-field mdc-text-field--filled">
 
-      <input class="mdc-text-field__input" 
-          type="text" 
-          aria-labelledby="my-label-id"  
-          placeholder=" Incapacidades, prima, modificacion, salario, etc">
+      <input class="text-field__input" type="text" aria-labelledby="my-label-id"
+        placeholder=" Incapacidades, prima, modificacion, salario, etc">
       <span class="mdc-line-ripple"> </span>
     </label>
     <span class="hideShowEmployeeInformation"> <img src="./img/icono mostrar ocultar.svg"> Ocultar perfil </span>
@@ -90,39 +87,69 @@
 
   <main id="content">
     <section class="headerContentBitakora">
-      <h2>Bitákora del Empleado</h2>
-      <label style="color: #000;"> Visualizar bitakora por:
-        <button class="mdc-button mdc-button--icon-trailing">
-          <span class="mdc-button__ripple">Periodo</span>
-          <button class="mdc-button mdc-button--icon-trailing">
-            <span class="mdc-button__label">Meses</span>
+      <h3>Bitákora del Empleado</h3>
+      <div id="viewBitakoraBy">
+        <label> Visualizar bitakora por: </label>
+        <div class="toggleView">
+          <button class="mdc-button">
+            <span class="mdc-button__ripple">Periodo</span>
+            <button class="buttonMount">
+              <span class="mdc-button__label">Meses</span>
+            </button>
           </button>
-        </button>
-      </label>
+        </div>
+
+      </div>
       <label style="color: #000;"> Marzo de 2022
-        <button> < </button>
-        <button> > </button>
+        <button>
+          < </button>
+            <button> > </button>
       </label>
     </section>
 
-    <section id="boxMounth" >
+    <section id="boxMounth">
       <h6> Concepto &nbsp;&nbsp; Valor mensual </h6>
+      <section class="containerDays">
+        <div class="">
+          <div id="sal1" class="flagBox">
+            <img src="./img/salv1.svg" > </div>
+          <div id="" class="boxDay"> </div>
+        </div>
 
-        <div id="sal1" class="flag-Box" > </div>
-        <div id="vac1" class="flag-Box" > </div>
-        <div id="vac2" class="flag-Box" > </div>
-        <div id="tra1" class="flag-Box" > </div>
-        <div id="seg1" class="flag-Box" > </div>
-        <div id="seg1.2" class="flag-Box" > </div>
-        <div id="seg2" class="flag-Box" > </div>
-        <div id="seg2.2" class="flag-Box" > </div>
-      
+        <div>
+          <div id="vac1" class="flagBox"> 
+            <img src="./img/vac1.svg" > </div>
+          <div id="" class="boxDay"> </div>
+        </div>
+
+        <div>
+          <div id="vac2" class="flagBox">
+            <img src="./img/vac2.svg" > </div>
+          <div id="" class="boxDay"> </div>
+        </div>
+        <div>
+          <div id="seg1" class="flagBox"> </div>
+          <div id="" class="boxDay"> </div>
+        </div>
+        <div>
+          <div id="seg1-1" class="flagBox"> </div>
+          <div id="" class="boxDay"> </div>
+        </div>
+        <div>
+          <div id="seg2" class="flagBox"> </div>
+          <div id="" class="boxDay"> </div>
+        </div>
+        <div>
+          <div id="seg2-2" class="flagBox"> </div>
+          <div id="" class="boxDay"> </div>
+        </div>
+      </section>
     </section>
 
-          </main>
-          <script type="module" src="./src/script.js" > </script>
+  </main>
+  <script type="module" src="./src/script.js"> </script>
 
-          </script>
+  </script>
 </body>
 
 </html>
